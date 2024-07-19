@@ -5,6 +5,12 @@
       "__resolveType": "Header"
     },
     {
+      "__resolveType": "website/sections/Rendering/SingleDeferred.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/HeroNeoVista.tsx"
+      }
+    },
+    {
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
