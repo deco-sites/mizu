@@ -1,1 +1,15 @@
-{"__resolveType":"site/apps/deco/vtex.ts"}
+{
+  "__resolveType": "site/apps/deco/vtex.ts",
+  "salesChannel": "1",
+  "defaultSegment": {
+    "channelPrivacy": "public",
+    "cultureInfo": "pt-BR",
+    "countryCode": "BRA",
+    "currencySymbol": "R$",
+    "currencyCode": "BRL",
+    "channel": "1"
+  },
+  "platform": "vtex",
+  "account": "mizunobrio",
+  "publicUrl": "https://www.mizuno.com.br/"
+}
