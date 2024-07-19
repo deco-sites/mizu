@@ -24,7 +24,24 @@
             "weight": "700"
           }
         ],
-        "family": "Inter Tight"
+        "family": "Roboto"
+      },
+      {
+        "variations": [
+          {
+            "weight": "400"
+          },
+          {
+            "weight": "500"
+          },
+          {
+            "weight": "600"
+          },
+          {
+            "weight": "700"
+          }
+        ],
+        "family": "Roboto Condensed"
       }
     ]
   },
@@ -38,14 +55,15 @@
   },
   "mode": "dark",
   "mainColors": {
-    "primary": "#27AE6B",
+    "primary": "#001489",
     "base-100": "#ffffff",
-    "secondary": "#FAEABC",
+    "secondary": "#001489",
     "success": "#219259",
     "warning": "#a39e0f",
     "error": "#d10a0a",
     "info": "#3c4cc8",
-    "neutral": "#000000"
+    "neutral": "#707070",
+    "tertiary": "#060606"
   },
   "complementaryColors": {
     "primary-content": "#ffffff",
