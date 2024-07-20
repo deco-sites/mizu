@@ -16,6 +16,36 @@
       "title": "MAIS<br /> PERFORMANCE<br /> E MAIS<br /> RESULTADO<br /> PARA SEUS<br /> TREINAMENTOS."
     },
     {
+      "__resolveType": "site/sections/Content/TabLayoutShoes.tsx",
+      "selected": 0,
+      "tabs": [
+        {
+          "name": "Cabedal",
+          "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-01___a04f46f2c045f87261bffe229c298e50.png",
+          "description": "Estrutura que se adapta à forma do pé, mantendo-o na posição correta e ajustado durante todo o período do treino.",
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-01___459c6880272823a3bb36ed97956e5c1e.png"
+        },
+        {
+          "name": "Amortecimento",
+          "description": "Entressola com Mizuno Enerzy Nxt que oferece uma experiência aprimorada de amortecimento com retorno de energia.",
+          "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-02___5c5c5be29cd2e769da3fc110bd1a5cbc.png",
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-02___9dce74ee098ad92bbf91457d8bdb053a.png"
+        },
+        {
+          "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-03___3dcbf17724d03fbb68cabf1a2959fbf3.png",
+          "description": "Placa Wave reforçada com fibra de vidro que proporciona velocidade e estabilidade sem abrir mão do conforto.",
+          "name": "Propulsão",
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-03___fe103bc415cd337ca4bbec04a95a4b52.png"
+        },
+        {
+          "name": "Tecnologia",
+          "description": "A mais inovadora tecnologia de corrida da Mizuno, Smooth Speed Assist é uma geometria da entressola que facilita a pisada com o ante pé, proporcionando uma transição mais rápida e suave na sua passada.",
+          "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-04___946c040a5922816eccb19d846e6fe870.png",
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-04___8749217ce01230574f498cdfe0687c99.png"
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/Content/VideoPlusText.tsx",
       "title": "",
       "video": {
