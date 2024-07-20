@@ -8,6 +8,22 @@
       "__resolveType": "site/sections/Content/HeroNeoVista.tsx"
     },
     {
+      "__resolveType": "site/sections/Content/VideoPlusText.tsx",
+      "video": {
+        "src": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/Aw24_Neo%20Vista_action_16x9_FER_TM___3bd45127b0794e84701e99806f78fa01.mp4",
+        "marginOnX": false
+      },
+      "title": "MAIS<br /> PERFORMANCE<br /> E MAIS<br /> RESULTADO<br /> PARA SEUS<br /> TREINAMENTOS."
+    },
+    {
+      "__resolveType": "site/sections/Content/VideoPlusText.tsx",
+      "title": "",
+      "video": {
+        "src": "https://www.youtube.com/embed/pqYcYq0pwa4?autoplay=true&loop=1&playlist=pqYcYq0pwa4&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&controls=0&playsinline=0&mute=1",
+        "marginOnX": false
+      }
+    },
+    {
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
