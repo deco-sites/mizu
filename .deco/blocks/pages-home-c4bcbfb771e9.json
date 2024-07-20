@@ -6,8 +6,8 @@
     },
     {
       "__resolveType": "site/sections/Content/HeroNeoVista.tsx",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/b647b5f9-05a7-4c3e-86ed-8b5e22121719",
-      "hoverImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/0fb1d6f6-1f80-45b2-a9ee-1794cba2b325",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/0fb1d6f6-1f80-45b2-a9ee-1794cba2b325",
+      "hoverImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/b647b5f9-05a7-4c3e-86ed-8b5e22121719",
       "cta": {
         "href": "/",
         "text": "Compre Agora",
