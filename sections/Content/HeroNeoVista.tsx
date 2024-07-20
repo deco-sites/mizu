@@ -35,12 +35,12 @@ export default function HeroNeoVista({
   return (
     <div class="w-full py-[34px] overflow-hidden flex flex-col justify-center items-center">
       <h1
-        class="text-primary text-[64px] lg:text-[72px] font-extrabold leading-[64px] lg:leading-[72px] text-center uppercase"
+        class="relative lg:top-[76px] text-primary text-[64px] lg:text-[72px] font-extrabold leading-[64px] lg:leading-[72px] text-center uppercase"
         dangerouslySetInnerHTML={{
           __html: title,
         }}
       />
-      <div class="group relative lg:top-[-76px]">
+      <div class="group relative">
         <Image
           width={1366}
           height={612}
@@ -53,14 +53,14 @@ export default function HeroNeoVista({
         <Image
           width={1366}
           height={612}
-          class="w-auto absolute top-[10px] transition-all duration-[600ms] max-w-[670px] sm:max-w-none min-h-[266px] sm:max-h-none lg:max-w-[1366px] opacity-0 lg:opacity-100"
+          class="w-auto absolute top-[5px] transition-all duration-[600ms] max-w-[670px] sm:max-w-none min-h-[266px] sm:max-h-none lg:max-w-[1366px] opacity-0 lg:opacity-100"
           src={image}
           alt={image}
           decoding="sync"
           loading="eager"
         />
       </div>
-      <div class="relative lg:top-[-120px] max-w-[80%] sm:max-w-[95%] md:max-w-[55%] lg:max-w-[35%] flex flex-col items-center">
+      <div class="relative lg:top-[-60px] max-w-[80%] sm:max-w-[95%] md:max-w-[55%] lg:max-w-[35%] flex flex-col items-center">
         <h2
           class="text-primary text-[32px] lg:text-[40px] font-extrabold leading-[32px] lg:leading-[47px] text-center uppercase mt-[-20px]"
           dangerouslySetInnerHTML={{
