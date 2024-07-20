@@ -7,6 +7,9 @@ export default {
   theme: {
     container: { center: true },
     extend: {
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+      },
       animation: {
         sliding: "sliding 30s linear infinite",
       },

@@ -22,9 +22,15 @@
           },
           {
             "weight": "700"
+          },
+          {
+            "weight": "800"
+          },
+          {
+            "weight": "900"
           }
         ],
-        "family": "Roboto"
+        "family": "Roboto Condensed"
       },
       {
         "variations": [
@@ -39,9 +45,15 @@
           },
           {
             "weight": "700"
+          },
+          {
+            "weight": "800"
+          },
+          {
+            "weight": "900"
           }
         ],
-        "family": "Roboto Condensed"
+        "family": "Roboto"
       }
     ]
   },

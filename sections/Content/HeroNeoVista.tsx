@@ -1,94 +1,70 @@
-import type { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget, HTMLWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import Icon, { AvailableIcons } from "../../components/ui/Icon.tsx";
 
 export interface CTA {
-  id?: string;
   href: string;
   text: string;
-  variant: "Normal" | "Reverse";
+  iconOnHover: AvailableIcons
 }
 
 export interface Props {
   title: HTMLWidget;
-  description: string;
-  image?: ImageWidget;
-  placement: "left" | "right";
-  cta: CTA[];
+  subTitle: HTMLWidget;
+  description: HTMLWidget;
+  image: ImageWidget;
+  hoverImage: ImageWidget;
+  cta: CTA;
 }
 
-const PLACEMENT = {
-  left: "flex-col text-left lg:flex-row-reverse",
-  right: "flex-col text-left lg:flex-row",
-};
-
 export default function HeroNeoVista({
-  title = "Hero",
-  description = "Your description here",
-  image,
-  placement,
-  cta,
+  title = "Mizuno<br /> Neo Vista",
+  subTitle = "Tecnologia de prova.<br /> Em dia de treino.",
+  description = "Conheça o primeiro <b>SUPER TRAINER</b> da Mizuno, desenvolvido com tecnologias de performance para tornar o seu treino ainda mais eficiente.",
+  image = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/0fb1d6f6-1f80-45b2-a9ee-1794cba2b325",
+  hoverImage = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/b647b5f9-05a7-4c3e-86ed-8b5e22121719",
+  cta = {
+    href: "/neo-vista",
+    text: "Compre Agora",
+    iconOnHover: "chevron-right"
+  }
 }: Props) {
   return (
-    <div>
-      <div class="mx-auto flex flex-col items-center gap-8">
-        <div
-          class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
-            image
-              ? PLACEMENT[placement]
-              : "flex-col items-center justify-center text-center"
-          } lg:py-36 gap-12 md:gap-20 items-center`}
-        >
-          {image && (
-            <Image
-              width={640}
-              class="w-full lg:w-1/2 object-fit"
-              sizes="(max-width: 640px) 100vw, 30vw"
-              src={image}
-              alt={image}
-              decoding="async"
-              loading="lazy"
-            />
-          )}
-          <div
-            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
-              image
-                ? "lg:w-1/2 lg:max-w-xl"
-                : "flex flex-col items-center justify-center lg:max-w-3xl"
-            }`}
-          >
-            <div
-              class="inline-block text-[80px] leading-[100%] font-medium tracking-[-2.4px]"
-              dangerouslySetInnerHTML={{
-                __html: title,
-              }}
-            >
-            </div>
-            <p class="text-zinc-400 text-[16px] md:text-[18px] leading-[150%]">
-              {description}
-            </p>
-            <div class="flex flex-col items-center lg:items-start lg:flex-row gap-4">
-              {cta?.map((item) => (
-                <a
-                  key={item?.id}
-                  id={item?.id}
-                  href={item?.href}
-                  target={item?.href.includes("http") ? "_blank" : "_self"}
-                  class={`group relative overflow-hidden rounded-full hover:bg-gradient-to-r px-6 py-2 lg:px-8 lg:py-3 transition-all duration-300 ease-out ${
-                    item.variant === "Reverse"
-                      ? "bg-secondary text-white"
-                      : "bg-accent text-black"
-                  }`}
-                >
-                  <span class="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 group-hover:-translate-x-40">
-                  </span>
-                  <span class="relative font-medium lg:text-[20px]">
-                    {item?.text}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
+    <div class="w-full py-[34px] overflow-hidden flex flex-col justify-center items-center">
+      <h1 class="text-primary text-[64px] lg:text-[72px] font-extrabold leading-[64px] lg:leading-[72px] text-center uppercase" dangerouslySetInnerHTML={{
+        __html: title
+      }} />
+      <div class="group relative lg:top-[-76px]">
+        <Image
+          width={1366}
+          height={612}
+          class="w-auto transition-all duration-[600ms] max-w-[670px] sm:max-w-none min-h-[266px] sm:max-h-none lg:max-w-[1366px] lg:opacity-0 group-hover:opacity-100"
+          src={hoverImage}
+          alt={hoverImage}
+          decoding="sync"
+          loading="eager"
+        />
+        <Image
+          width={1366}
+          height={612}
+          class="w-auto absolute top-[5px] transition-all duration-[600ms] max-w-[670px] sm:max-w-none min-h-[266px] sm:max-h-none lg:max-w-[1366px] opacity-0 lg:opacity-100"
+          src={image}
+          alt={image}
+          decoding="sync"
+          loading="eager"
+        />
+      </div>
+      <div class="relative lg:top-[-120px] max-w-[80%] sm:max-w-[95%] md:max-w-[55%] lg:max-w-[35%] flex flex-col items-center">
+        <h2 class="text-primary text-[32px] lg:text-[40px] font-extrabold leading-[32px] lg:leading-[47px] text-center uppercase mt-[-20px]" dangerouslySetInnerHTML={{
+          __html: subTitle
+        }} />
+        <p class="text-accent text-[16px] leading-[18.75px] text-center mt-[24px] font-roboto mt-[-20px]" dangerouslySetInnerHTML={{
+          __html: description
+        }}/>
+        <a class="w-min group relative pr-[90px] lg:pr-[40px] hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-[40px] mt-[24px] rounded font-roboto font-medium mt-[-20px]" href={cta.href}>
+          {cta.text}
+          <Icon class="lg:opacity-0 group-hover:opacity-100 absolute right-[40px] transition-all duration-300" id={cta.iconOnHover} size={18} />
+        </a>
       </div>
     </div>
   );
