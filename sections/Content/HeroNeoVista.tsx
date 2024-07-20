@@ -53,7 +53,7 @@ export default function HeroNeoVista({
         <Image
           width={1366}
           height={612}
-          class="w-auto absolute top-[5px] transition-all duration-[600ms] max-w-[670px] sm:max-w-none min-h-[266px] sm:max-h-none lg:max-w-[1366px] opacity-0 lg:opacity-100"
+          class="w-auto absolute top-[10px] transition-all duration-[600ms] max-w-[670px] sm:max-w-none min-h-[266px] sm:max-h-none lg:max-w-[1366px] opacity-0 lg:opacity-100"
           src={image}
           alt={image}
           decoding="sync"
