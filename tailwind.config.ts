@@ -8,7 +8,7 @@ export default {
     container: { center: true },
     extend: {
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'],
+        "roboto": ["Roboto", "sans-serif"],
       },
       animation: {
         sliding: "sliding 30s linear infinite",
