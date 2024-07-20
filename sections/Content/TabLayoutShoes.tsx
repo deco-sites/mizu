@@ -60,8 +60,8 @@ export default function TabLayoutShoes({
                   width={207}
                   src={tab.imageName}
                   alt={tab.imageName}
-                  decoding="async"
-                  loading="lazy"
+                  decoding="sync"
+                  loading="eager"
                 />
                 <p
                   class="text-left text-[#060606] leading-[17px]"
@@ -82,8 +82,8 @@ export default function TabLayoutShoes({
               class="min-w-[318px] w-full"
               src={tab.image}
               alt={tab.image}
-              decoding="async"
-              loading="lazy"
+              decoding="sync"
+              loading="eager"
             />
           ))}
         </div>
