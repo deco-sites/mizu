@@ -58,6 +58,7 @@ export default function TabLayoutShoes({
               >
                 <Image
                   width={207}
+                  style={{ opacity: index == selected ? "1" : ".6" }}
                   src={tab.imageName}
                   alt={tab.imageName}
                   decoding="sync"
