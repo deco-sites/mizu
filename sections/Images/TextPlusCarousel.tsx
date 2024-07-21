@@ -6,9 +6,9 @@ import { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
 export interface CTA {
-    href: string;
-    text: string;
-    iconOnHover: AvailableIcons;
+  href: string;
+  text: string;
+  iconOnHover: AvailableIcons;
 }
 export interface CarouselImage {
   /** @description desktop otimized image */
@@ -22,8 +22,8 @@ export interface CarouselImage {
 }
 
 export interface Text {
-    title: HTMLWidget;
-    description: HTMLWidget;
+  title: HTMLWidget;
+  description: HTMLWidget;
 }
 
 interface Props {
@@ -36,16 +36,20 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
   const id = useId();
 
   return (
-    <div class="flex flex-col lg:flex-row lg:justify-end gap-[24px] mt-[24px] lg:mt-[80px]">
+    <div class="relative flex flex-col lg:flex-row lg:justify-end gap-[24px] mt-[24px] lg:mt-[80px]">
       <div class="flex flex-col gap-[40px] px-[12px] max-w-[357px]">
-        {
-            summaries.map(summary => (
-                <div class="flex flex-col gap-[24px]">
-                    <h3 class="text-primary font-black uppercase text-[32px] lg:text-[40px] leading-[37.5px]" dangerouslySetInnerHTML={{ __html: summary.title }} />
-                    <p class="font-roboto text-[16px] leading-[18.75px]" dangerouslySetInnerHTML={{ __html: summary.description }} />
-                </div>
-            ))
-        }
+        {summaries.map((summary) => (
+          <div class="flex flex-col gap-[24px]">
+            <h3
+              class="text-primary font-black uppercase text-[32px] lg:text-[40px] leading-[37.5px]"
+              dangerouslySetInnerHTML={{ __html: summary.title }}
+            />
+            <p
+              class="font-roboto text-[16px] leading-[18.75px]"
+              dangerouslySetInnerHTML={{ __html: summary.description }}
+            />
+          </div>
+        ))}
         <a
           class="mx-auto lg:mx-0 w-min group relative pr-[90px] lg:pr-[40px] hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-[40px] mt-[24px] rounded font-roboto font-medium mt-[-20px]"
           href={cta.href}
@@ -87,20 +91,27 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
           </Slider>
         </div>
 
-        <div class="flex w-full gap-[12px] justify-center items-center my-[20px]">
-            <div class="group">
-            <Slider.PrevButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent group-hover:bg-primary no-animation">
-                <Icon id="chevron-right" size={16} class="fill-[#001489] group-hover:fill-[#fff] rotate-180" />
+        <div class="lg:absolute lg:w-[50%] lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-[12px] justify-center items-center my-[20px]">
+          <div class="group">
+            <Slider.PrevButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent lg:bg-white group-hover:bg-primary no-animation">
+              <Icon
+                id="chevron-right"
+                size={16}
+                class="fill-[#001489] group-hover:fill-[#fff] rotate-180"
+              />
             </Slider.PrevButton>
-            </div>
+          </div>
 
-            <div class="group">
-            <Slider.NextButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent group-hover:bg-primary no-animation">
-                <Icon id="chevron-right" size={16} class="fill-[#001489] group-hover:fill-[#fff]"/>
+          <div class="group">
+            <Slider.NextButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent lg:bg-white group-hover:bg-primary no-animation">
+              <Icon
+                id="chevron-right"
+                size={16}
+                class="fill-[#001489] group-hover:fill-[#fff]"
+              />
             </Slider.NextButton>
-            </div>
+          </div>
         </div>
-
       </div>
       <Slider.JS rootId={id} scroll="smooth" />
     </div>
