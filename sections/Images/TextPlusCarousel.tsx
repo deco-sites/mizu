@@ -18,10 +18,9 @@ export interface CarouselImage {
 
 interface Props {
   carouselImages: CarouselImage[];
-  itemListName?: string;
 }
 
-function TextPlusCarousel({ carouselImages, itemListName }: Props) {
+function TextPlusCarousel({ carouselImages }: Props) {
   const id = useId();
 
   return (
