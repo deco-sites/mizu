@@ -196,5 +196,9 @@
   "/.deco/blocks/Preview%20%2Fsections%2FProduct%2FProductShelfTabbed.tsx.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx"
+  },
+  "/.deco/blocks/Preview%20%2Fsections%2FImages%2FTextPlusCarousel.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Images/TextPlusCarousel.tsx"
   }
 }
