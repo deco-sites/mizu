@@ -119,7 +119,7 @@
   },
   "/.deco/blocks/pages-productpage-ce4850591828.json": {
     "name": "Product Page",
-    "path": "/products/:slug",
+    "path": "/:slug/p",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
