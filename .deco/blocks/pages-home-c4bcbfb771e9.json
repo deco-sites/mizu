@@ -68,12 +68,7 @@
             "marginOnX": false
           }
         }
-      ],
-      "behavior": {
-        "type": "intersection",
-        "payload": "300"
-      },
-      "display": true
+      ]
     },
     {
       "__resolveType": "site/sections/Images/TextPlusCarousel.tsx",
