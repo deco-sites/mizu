@@ -64,14 +64,12 @@ export default function TabLayoutShoes({
                   decoding="async"
                   loading="lazy"
                 />
-                {
-                  index == selected &&
-                  <p
-                    class="text-left text-[#060606] leading-[17px]"
-                  >
-                    {tab.description}
-                  </p>
-                }
+                {index == selected &&
+                  (
+                    <p class="text-left text-[#060606] leading-[17px]">
+                      {tab.description}
+                    </p>
+                  )}
               </button>
             ))}
           </div>
