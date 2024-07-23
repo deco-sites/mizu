@@ -58,12 +58,21 @@
       "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/f1b4ea9b-438f-445a-9786-377d32280279"
     },
     {
-      "__resolveType": "site/sections/Content/VideoPlusText.tsx",
-      "title": "",
-      "video": {
-        "src": "https://www.youtube.com/embed/pqYcYq0pwa4?autoplay=true&loop=1&playlist=pqYcYq0pwa4&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&controls=0&playsinline=0&mute=1",
-        "marginOnX": false
-      }
+      "__resolveType": "website/sections/Rendering/Deferred.tsx",
+      "behavior": {
+        "type": "scroll",
+        "payload": 1000
+      },
+      "sections": [
+        {
+          "__resolveType": "site/sections/Content/VideoPlusText.tsx",
+          "title": "",
+          "video": {
+            "src": "https://www.youtube.com/embed/pqYcYq0pwa4?autoplay=true&loop=1&playlist=pqYcYq0pwa4&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&controls=0&playsinline=0&mute=1",
+            "marginOnX": false
+          }
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Images/TextPlusCarousel.tsx",
