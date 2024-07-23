@@ -60,8 +60,8 @@
     {
       "__resolveType": "website/sections/Rendering/Deferred.tsx",
       "behavior": {
-        "type": "scroll",
-        "payload": 1000
+        "type": "intersection",
+        "payload": "400"
       },
       "sections": [
         {
