@@ -49,7 +49,7 @@ export default function VideoPlusText({
             autoplay
             muted
             playsinline
-            class="w-full h-[502px] lg:h-full object-cover"
+            class="w-full h-[502px] lg:h-[720px] object-cover"
           >
             <source src={video.src}></source>
           </video>

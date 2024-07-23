@@ -62,7 +62,7 @@ export default function HeroNeoVista({
       </div>
       <div class="relative lg:top-[-60px] max-w-[80%] sm:max-w-[95%] md:max-w-[55%] lg:max-w-[35%] flex flex-col items-center">
         <h2
-          class="text-primary text-[32px] lg:text-[40px] font-extrabold leading-[32px] lg:leading-[47px] text-center uppercase mt-[-20px]"
+          class="text-primary text-[32px] lg:text-[40px] font-extrabold leading-[32px] lg:leading-[46.88px] text-center uppercase mt-[-20px]"
           dangerouslySetInnerHTML={{
             __html: subTitle,
           }}

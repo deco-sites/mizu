@@ -20,10 +20,10 @@ export default function TabLayoutShoes({
   mobileImage =
     "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/f1b4ea9b-438f-445a-9786-377d32280279",
   tabs,
-  selected = 1,
+  selected = 0,
 }: Props & { selected: number }) {
   return (
-    <div class="bg-[#f2f2f2] lg:bg-white flex flex-col lg:items-center px-[12px] lg:px-0 mt-[40px] mb-[50px] mb-[24px] py-[12px] lg:py-[15px]">
+    <div class="bg-[#f2f2f2] lg:bg-white flex flex-col lg:items-center px-[12px] lg:px-0 mt-[40px] lg:mt-[65px] mb-[50px] mb-[24px] py-[12px] lg:py-[15px]">
       <h1 class="max-w-[190px] mt-[26px] mx-[14px] mb-[40px] lg:m-0 lg:max-w-[1240px] w-full font-black text-primary leading-[37.5px] text-[32px] lg:text-[40px] lg:leading-[46.88px]">
         {title}
       </h1>
@@ -38,7 +38,7 @@ export default function TabLayoutShoes({
                 background: index == selected ? "#001489" : "transparent",
                 color: index == selected ? "#fff" : "#001489",
               }}
-              class="rounded-[46px] border font-roboto border-[#001489] text-[16px] py-[12px] px-[20px]"
+              class="rounded-[46px] border font-roboto border-[#001489] text-[16px] leading-[18.75px] py-[10px] px-[20px]"
             >
               {tab.name}
             </button>
@@ -61,32 +61,29 @@ export default function TabLayoutShoes({
                   style={{ opacity: index == selected ? "1" : ".6" }}
                   src={tab.imageName}
                   alt={tab.imageName}
-                  decoding="sync"
-                  loading="eager"
+                  decoding="async"
+                  loading="lazy"
                 />
-                <p
-                  class="text-left text-[#060606] leading-[17px]"
-                  style={{ display: index == selected ? "flex" : "none" }}
-                >
-                  {tab.description}
-                </p>
+                {
+                  index == selected &&
+                  <p
+                    class="text-left text-[#060606] leading-[17px]"
+                  >
+                    {tab.description}
+                  </p>
+                }
               </button>
             ))}
           </div>
-          {tabs.map((tab, index) => (
-            <Image
-              width={550}
-              height={730}
-              style={{
-                display: index == selected ? "flex" : "none",
-              }}
-              class="min-w-[318px] w-full"
-              src={tab.image}
-              alt={tab.image}
-              decoding="sync"
-              loading="eager"
-            />
-          ))}
+          <Image
+            width={550}
+            height={730}
+            class="min-w-[318px] w-full"
+            src={tabs[selected].image}
+            alt={tabs[selected].image}
+            decoding="async"
+            loading="lazy"
+          />
         </div>
       </div>
       <div class="lg:hidden">

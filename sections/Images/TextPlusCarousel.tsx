@@ -113,7 +113,7 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
           </div>
         </div>
       </div>
-      <Slider.JS rootId={id} scroll="smooth" />
+      <Slider.JS rootId={id} scroll="smooth" infinite={true} />
     </div>
   );
 }
