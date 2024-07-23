@@ -59,6 +59,10 @@
     },
     {
       "__resolveType": "website/sections/Rendering/Deferred.tsx",
+      "behavior": {
+        "type": "intersection",
+        "payload": "400"
+      },
       "sections": [
         {
           "__resolveType": "site/sections/Content/VideoPlusText.tsx",
@@ -68,7 +72,8 @@
             "marginOnX": false
           }
         }
-      ]
+      ],
+      "display": false
     },
     {
       "__resolveType": "site/sections/Images/TextPlusCarousel.tsx",
