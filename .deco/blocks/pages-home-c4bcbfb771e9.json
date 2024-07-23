@@ -73,7 +73,7 @@
           }
         }
       ],
-      "display": false
+      "display": true
     },
     {
       "__resolveType": "site/sections/Images/TextPlusCarousel.tsx",
