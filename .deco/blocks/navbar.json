@@ -15,7 +15,9 @@
           "children": [],
           "name": "World"
         }
-      ]
+      ],
+      "additionalType": "sa",
+      "identifier": "sa"
     },
     {
       "@type": "SiteNavigationElement",

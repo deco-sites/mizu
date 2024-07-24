@@ -1,15 +1,15 @@
 import Icon from "../../components/ui/Icon.tsx";
-import type { SiteNavigationElement } from "apps/commerce/types.ts";
+import { NavItemNode } from "./NavItem.tsx";
 
 export interface Props {
-  navItems: SiteNavigationElement[];
+  navItems: NavItemNode[];
 }
 
-function MenuItem({ item }: { item: SiteNavigationElement }) {
+function MenuItem({ item }: { item: NavItemNode }) {
   return (
     <div class="collapse collapse-plus">
       <input type="checkbox" />
-      <div class="collapse-title">{item.name}</div>
+      <div class="collapse-title">{item.text}</div>
       <div class="collapse-content">
         <ul>
           <li>
@@ -17,7 +17,8 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
           </li>
           {item.children?.map((node) => (
             <li>
-              <MenuItem item={node} />
+              {node}
+              {/* <MenuItem item={node} /> */}
             </li>
           ))}
         </ul>

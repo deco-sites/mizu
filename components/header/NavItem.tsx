@@ -1,24 +1,58 @@
-import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
-import {
-  HEADER_HEIGHT_DESKTOP,
-  NAVBAR_HEIGHT_DESKTOP,
-} from "../../constants.ts";
+import { HEADER_HEIGHT_DESKTOP } from "../../constants.ts";
+import { Color, ImageWidget } from "apps/admin/widgets.ts";
 
-function NavItem({ item }: { item: SiteNavigationElement }) {
-  const { url, name, children } = item;
-  const image = item?.image?.[0];
+export interface Link {
+  text?: string;
+  url?: string;
+  color?: Color;
+  bold?: boolean;
+  underline?: boolean;
+}
 
+export interface NavLeaf {
+  title?: {
+    text?: string;
+    url?: string;
+    color?: Color;
+    bold?: boolean;
+    underline?: boolean;
+  };
+  links?: Link[];
+  seeMore?: {
+    text?: string;
+    url?: string;
+  };
+}
+
+export interface NavItemNode {
+  text: string;
+  url: string;
+  color?: Color;
+  bold?: boolean;
+  underline?: boolean;
+  image?: ImageWidget;
+  imageUrl?: string;
+  children: NavLeaf[];
+}
+
+function NavItem({ item }: { item: NavItemNode }) {
+  const { url, text, children, color } = item;
+  const image = item?.image;
+  console.log(item);
   return (
-    <li
-      class="group flex items-center pr-5"
-      style={{ height: NAVBAR_HEIGHT_DESKTOP }}
-    >
+    <li class="relative group flex items-center px-[10px]">
       <a
         href={url}
-        class="group-hover:underline text-base/5 font-medium"
+        style={{
+          color: color ? color : "inherit",
+          height: HEADER_HEIGHT_DESKTOP,
+        }}
+        class="flex items-center text-[12px] font-roboto text-[#060606] group-hover:text-[#001489_!important] group-hover:font-bold leading-[1.25rem] tracking-[0rem] uppercase text-center"
       >
-        {name}
+        <span class="after:content-[''] after:w-full after:absolute after:bottom-[1px] after:left-0 after:transition-all after:ease-in-out after:duration-300 after:delay-0 after:h-[3px] after:scale-x-50 after:group-hover:scale-x-100 after:bg-white after:group-hover:bg-primary">
+          {text}
+        </span>
       </a>
 
       {children && children.length > 0 &&
@@ -31,35 +65,16 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
               marginTop: HEADER_HEIGHT_DESKTOP,
             }}
           >
-            {image?.url && (
+            {image && (
               <Image
                 class="p-6"
-                src={image.url}
-                alt={image.alternateName}
+                src={image}
+                alt={image}
                 width={300}
                 height={332}
                 loading="lazy"
               />
             )}
-            <ul class="flex items-start justify-center gap-6">
-              {children.map((node) => (
-                <li class="p-6">
-                  <a class="hover:underline" href={node.url}>
-                    <span>{node.name}</span>
-                  </a>
-
-                  <ul class="flex flex-col gap-1 mt-4">
-                    {node.children?.map((leaf) => (
-                      <li>
-                        <a class="hover:underline" href={leaf.url}>
-                          <span class="text-xs">{leaf.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
           </div>
         )}
     </li>

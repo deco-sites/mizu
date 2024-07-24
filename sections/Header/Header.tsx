@@ -1,25 +1,22 @@
 import type { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
-import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import { useDevice } from "deco/hooks/useDevice.ts";
 import { useSection } from "deco/hooks/useSection.ts";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
 import Menu from "../../components/header/Menu.tsx";
-import NavItem from "../../components/header/NavItem.tsx";
+import NavItem, { NavItemNode } from "../../components/header/NavItem.tsx";
 import SignIn from "../../components/header/SignIn.tsx";
 import Searchbar, {
   type SearchbarProps,
 } from "../../components/search/Searchbar/Form.tsx";
 import Drawer from "../../components/ui/Drawer.tsx";
 import Icon from "../../components/ui/Icon.tsx";
-import Modal from "../../components/ui/Modal.tsx";
 import {
   HEADER_HEIGHT_DESKTOP,
   HEADER_HEIGHT_MOBILE,
   NAVBAR_HEIGHT_MOBILE,
   SEARCHBAR_DRAWER_ID,
-  SEARCHBAR_POPUP_ID,
   SIDEMENU_CONTAINER_ID,
   SIDEMENU_DRAWER_ID,
 } from "../../constants.ts";
@@ -38,7 +35,7 @@ export interface SectionProps {
    * @title Navigation items
    * @description Navigation items used both on mobile and desktop menus
    */
-  navItems?: SiteNavigationElement[] | null;
+  navItems?: NavItemNode[];
 
   /**
    * @title Searchbar
@@ -56,55 +53,28 @@ export interface SectionProps {
 type Props = Omit<SectionProps, "alert" | "variant">;
 
 const Desktop = (
-  { navItems, logo, searchbar }: Props,
+  { navItems, logo }: Props,
 ) => (
   <>
-    <Modal id={SEARCHBAR_POPUP_ID}>
-      <div
-        class="absolute top-0 bg-base-100 container"
-        style={{ marginTop: HEADER_HEIGHT_MOBILE }}
-      >
-        <Searchbar {...searchbar} />
-      </div>
-    </Modal>
+    <div class="bg-white max-w-[1250px] mx-auto w-full flex items-center">
+      <a class="w-auto" href="/" aria-label="Store logo">
+        <Image
+          class="mb-[5px]"
+          src={logo.src}
+          alt={logo.alt}
+          width={logo.width || 100}
+          height={logo.height || 23}
+        />
+      </a>
 
-    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300">
-      <div class="grid grid-cols-3 place-items-center">
-        <div class="place-self-start">
-          <a href="/" aria-label="Store logo">
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={logo.width || 100}
-              height={logo.height || 23}
-            />
-          </a>
-        </div>
+      <ul class="flex w-auto gap-[10px] pl-[40px]">
+        {navItems?.map((item) => <NavItem item={item} />)}
+      </ul>
 
-        <label
-          for={SEARCHBAR_POPUP_ID}
-          class="input input-bordered flex items-center gap-2 w-full"
-          aria-label="search icon button"
-        >
-          <Icon id="search" />
-          <span class="text-base-300 truncate">
-            Search products, brands...
-          </span>
-        </label>
-
-        <div class="flex gap-4 place-self-end">
-          <SignIn variant="desktop" />
-          <Bag />
-        </div>
-      </div>
-
-      <div class="flex justify-between items-center text-base-300">
-        <ul class="flex">
-          {navItems?.slice(0, 4).map((item) => <NavItem item={item} />)}
-        </ul>
-        <div>
-          {/* ship to */}
-        </div>
+      <div class="flex w-auto">
+        {/* <Searchbar {...searchbar} /> */}
+        <SignIn variant="desktop" />
+        <Bag />
       </div>
     </div>
   </>
@@ -161,14 +131,14 @@ const Mobile = ({ logo, searchbar }: Props) => (
         <a
           href="/"
           class="flex-grow inline-flex items-center justify-center"
-          style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="Store logo"
         >
           <Image
             src={logo.src}
             alt={logo.alt}
-            width={logo.width || 100}
-            height={logo.height || 13}
+            class="w-full"
+            width={logo.width || 56}
+            height={logo.height || 31}
           />
         </a>
       )}
@@ -209,11 +179,11 @@ function Header({
           : HEADER_HEIGHT_MOBILE,
       }}
     >
-      <div class="bg-base-100 fixed w-full z-40">
-        {alerts.length > 0 && <Alert alerts={alerts} />}
+      <div class="fixed w-full z-40 top-0 left-0 bg-white">
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}
+        {alerts.length > 0 && <Alert alerts={alerts} />}
       </div>
     </header>
   );

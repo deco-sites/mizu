@@ -1,23 +1,582 @@
 {
   "__resolveType": "site/sections/Header/Header.tsx",
-  "navItems": {
-    "__resolveType": "navbar"
-  },
+  "navItems": [
+    {
+      "Accent": "#000000",
+      "children": [
+        {
+          "title": {
+            "color": "#001489",
+            "text": "PRESENTES",
+            "url": "/dia-dos-pais",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Para pais corredores",
+              "url": "/masculino/calcados/corrida"
+            },
+            {
+              "color": "#000000",
+              "text": "Para pais craques",
+              "url": "/masculino/calcados/chuteiras"
+            },
+            {
+              "color": "#000000",
+              "text": "Para pais que trilham",
+              "url": "/masculino/calcados/trilha"
+            },
+            {
+              "color": "#000000",
+              "text": "Para pais casuais",
+              "url": "/masculino/calcados/casual"
+            }
+          ]
+        },
+        {
+          "title": {
+            "color": "#001489",
+            "text": "FAIXA DE PREÇO",
+            "url": "/dias-dos-pais",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Até R$ 99",
+              "url": "/dia-dos-pais"
+            },
+            {
+              "color": "#000000",
+              "text": "Até R$ 199",
+              "url": "/dia-dos-pais"
+            },
+            {
+              "color": "#000000",
+              "text": "Até R$ 299",
+              "url": "/dia-dos-pais"
+            },
+            {
+              "color": "#000000",
+              "text": "Até R$ 399",
+              "url": "/dia-dos-pais"
+            }
+          ]
+        },
+        {
+          "title": {
+            "color": "#001489",
+            "text": "OFERTAS",
+            "url": "/dia-dos-pais",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Ganhe até 20% OFF",
+              "url": "/ofertas-dia-dos-pais"
+            },
+            {
+              "color": "#000000",
+              "text": "Chuteiras a partir de R$ 399",
+              "url": "/masculino/calcados/chuteiras"
+            },
+            {
+              "color": "#000000",
+              "text": "Prophecy com 44% OFF",
+              "url": "/linha-wave-prophecy"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas a partir de R$ 59",
+              "url": "/masculino/roupas/camisetas"
+            },
+            {
+              "color": "#000000",
+              "url": "/masculino/roupas/shorts-e-bermudas",
+              "text": "Bermudas até 50% OFF"
+            },
+            {
+              "color": "#000000",
+              "text": "Volta às Aulas",
+              "url": "/volta-as-aulas"
+            }
+          ]
+        }
+      ],
+      "color": "#e01e0a",
+      "text": "DIA DOS PAIS",
+      "url": "/dia-dos-pais",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/d3e6eaed-f51e-425d-b7e1-0411222ea1f0",
+      "underline": false
+    },
+    {
+      "color": "#000000",
+      "children": [
+        {
+          "title": {
+            "color": "#001489",
+            "text": "ACESSÓRIOS",
+            "url": "/masculino/acessorios",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Boldas e Mochilas",
+              "url": "/masculino/acessorios/bolsas-e-mochilas"
+            },
+            {
+              "color": "#000000",
+              "text": "Bonés e Viseiras",
+              "url": "/masculino/acessorios/bones-e-viseiras"
+            },
+            {
+              "color": "#000000",
+              "text": "Joelheiras",
+              "url": "/masculino/acessorios/joelheiras"
+            },
+            {
+              "color": "#000000",
+              "text": "Meias",
+              "url": "/masculino/acessorios/meias"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/masculino/acessorios"
+          }
+        },
+        {
+          "title": {
+            "color": "#001489",
+            "text": "CALÇADOS",
+            "url": "/masculino/calcados",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Casual",
+              "url": "/masculino/calcados/casual"
+            },
+            {
+              "color": "#000000",
+              "text": "Chinelos",
+              "url": "/masculino/calcados/chinelos"
+            },
+            {
+              "color": "#000000",
+              "text": "Chuteiras",
+              "url": "/masculino/calcados/chuteiras"
+            },
+            {
+              "color": "#000000",
+              "text": "Corrida",
+              "url": "/masculino/calcados/corrido"
+            },
+            {
+              "color": "#000000",
+              "text": "Tennis",
+              "url": "/masculino/calcados/tennis"
+            },
+            {
+              "color": "#000000",
+              "text": "Trilha",
+              "url": "/masculino/calcados/trilha"
+            },
+            {
+              "color": "#000000",
+              "text": "Vôlei",
+              "url": "/masculino/calcados/volei"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/masculino/calcados"
+          }
+        },
+        {
+          "title": {
+            "color": "#001489",
+            "text": "ROUPAS",
+            "url": "/masculino/roupas",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Agasalhos",
+              "url": "/masculino/roupas/agasalhos"
+            },
+            {
+              "color": "#000000",
+              "text": "Calças e Leggings",
+              "url": "/masculino/roupas/calcas-e-leggings"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas",
+              "url": "/masculino/roupas/camisetas"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas Manga longa",
+              "url": "/masculino/roupas/camisetas-manga-longa"
+            },
+            {
+              "color": "#000000",
+              "text": "Jaquetas e Moletons",
+              "url": "/masculino/roupas/jaquetas-e-moletons"
+            },
+            {
+              "color": "#000000",
+              "text": "Kimono",
+              "url": "/masculino/roupas/kimono"
+            },
+            {
+              "color": "#000000",
+              "text": "Regatas",
+              "url": "/masculino/roupas/regatas"
+            },
+            {
+              "color": "#000000",
+              "text": "Shorts e Bermudas",
+              "url": "/masculino/roupas/shorts-e-bermudas"
+            }
+          ],
+          "seeMore": {
+            "url": "/masculino/roupas",
+            "text": "Ver Todos"
+          }
+        }
+      ],
+      "text": "MASCULINO",
+      "url": "/masculino",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/67e77b25-ead5-4bc4-b168-112f0236b9f4"
+    },
+    {
+      "color": "#000000",
+      "children": [
+        {
+          "title": {
+            "color": "#001489",
+            "text": "ACESSÓRIOS",
+            "url": "/feminino/acessorios",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Boldas e Mochilas",
+              "url": "/feminino/acessorios/bolsas-e-mochilas"
+            },
+            {
+              "color": "#000000",
+              "text": "Bonés e Viseiras",
+              "url": "/feminino/acessorios/bones-e-viseiras"
+            },
+            {
+              "color": "#000000",
+              "text": "Joelheiras",
+              "url": "/feminino/acessorios/joelheiras"
+            },
+            {
+              "color": "#000000",
+              "text": "Meias",
+              "url": "/feminino/acessorios/meias"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/feminino/acessorios"
+          }
+        },
+        {
+          "title": {
+            "color": "#001489",
+            "text": "CALÇADOS",
+            "url": "/feminino/calcados",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Casual",
+              "url": "/feminino/calcados/casual"
+            },
+            {
+              "color": "#000000",
+              "text": "Chinelos",
+              "url": "/feminino/calcados/chinelos"
+            },
+            {
+              "color": "#000000",
+              "text": "Corrida",
+              "url": "/feminino/calcados/corrido"
+            },
+            {
+              "color": "#000000",
+              "text": "Tennis",
+              "url": "/feminino/calcados/tennis"
+            },
+            {
+              "color": "#000000",
+              "text": "Trilha",
+              "url": "/feminino/calcados/trilha"
+            },
+            {
+              "color": "#000000",
+              "text": "Vôlei",
+              "url": "/feminino/calcados/volei"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/feminino/calcados"
+          }
+        },
+        {
+          "title": {
+            "color": "#001489",
+            "text": "ROUPAS",
+            "url": "/feminino/roupas",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Agasalhos",
+              "url": "/feminino/roupas/agasalhos"
+            },
+            {
+              "color": "#000000",
+              "text": "Calças e Leggings",
+              "url": "/feminino/roupas/calcas-e-leggings"
+            },
+            {
+              "color": "#000000",
+              "text": "Camisetas",
+              "url": "/feminino/roupas/camisetas"
+            },
+            {
+              "color": "#000000",
+              "text": "Jaquetas e Moletons",
+              "url": "/feminino/roupas/jaquetas-e-moletons"
+            },
+            {
+              "color": "#000000",
+              "text": "Kimono",
+              "url": "/feminino/roupas/kimono"
+            },
+            {
+              "color": "#000000",
+              "text": "Regatas",
+              "url": "/feminino/roupas/regatas"
+            },
+            {
+              "color": "#000000",
+              "text": "Shorts e Bermudas",
+              "url": "/feminino/roupas/shorts-e-bermudas"
+            },
+            {
+              "color": "#000000",
+              "text": "Tops Esportivos",
+              "url": "/feminino/roupas/tops-esportivos"
+            }
+          ],
+          "seeMore": {
+            "url": "/feminino/roupas",
+            "text": "Ver Todos"
+          }
+        }
+      ],
+      "text": "FEMININO",
+      "url": "/feminino",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/095d0c54-0c46-48e4-9cba-5cf2274c8852"
+    },
+    {
+      "color": "#000000",
+      "children": [],
+      "text": "KIDS",
+      "url": "/kids"
+    },
+    {
+      "color": "#000000",
+      "children": [
+        {
+          "title": {
+            "color": "#001489",
+            "text": "CALÇADOS",
+            "url": "/calcados",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Para Bater Seus Recordes",
+              "url": "/calcados/para-bater-seus-recordes"
+            },
+            {
+              "color": "#000000",
+              "text": "Para Ir Mais Longe",
+              "url": "/calcados/para-ir-mais-longe"
+            },
+            {
+              "color": "#000000",
+              "text": "Para Se Aventurar",
+              "url": "/calcados/para-se-aventurar"
+            },
+            {
+              "color": "#000000",
+              "text": "Para Todos os Dias",
+              "url": "/calcados/para-todos-os-dias"
+            },
+            {
+              "color": "#000000",
+              "text": "Para Todos os Treinos",
+              "url": "/calcados/para-todos-os-treinos"
+            }
+          ],
+          "seeMore": {
+            "text": "Ver Todos",
+            "url": "/calcados"
+          }
+        }
+      ],
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/09a6ddfa-37a6-41c9-aebc-a8f51b16806a",
+      "text": "CALÇADOS",
+      "url": "/calcados",
+      "bold": false
+    },
+    {
+      "color": "#000000",
+      "children": [
+        {
+          "title": {
+            "color": "#000000"
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "text": "Corrida",
+              "url": "/esportes/corrida"
+            },
+            {
+              "color": "#000000",
+              "text": "Futebol",
+              "url": "/esportes/futebol"
+            },
+            {
+              "color": "#000000",
+              "text": "Judô",
+              "url": "/esportes/judo"
+            },
+            {
+              "color": "#000000",
+              "text": "Tennis",
+              "url": "/esportes/tennis"
+            },
+            {
+              "color": "#000000",
+              "text": "Trilha",
+              "url": "/esportes/trilha"
+            },
+            {
+              "color": "#000000",
+              "text": "Vôlei",
+              "url": "/esportes/volei"
+            }
+          ]
+        }
+      ],
+      "text": "ESPORTES",
+      "url": "/esportes",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/9bf98f19-da6a-486a-a924-68923f02f379"
+    },
+    {
+      "color": "#000000",
+      "children": [],
+      "text": "SPORTSTYLE",
+      "url": "/historias-autenticas"
+    },
+    {
+      "color": "#000000",
+      "children": [
+        {
+          "title": {
+            "color": "#001489",
+            "text": "DESTAQUES",
+            "url": "/lancamentos",
+            "bold": true
+          },
+          "links": [
+            {
+              "color": "#000000",
+              "url": "/rebellion-series",
+              "text": "Rebellion Series"
+            },
+            {
+              "color": "#000000",
+              "text": "Wave Sky",
+              "url": "/wave-sky-8"
+            },
+            {
+              "color": "#000000",
+              "text": "Wave Rider 28",
+              "url": "/wave-rider-28"
+            },
+            {
+              "color": "#000000",
+              "text": "Mizuno Neo Vista",
+              "url": "/mizuno-neo-vista"
+            },
+            {
+              "color": "#000000",
+              "text": "Contender Shinzo",
+              "url": "/shinzo-pack"
+            },
+            {
+              "color": "#000000",
+              "text": "Hiroshi Nagai Park",
+              "url": "/hiroshi-nagai-pack"
+            }
+          ],
+          "seeMore": {
+            "url": "/lancamentos",
+            "text": "Ver Todos"
+          }
+        }
+      ],
+      "text": "EXPLORE MIZUNO",
+      "url": "/lancamentos",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/4f40bb4a-553d-415b-a968-c53ef303873b"
+    }
+  ],
   "searchbar": {
-    "placeholder": "What are you looking for?",
+    "placeholder": "O que você está procurando",
     "loader": {
       "__resolveType": "resolved",
-      "data": null
+      "data": {
+        "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
+        "count": 4
+      }
     }
   },
   "alerts": [
-    "<p>Get 10% off today: <strong>NEW10</strong></p>"
+    "<a href='/'><p>5% off no pix à vista - <span style='font-size: 12px'>Saiba mais</span></p></a>",
+    "<a href='/'><p>Frete grátis para todo o Brasil acima de R$ 199,99</p></a>",
+    "<a href='/'><p>20% de cashback para sua próxima compra - <span style='font-size: 12px'>Saiba mais</span></p></a>",
+    "<a href='/'><p style='cursor: pointer;'><span>Cadastre-se e ganhe 10% off na primeira compra</span></p></a>",
+    "<a href='/'><p>Parcele em até 10x sem juros</p></a>",
+    "<a href='/'><p>Comprou e não gostou? A primeira troca é grátis - <span style='font-size: 12px'>Saiba mais</span></p></a>"
   ],
   "variant": "initial",
   "logo": {
-    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ed9f7e80-86a8-4b72-9809-2e4e2e5f0e53",
-    "alt": "Deco Storefront",
-    "width": 160,
-    "height": 40
+    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/6a6ec5a6-6547-4c07-bd34-2f4f96488935",
+    "alt": "Mizuno",
+    "width": 56,
+    "height": 32
   }
 }
