@@ -177,6 +177,7 @@ function Header({
         height: device === "desktop"
           ? HEADER_HEIGHT_DESKTOP
           : HEADER_HEIGHT_MOBILE,
+        marginBottom: "21px",
       }}
     >
       <div class="fixed w-full z-40 top-0 left-0 bg-white">

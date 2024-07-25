@@ -28,6 +28,9 @@
           },
           {
             "weight": "900"
+          },
+          {
+            "weight": "300"
           }
         ],
         "family": "Roboto Condensed"
@@ -51,6 +54,9 @@
           },
           {
             "weight": "900"
+          },
+          {
+            "weight": "300"
           }
         ],
         "family": "Roboto"

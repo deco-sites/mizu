@@ -37,9 +37,7 @@ export interface NavItemNode {
 }
 
 function NavItem({ item }: { item: NavItemNode }) {
-  const { url, text, children, color } = item;
-  const image = item?.image;
-  console.log(item);
+  const { url, text, children, color, image, imageUrl } = item;
   return (
     <li class="relative group flex items-center px-[10px]">
       <a
@@ -58,23 +56,63 @@ function NavItem({ item }: { item: NavItemNode }) {
       {children && children.length > 0 &&
         (
           <div
-            class="fixed hidden hover:flex group-hover:flex bg-base-100 z-40 items-start justify-center gap-6 border-t-2 border-b-2 border-base-200 w-screen"
+            class="fixed top-0 left-0 w-full hidden hover:flex group-hover:flex bg-[#f9f9f9] "
             style={{
-              top: "0px",
-              left: "0px",
-              marginTop: HEADER_HEIGHT_DESKTOP,
+              boxShadow: "rgba(0,0,0,0.06) 0px 12px 12px",
+              marginTop: "65.31px",
             }}
           >
-            {image && (
-              <Image
-                class="p-6"
-                src={image}
-                alt={image}
-                width={300}
-                height={332}
-                loading="lazy"
-              />
-            )}
+            <div class="max-w-[1238px] pb-[20px] w-full mx-auto group-hover:flex items-start justify-center gap-[10px]">
+              <ul
+                class="grid w-full justify-center pt-[12px] pb-[5px] overflow-hidden border border-[#f2f2f2] max-h-[382px]"
+                style={{
+                  gridTemplateColumns: "repeat(auto-fit,minmax(20%,150px))",
+                }}
+              >
+                {children.map((child) => (
+                  <li class="min-w-[150px] leading-[0.8125rem] text-[0.75rem] tracking-[0rem] text-[#060606]">
+                    <a
+                      class="font-roboto flex pb-[5px] text-[#001489] text-[14px] leading-[1.125rem] tracking-[0rem] uppercase font-extrabold"
+                      href={child.title?.url}
+                    >
+                      {child.title?.text}
+                    </a>
+                    <ul>
+                      {child?.links?.map((link) => (
+                        <li class="font-roboto text-[#777777] hover:text-[#001489] hover:font-bold text-[12px] leading-[26px] tracking-[0rem]">
+                          <a href={link.url}>
+                            {link.text}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                    <a
+                      class="underline font-roboto font-light text-[#777777] hover:text-[#001489] hover:font-bold text-[12px] leading-[26px] tracking-[0rem]"
+                      href={child.seeMore?.url}
+                    >
+                      {child.seeMore?.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {image && (
+                <a
+                  style={{
+                    minWidth: "430px",
+                  }}
+                  href={imageUrl ?? "#"}
+                >
+                  <Image
+                    class=""
+                    src={image}
+                    alt={image}
+                    width={430}
+                    height={430}
+                    loading="lazy"
+                  />
+                </a>
+              )}
+            </div>
           </div>
         )}
     </li>
