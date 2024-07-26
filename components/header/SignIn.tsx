@@ -24,33 +24,29 @@ const onLoad = (containerID: string) => {
   });
 };
 
-function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
+function SignIn(_props: { variant: "mobile" | "desktop" }) {
   const id = useId();
 
   return (
-    <div id={id}>
+    <div class="px-[15px]" id={id}>
       <a
         class={clx(
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
+          "",
         )}
         href="/login"
         aria-label="Login"
       >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>Sign in</span>}
+        <Icon size={21} id="account" />
       </a>
       <a
         class={clx(
           "hidden",
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
+          "",
         )}
         href="/account"
         aria-label="Account"
       >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>My account</span>}
+        <Icon size={21} id="account" />
       </a>
       <script
         type="module"

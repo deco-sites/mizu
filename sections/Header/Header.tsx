@@ -53,7 +53,7 @@ export interface SectionProps {
 type Props = Omit<SectionProps, "alert" | "variant">;
 
 const Desktop = (
-  { navItems, logo }: Props,
+  { navItems, logo, searchbar }: Props,
 ) => (
   <>
     <div class="bg-white max-w-[1250px] mx-auto w-full flex items-center">
@@ -71,9 +71,15 @@ const Desktop = (
         {navItems?.map((item) => <NavItem item={item} />)}
       </ul>
 
-      <div class="flex w-auto">
-        {/* <Searchbar {...searchbar} /> */}
+      <div class="flex w-auto gap-[1.25rem] justify-center items-center">
+        <Searchbar {...searchbar} />
         <SignIn variant="desktop" />
+        <Image
+          class="cursor-pointer"
+          src={"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/772125fb-f121-40fc-b27c-0632722e40bf"}
+          width={20}
+          height={21}
+        />
         <Bag />
       </div>
     </div>

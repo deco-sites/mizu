@@ -557,11 +557,7 @@
   "searchbar": {
     "placeholder": "O que você está procurando",
     "loader": {
-      "__resolveType": "resolved",
-      "data": {
-        "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
-        "count": 4
-      }
+      "__resolveType": "resolved"
     }
   },
   "alerts": [

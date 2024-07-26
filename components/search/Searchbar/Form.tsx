@@ -78,25 +78,17 @@ export default function Searchbar(
   const slot = useId();
 
   return (
-    <div
-      class="w-full grid gap-8 px-4 py-6"
-      style={{ gridTemplateRows: "min-content auto" }}
-    >
-      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join">
-        <button
-          type="submit"
-          class="btn join-item btn-square no-animation"
-          aria-label="Search"
-          for={SEARCHBAR_INPUT_FORM_ID}
-          tabIndex={-1}
-        >
-          <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
-          <Icon id="search" class="inline [.htmx-request_&]:hidden" />
-        </button>
+    <div class="w-full min-w-[13.5rem] max-w-[216px]">
+      <form
+        id={SEARCHBAR_INPUT_FORM_ID}
+        action={ACTION}
+        class="w-full grid gap-[1.5rem] items-center justify-between rounded-[2rem] border border-[.0625rem] border-[#707070] hover:bg-[#f2f2f2] transition-all duration-[400ms] ease-in-out"
+        style={{ gridTemplateColumns: "3fr 2rem" }}
+      >
         <input
           autoFocus
           tabIndex={0}
-          class="input input-bordered join-item flex-grow"
+          class="outline-none bg-transparent leading-[.75rem] text-[.75rem] font-roboto p-[.5625rem] pr-0 text-[#949494]"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
@@ -108,14 +100,26 @@ export default function Searchbar(
           hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`}
           hx-swap="innerHTML"
         />
-        <label
+        <button
+          type="submit"
+          class="flex pl-[5px]"
+          aria-label="Search"
+          for={SEARCHBAR_INPUT_FORM_ID}
+          tabIndex={-1}
+        >
+          <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
+          <Icon size={16} id="search" class="inline [.htmx-request_&]:hidden" />
+        </button>
+        {
+          /* <label
           type="button"
           class="join-item btn btn-ghost btn-square hidden sm:inline-flex no-animation"
           for={SEARCHBAR_POPUP_ID}
           aria-label="Toggle searchbar"
         >
           <Icon id="close" />
-        </label>
+        </label> */
+        }
       </form>
 
       {/* Suggestions slot */}

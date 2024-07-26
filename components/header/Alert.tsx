@@ -1,5 +1,6 @@
 import Slider from "../../components/ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
+import Icon from "../ui/Icon.tsx";
 
 export interface Props {
   alerts?: string[];
@@ -14,7 +15,7 @@ function Alert({ alerts = [], interval = 5 }: Props) {
   const id = useId();
 
   return (
-    <div id={id}>
+    <div id={id} class="relative">
       <Slider class="carousel carousel-center w-screen gap-6 bg-[#f2f2f2] text-primary">
         {alerts.map((alert, index) => (
           <Slider.Item index={index} class="carousel-item">
@@ -25,6 +26,28 @@ function Alert({ alerts = [], interval = 5 }: Props) {
           </Slider.Item>
         ))}
       </Slider>
+
+      <div class="h-[50px] lg:absolute lg:w-[54%] lg:justify-between lg:right-[23%] lg:top-0 flex w-full gap-[12px] justify-center items-center">
+        <div class="group">
+          <Slider.PrevButton class="w-[42px] h-[42px] flex justify-center items-center text-primary bg-transparent no-animation">
+            <Icon
+              id="carret_right"
+              size={12}
+              class="fill-[#001489]"
+            />
+          </Slider.PrevButton>
+        </div>
+
+        <div class="group">
+          <Slider.NextButton class="w-[42px] h-[42px] flex justify-center items-center text-primary bg-transparent no-animation">
+            <Icon
+              id="carret_left"
+              size={12}
+              class="fill-[#001489]"
+            />
+          </Slider.NextButton>
+        </div>
+      </div>
 
       <Slider.JS rootId={id} interval={interval && interval * 1e3} />
     </div>
