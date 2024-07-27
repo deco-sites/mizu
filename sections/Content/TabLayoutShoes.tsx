@@ -73,15 +73,26 @@ export default function TabLayoutShoes({
               </button>
             ))}
           </div>
-          <Image
-            width={550}
-            height={730}
-            class="min-w-[318px] w-full"
-            src={tabs[selected].image}
-            alt={tabs[selected].image}
-            decoding="async"
-            loading="lazy"
-          />
+          <div class="relative">
+            <Image
+              width={550}
+              height={730}
+              class="absolute top-0 right-0 min-w-[318px] w-full"
+              src={tabs[0].image}
+              alt={tabs[0].image}
+              decoding="sync"
+              loading="eager"
+            />
+            <Image
+              width={550}
+              height={730}
+              class="min-w-[318px] w-full relative"
+              src={tabs[selected].image}
+              alt={tabs[selected].image}
+              decoding="async"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
       <div class="lg:hidden">

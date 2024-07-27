@@ -118,8 +118,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
       class="grid items-center w-screen px-[16px] py-[15px]"
       style={{
         height: NAVBAR_HEIGHT_MOBILE,
-        gridTemplateColumns:
-          "5rem auto 5rem",
+        gridTemplateColumns: "5rem auto 5rem",
       }}
     >
       <label
@@ -179,7 +178,7 @@ function Header({
       style={{
         height: device === "desktop"
           ? HEADER_HEIGHT_DESKTOP
-          : HEADER_HEIGHT_MOBILE
+          : HEADER_HEIGHT_MOBILE,
       }}
     >
       <div class="fixed w-full z-40 top-0 left-0 bg-white">

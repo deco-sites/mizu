@@ -77,30 +77,30 @@ function Aside(
     title: string;
     drawer: string;
     children: ComponentChildren;
-    hasTop?: boolean
+    hasTop?: boolean;
   },
 ) {
   return (
     <div
       data-aside
       class="bg-[#f9f9f9] grid h-full divide-y relative"
-      style={{ 
-        maxWidth: "100vw", 
-        gridTemplateRows: hasTop ? 'auto 1fr' : 'auto',
-        top: hasTop ? '' : '118px',
-       }}
+      style={{
+        maxWidth: "100vw",
+        gridTemplateRows: hasTop ? "auto 1fr" : "auto",
+        top: hasTop ? "" : "118px",
+      }}
     >
-      {
-        hasTop &&
-        <div class="flex justify-between items-center">
-          <h1 class="px-4 py-3">
-            <span class="font-medium text-2xl">{title}</span>
-          </h1>
-          <label for={drawer} aria-label="X" class="btn btn-ghost">
-            <Icon id="close" />
-          </label>
-        </div>
-      }
+      {hasTop &&
+        (
+          <div class="flex justify-between items-center">
+            <h1 class="px-4 py-3">
+              <span class="font-medium text-2xl">{title}</span>
+            </h1>
+            <label for={drawer} aria-label="X" class="btn btn-ghost">
+              <Icon id="close" />
+            </label>
+          </div>
+        )}
       {children}
     </div>
   );
