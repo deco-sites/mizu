@@ -66,8 +66,7 @@ function Newsletter({
       "Cadastro efetuado! Aguarde para receber as novidades em primeira mão.",
   },
   failed = {
-    description:
-      "Algo deu errado. Por favor, tente novamente.",
+    description: "Algo deu errado. Por favor, tente novamente.",
   },
   namePlaceholder = "",
   label = "Sign up",
@@ -76,45 +75,61 @@ function Newsletter({
 }: SectionProps<typeof loader, typeof action>) {
   if (status === "success" || status === "failed") {
     return (
-      <Section.Container class="flex flex-col lg:flex-row bg-primary py-0 lg:gap-[55px]" style={{ maxWidth: 'none' }}>
-      <Image
-        width={960}
-        height={418}
-        class="lg:hidden w-full object-cover h-[418px]"
-        src={mobileImage}
-        alt={mobileImage}
-        decoding="sync"
-        loading="eager"
-      />
-      <Image
-        width={960}
-        height={418}
-        class="hidden lg:flex w-[50%] object-cover h-[418px]"
-        src={desktopImage}
-        alt={desktopImage}
-        decoding="sync"
-        loading="eager"
-      />
-      <div class="lg:max-w-[690px] w-full lg:w-[50%] flex flex-col items-center justify-center lg:justify-start lg:items-start gap-[20px] pt-[45px] lg:pt-[65px]">
-        <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">{title}</h2>
-        <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[2rem] tracking-[0rem] uppercase font-bold">{heading}</h3>
-        <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">{subHeading}</h3>
-        
-        {
-          status === "success" &&
-          <p class="text-[16px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem]">{success.description}</p>
-        }
-        {
-          status === "failed" &&
-          <p class="text-[16px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem]">{failed.description}</p>
-        }
-      </div>
-    </Section.Container>
+      <Section.Container
+        class="flex flex-col lg:flex-row bg-primary py-0 lg:gap-[55px]"
+        style={{ maxWidth: "none" }}
+      >
+        <Image
+          width={960}
+          height={418}
+          class="lg:hidden w-full object-cover h-[418px]"
+          src={mobileImage}
+          alt={mobileImage}
+          decoding="sync"
+          loading="eager"
+        />
+        <Image
+          width={960}
+          height={418}
+          class="hidden lg:flex w-[50%] object-cover h-[418px]"
+          src={desktopImage}
+          alt={desktopImage}
+          decoding="sync"
+          loading="eager"
+        />
+        <div class="lg:max-w-[690px] w-full lg:w-[50%] flex flex-col items-center justify-center lg:justify-start lg:items-start gap-[20px] pt-[45px] lg:pt-[65px]">
+          <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+            {title}
+          </h2>
+          <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[2rem] tracking-[0rem] uppercase font-bold">
+            {heading}
+          </h3>
+          <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+            {subHeading}
+          </h3>
+
+          {status === "success" &&
+            (
+              <p class="text-[16px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem]">
+                {success.description}
+              </p>
+            )}
+          {status === "failed" &&
+            (
+              <p class="text-[16px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem]">
+                {failed.description}
+              </p>
+            )}
+        </div>
+      </Section.Container>
     );
   }
 
   return (
-    <Section.Container class="flex flex-col lg:flex-row bg-primary py-0 lg:gap-[55px]" style={{ maxWidth: 'none' }}>
+    <Section.Container
+      class="flex flex-col lg:flex-row bg-primary py-0 lg:gap-[55px]"
+      style={{ maxWidth: "none" }}
+    >
       <Image
         width={960}
         height={418}
@@ -134,9 +149,15 @@ function Newsletter({
         loading="eager"
       />
       <div class="lg:max-w-[690px] w-full lg:w-[50%] flex flex-col items-center justify-center lg:justify-start lg:items-start gap-[20px] pt-[45px] lg:pt-[65px]">
-        <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">{title}</h2>
-        <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[2rem] tracking-[0rem] uppercase font-bold">{heading}</h3>
-        <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">{subHeading}</h3>
+        <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+          {title}
+        </h2>
+        <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[2rem] tracking-[0rem] uppercase font-bold">
+          {heading}
+        </h3>
+        <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+          {subHeading}
+        </h3>
         <form
           hx-target="closest section"
           hx-swap="outerHTML"
