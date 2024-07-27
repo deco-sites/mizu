@@ -20,14 +20,14 @@ function Alert({ alerts = [], interval = 5 }: Props) {
         {alerts.map((alert, index) => (
           <Slider.Item index={index} class="carousel-item">
             <span
-              class="p-[16px] leading-[18px] w-screen text-center text-primary text-[16px] font-roboto font-bold"
+              class="py-[1rem] px-[2rem] lg:px-[16px] lg:py-[16px] leading-[18px] w-screen text-center text-primary text-[.875rem] lg:text-[16px] font-roboto font-bold"
               dangerouslySetInnerHTML={{ __html: alert }}
             />
           </Slider.Item>
         ))}
       </Slider>
 
-      <div class="h-[50px] lg:absolute lg:w-[54%] lg:justify-between lg:right-[23%] lg:top-0 flex w-full gap-[12px] justify-center items-center">
+      <div class="h-[50px] absolute w-full lg:w-[54%] justify-between right-0 lg:right-[23%] top-0 flex w-full gap-[12px] items-center">
         <div class="group">
           <Slider.PrevButton class="w-[42px] h-[42px] flex justify-center items-center text-primary bg-transparent no-animation">
             <Icon

@@ -28,7 +28,7 @@ function SignIn(_props: { variant: "mobile" | "desktop" }) {
   const id = useId();
 
   return (
-    <div class="px-[15px]" id={id}>
+    <div class="pr-[5px] lg:px-[15px]" id={id}>
       <a
         class={clx(
           "",

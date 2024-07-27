@@ -557,7 +557,11 @@
   "searchbar": {
     "placeholder": "O que você está procurando",
     "loader": {
-      "__resolveType": "resolved"
+      "__resolveType": "resolved",
+      "data": {
+        "searches": [],
+        "products": []
+      }
     }
   },
   "alerts": [
@@ -565,14 +569,14 @@
     "<a href='/'><p>Frete grátis para todo o Brasil acima de R$ 199,99</p></a>",
     "<a href='/'><p>20% de cashback para sua próxima compra - <span style='font-size: 12px'>Saiba mais</span></p></a>",
     "<a href='/'><p style='cursor: pointer;'><span>Cadastre-se e ganhe 10% off na primeira compra</span></p></a>",
-    "<a href='/'><p>Parcele em até 10x sem juros</p></a>",
-    "<a href='/'><p>Comprou e não gostou? A primeira troca é grátis - <span style='font-size: 12px'>Saiba mais</span></p></a>"
+    "<a href='/'><p>Parcele em até 10x sem juros</p></a>"
   ],
   "variant": "initial",
   "logo": {
     "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/6a6ec5a6-6547-4c07-bd34-2f4f96488935",
     "alt": "Mizuno",
     "width": 56,
-    "height": 32
+    "height": 32,
+    "mobileSrc": "https://mizunobrio.vtexassets.com/arquivos/LOGO-MOBILE.svg"
   }
 }

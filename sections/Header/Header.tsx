@@ -23,6 +23,7 @@ import {
 
 export interface Logo {
   src: ImageWidget;
+  mobileSrc: ImageWidget;
   alt: string;
   width?: number;
   height?: number;
@@ -56,7 +57,7 @@ const Desktop = (
   { navItems, logo, searchbar }: Props,
 ) => (
   <>
-    <div class="bg-white max-w-[1250px] mx-auto w-full flex items-center">
+    <div class="bg-white max-w-[1250px] mx-auto w-full flex items-center z-10 relative">
       <a class="w-auto" href="/" aria-label="Store logo">
         <Image
           class="mb-[5px]"
@@ -101,7 +102,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
-        <Drawer.Aside title="Menu" drawer={SIDEMENU_DRAWER_ID}>
+        <Drawer.Aside hasTop={false} title="Menu" drawer={SIDEMENU_DRAWER_ID}>
           <div
             id={SIDEMENU_CONTAINER_ID}
             class="h-full flex items-center justify-center"
@@ -114,23 +115,23 @@ const Mobile = ({ logo, searchbar }: Props) => (
     />
 
     <div
-      class="grid place-items-center w-screen px-5 gap-4"
+      class="grid items-center w-screen px-[16px] py-[15px]"
       style={{
         height: NAVBAR_HEIGHT_MOBILE,
         gridTemplateColumns:
-          "min-content auto min-content min-content min-content",
+          "5rem auto 5rem",
       }}
     >
       <label
         for={SIDEMENU_DRAWER_ID}
-        class="btn btn-square btn-sm btn-ghost"
+        class="btn btn-square btn-sm btn-ghost justify-start"
         aria-label="open menu"
         hx-target={`#${SIDEMENU_CONTAINER_ID}`}
         hx-swap="outerHTML"
         hx-trigger="click once"
         hx-get={useSection({ props: { variant: "menu" } })}
       >
-        <Icon id="menu" />
+        <Icon height={18} width={24} id="menu" />
       </label>
 
       {logo && (
@@ -140,27 +141,21 @@ const Mobile = ({ logo, searchbar }: Props) => (
           aria-label="Store logo"
         >
           <Image
-            src={logo.src}
+            src={logo.mobileSrc}
             alt={logo.alt}
-            class="w-full"
-            width={logo.width || 56}
-            height={logo.height || 31}
+            class=""
+            width={73}
+            height={28}
           />
         </a>
       )}
 
-      <label
-        for={SEARCHBAR_DRAWER_ID}
-        class="btn btn-square btn-sm btn-ghost"
-        aria-label="search icon button"
-      >
-        <Icon id="search" />
-      </label>
-
-      <SignIn variant="mobile" />
-
-      <Bag />
+      <div class="flex gap-[1rem] items-center justify-end">
+        <SignIn variant="mobile" />
+        <Bag />
+      </div>
     </div>
+    <Searchbar {...searchbar} />
   </>
 );
 
@@ -169,6 +164,7 @@ function Header({
   logo = {
     src:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/986b61d4-3847-4867-93c8-b550cb459cc7",
+    mobileSrc: "https://mizunobrio.vtexassets.com/arquivos/LOGO-MOBILE.svg",
     width: 100,
     height: 16,
     alt: "Logo",
@@ -179,11 +175,11 @@ function Header({
 
   return (
     <header
+      class="mb-[65px] lg:mb-[21px]"
       style={{
         height: device === "desktop"
           ? HEADER_HEIGHT_DESKTOP
-          : HEADER_HEIGHT_MOBILE,
-        marginBottom: "21px",
+          : HEADER_HEIGHT_MOBILE
       }}
     >
       <div class="fixed w-full z-40 top-0 left-0 bg-white">

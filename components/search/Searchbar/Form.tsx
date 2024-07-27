@@ -78,7 +78,7 @@ export default function Searchbar(
   const slot = useId();
 
   return (
-    <div class="w-full min-w-[13.5rem] max-w-[216px]">
+    <div class="w-full px-[16px] pb-[14px] lg:px-0 lg:pb-0 min-w-[13.5rem] max-w-[25rem] mx-auto lg:max-w-[216px]">
       <form
         id={SEARCHBAR_INPUT_FORM_ID}
         action={ACTION}
