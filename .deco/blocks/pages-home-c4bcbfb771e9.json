@@ -154,7 +154,7 @@
     },
     {
       "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
-      "label": "Sign up",
+      "label": "ENVIAR",
       "placeholder": "Email address",
       "empty": {
         "title": "Get top deals, latest trends, and more.",
@@ -162,12 +162,19 @@
       },
       "success": {
         "title": "Thank you for subscribing!",
-        "description": "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!"
+        "description": "Cadastro efetuado! Aguarde para receber as novidades em primeira mão."
       },
       "failed": {
         "title": "Oops!. Something went wrong!",
-        "description": "Something went wrong. Please try again. If the problem persists, please contact us."
-      }
+        "description": "Algo deu errado. Por favor, tente novamente."
+      },
+      "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/e3dde2f9-ed2e-4bce-b445-77d5c6fc05da",
+      "desktopImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/10320093-6c9a-4a17-92ac-91d6a3c3929a",
+      "title": "Newsletter",
+      "heading": "Cadastre-se",
+      "subHeading": "E receba ofertas e novidades exclusivas",
+      "namePlaceholder": "Digite seu nome",
+      "emailPlaceholder": "Digite seu e-mail"
     },
     {
       "__resolveType": "Footer"
