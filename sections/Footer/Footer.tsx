@@ -1,11 +1,12 @@
 import { type ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+// import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
 
 /** @titleBy title */
 interface Item {
-  title: string;
-  href: string;
+  title?: string;
+  href?: string;
+  type?: "common" | "title";
 }
 
 /** @titleBy title */
@@ -20,103 +21,211 @@ interface Social {
   image: ImageWidget;
 }
 
+interface ContactUs {
+  phone: {
+    text: string;
+    href: string;
+  };
+  email: {
+    text: string;
+    href: string;
+  };
+  openingHour: {
+    text: string;
+    href: string;
+  };
+}
+
 interface Props {
   links?: Link[];
   social?: Social[];
+  contactUs?: ContactUs;
   paymentMethods?: Social[];
-  policies?: Item[];
-  logo?: ImageWidget;
-  trademark?: string;
+  security?: Social[];
 }
 
 function Footer({
   links = [],
   social = [],
-  policies = [],
   paymentMethods = [],
-  logo,
-  trademark,
+  contactUs,
+  security = [],
 }: Props) {
   return (
-    <footer
-      class="px-5 sm:px-0 mt-5 sm:mt-10"
-      style={{ backgroundColor: "#EFF0F0" }}
-    >
-      <div class="container flex flex-col gap-5 sm:gap-10 py-10">
-        <ul class="grid grid-flow-row sm:grid-flow-col gap-6 ">
-          {links.map(({ title, href, children }) => (
-            <li class="flex flex-col gap-4">
-              <a class="text-base font-semibold" href={href}>{title}</a>
-              <ul class="flex flex-col gap-2">
-                {children.map(({ title, href }) => (
-                  <li>
-                    <a class="text-sm font-medium text-base-300" href={href}>
-                      {title}
-                    </a>
-                  </li>
+    <footer class="bg-[#f2f2f2]">
+      <div class="lg:hidden">
+        <div class="flex flex-col pb-[15px] pt-[40px] w-full justify-start">
+          <ul class="w-full p-[15px] max-h-[500px] flex flex-wrap justify-end border-b border-[#707070]">
+            {links.map((link, index) => {
+              if (link.title) {
+                return (
+                  <div
+                    class="relative h-min w-1/2"
+                    style={{ top: index == 2 ? "-120px" : "0" }}
+                  >
+                    <li class="mb-[15px]">
+                      <a
+                        class="text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary"
+                        href={link.href}
+                      >
+                        {link.title}
+                      </a>
+                    </li>
+                    <ul>
+                      {link?.children?.map((child) => (
+                        <li class="mb-[15px]">
+                          <a
+                            class="text-[16px] leading-[1.125rem]  tracking-[0rem] "
+                            href={child.href}
+                            style={{
+                              color: child.type === "title"
+                                ? "#001489"
+                                : "#707070",
+                            }}
+                          >
+                            {child.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              }
+              return (
+                <ul class="h-min w-1/2">
+                  {link?.children?.map((child) => (
+                    <li class="mb-[15px]">
+                      <a
+                        class="text-[16px] leading-[1.125rem]  tracking-[0rem] "
+                        href={child.href}
+                        style={{
+                          color: child.type === "title" ? "#001489" : "#707070",
+                          fontWeight: child.type === "title"
+                            ? "bold"
+                            : "normal",
+                        }}
+                      >
+                        {child.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              );
+            })}
+          </ul>
+          <div class="flex flex-col justify-center items-center mt-[15px] border-b border-[#707070]">
+            <div>
+              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+                SIGA A MIZUNO
+              </p>
+              <ul class="flex gap-[10px] justify-center mb-[15px]">
+                {social.map((item) => (
+                  <a href={item.href}>
+                    <Image
+                      width={20}
+                      src={item.image}
+                      alt={item.alt}
+                    />
+                  </a>
                 ))}
               </ul>
-            </li>
-          ))}
-        </ul>
-
-        <div class="flex flex-col sm:flex-row gap-12 justify-between items-start sm:items-center">
-          <ul class="flex gap-4">
-            {social.map(({ image, href, alt }) => (
-              <li>
-                <a href={href}>
-                  <Image
-                    src={image}
-                    alt={alt}
-                    loading="lazy"
-                    width={24}
-                    height={24}
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ul class="flex flex-wrap gap-2">
-            {paymentMethods.map(({ image, alt }) => (
-              <li class="h-8 w-10 border border-base-100 rounded flex justify-center items-center">
-                <Image
-                  src={image}
-                  alt={alt}
-                  width={20}
-                  height={20}
-                  loading="lazy"
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <hr class="w-full text-base-300" />
-
-        <div class="grid grid-flow-row sm:grid-flow-col gap-8">
-          <ul class="flex flex-col sm:flex-row gap-2 sm:gap-4 sm:items-center">
-            {policies.map(({ title, href }) => (
-              <li>
-                <a class="text-xs font-medium" href={href}>
-                  {title}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <div class="flex flex-nowrap items-center justify-between sm:justify-center gap-4">
-            <div>
-              <img loading="lazy" src={logo} />
             </div>
-            <span class="text-xs font-normal text-base-300">{trademark}</span>
+            <div>
+              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+                FORMAS DE PAGAMENTO
+              </p>
+              <ul class="flex gap-[10px] justify-center mb-[15px]">
+                {paymentMethods.map((item) => (
+                  <a href={item.href}>
+                    <Image
+                      width={20}
+                      src={item.image}
+                      alt={item.alt}
+                    />
+                  </a>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+                SEGURANÇA
+              </p>
+              <ul class="flex gap-[10px] justify-center mb-[15px]">
+                {security.map((item) => (
+                  <a href={item.href}>
+                    <Image
+                      width={20}
+                      src={item.image}
+                      alt={item.alt}
+                    />
+                  </a>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p class="text-center mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+                FALE CONOSCO
+              </p>
+              <div class="text-center mb-[15px]">
+                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-bold">
+                  Telefone:
+                </p>
+                <a
+                  class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
+                  href={contactUs?.phone.href}
+                >
+                  {contactUs?.phone.text}
+                </a>
+              </div>
+              <div class="text-center mb-[15px]">
+                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-bold">
+                  Email:
+                </p>
+                <a
+                  class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
+                  href={contactUs?.email.href}
+                >
+                  {contactUs?.email.text}
+                </a>
+              </div>
+            </div>
+            <div>
+              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary uppercase">
+                Horários de Atendimento
+              </p>
+              <div class="text-center text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] mb-[15px]">
+                {contactUs?.openingHour.text}
+              </div>
+            </div>
           </div>
-
-          <div class="flex flex-nowrap items-center justify-center gap-4">
-            <span class="text-sm font-normal text-base-300">Powered by</span>
-            <PoweredByDeco />
+          <div class="mt-[30px]">
+            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px] font-bold">
+              FIQUE ATENTO ÀS FRAUDES!
+            </p>
+            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+              O site Mizuno.com.br é o site exclusivo da marca para compras
+              online. Antes de efetuar a compra, verifique que você está no site
+              oficial.
+            </p>
+            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+              Em caso de dúvida ou comunicação suspeita, se informe nos perfis
+              oficiais da marca ou pela central de atendimento.
+            </p>
+            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+              © 2023 MIZUNO TODOS OS DIREITOS RESERVADOS.
+            </p>
+            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+              Vulcabras – SP Comércio de Artigos Esportivos Ltda. – CNPJ
+              18.565.468/0012-41
+            </p>
+            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+              Estrada Municipal Luiz Lopes Neto, n.º 21 – Tenentes – CEP.
+              37.640-000 – Extrema/MG
+            </p>
           </div>
         </div>
       </div>
+      <div class="hidden lg:flex"></div>
     </footer>
   );
 }

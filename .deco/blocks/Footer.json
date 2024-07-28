@@ -2,150 +2,145 @@
   "__resolveType": "site/sections/Footer/Footer.tsx",
   "links": [
     {
-      "title": "Our Company",
       "children": [
         {
-          "title": "About us",
-          "href": "#"
+          "type": "title",
+          "title": "LOGIN",
+          "href": "/login"
         },
         {
-          "title": "Our blog",
-          "href": "#"
+          "type": "title",
+          "href": "/account",
+          "title": "MINHA CONTA"
         },
         {
-          "title": "Stores",
-          "href": "#"
+          "type": "title",
+          "href": "/account#/orders",
+          "title": "MEUS PEDIDOS"
         },
         {
-          "title": "Work with us",
-          "href": "#"
+          "type": "title",
+          "href": "/nossas-lojas",
+          "title": "ENCONTRE UMA LOJA"
+        },
+        {
+          "type": "title",
+          "title": "TRABALHE CONOSCO",
+          "href": "/trabalhe-conosco"
+        },
+        {
+          "type": "title",
+          "href": "/manual-troque-facil",
+          "title": "TROQUE FÁCIL AQUI"
         }
       ],
+      "type": "title"
+    },
+    {
+      "children": [
+        {
+          "type": "common",
+          "title": "Nossa Hístoria",
+          "href": "/nossa-historia"
+        },
+        {
+          "type": "common",
+          "title": "Tecnologias",
+          "href": "/tecnologias"
+        }
+      ],
+      "type": "title",
+      "title": "SOBRE A MIZUNO",
       "href": "#"
     },
     {
-      "title": "Orders & Purchases",
-      "href": "#",
       "children": [
         {
-          "title": "Check order status",
-          "href": "#"
+          "type": "common",
+          "title": "Central de Ajuda",
+          "href": "https://vulcamizuno.zendesk.com/hc/pt-br"
         },
         {
-          "title": "Return and exchanges",
-          "href": "#"
+          "type": "common",
+          "title": "Política de Trocas e Devoluções",
+          "href": "/trocas-e-devolucoes"
         },
         {
-          "title": "Product retail",
-          "href": "#"
+          "type": "common",
+          "title": "Aviso de Privacidade",
+          "href": "/politica-de-privacidade"
         },
         {
-          "title": "Gift cards",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "title": "Support & Services",
-      "href": "#",
-      "children": [
-        {
-          "title": "Support Center",
-          "href": "#"
+          "type": "common",
+          "title": "Política de Entrega",
+          "href": "/politica-de-entrega"
         },
         {
-          "title": "Schedule a service",
-          "href": "#"
+          "type": "common",
+          "title": "Política de Pagamento",
+          "href": "/politica-de-pagamento"
         },
         {
-          "title": "Contact us",
-          "href": "#"
-        }
-      ]
-    },
-    {
-      "title": "Support & Services",
-      "children": [
-        {
-          "title": "Support Center",
-          "href": "#"
+          "type": "common",
+          "href": "/politica-de-promocao",
+          "title": "Política de Promoções"
         },
         {
-          "title": "Schedule a service",
-          "href": "#"
+          "type": "common",
+          "href": "/politica-de-cookies",
+          "title": "Política de Cookies"
         },
         {
-          "title": "Contact us",
-          "href": "#"
+          "type": "common",
+          "title": "Cashback",
+          "href": "/cashback"
         }
       ],
+      "type": "title",
+      "title": "PRECISA DE AJUDA?",
       "href": "#"
     }
   ],
   "social": [
     {
-      "alt": "facebook",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/66137259-6bdb-4322-bed1-a2593560934c"
-    },
-    {
       "alt": "Instagram",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e71ae7f3-0f51-4185-af0a-fca08ebe4451"
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/icons/footer/icone-instagram___7978c0ee4bb15052bb5d09be2a51a1c1.png"
     },
     {
-      "alt": "Pinterest",
+      "alt": "facebook",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4becba39-fc08-4df2-bb5d-5e843f375deb"
-    },
-    {
-      "alt": "X",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/179a9ee9-3813-47b8-96eb-11e0c5558ede"
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/icons/footer/icone-face___dc229c9f0668d36ff51be1f91f6fe28e.png"
     }
   ],
   "paymentMethods": [
     {
-      "alt": "Paypal",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/7d858621-469e-4528-91b5-8c79fc413162"
+      "alt": "Visa",
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/icons/footer/payment-visa-card___73422c7b96bb002d9fadbda87fbf5c1c.png"
+    },
+    {
+      "alt": "Amex",
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/icons/footer/payment-amex___0152104b97a3877402e3ff934fbb63f3.png",
+      "href": "#"
     },
     {
       "alt": "Mastercard",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/88ab870c-4256-44b4-8da3-3cefe0436e87"
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/icons/footer/payment-mastercard___4a940b90ca837bc7de24a4a03f9e0224.png"
     },
     {
-      "alt": "Maestro",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e94aaf80-25f5-4e23-8708-14d78ffdebbb"
+      "alt": "Diners",
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/icons/footer/payment-diners___093771b549b3d37fcb36e43f661c16be.png",
+      "href": "#"
     },
     {
-      "alt": "Google Pay",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ccddc66e-baa8-4b44-a52c-ea48d8e111b5"
+      "alt": "Pix",
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/icons/footer/payment-pix___0b6f688de7eacc78b258543c236ce691.png",
+      "href": "#"
     },
     {
       "alt": "Elo",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/11f90dd4-91b5-4b60-9304-f8a7a9be84eb"
-    },
-    {
-      "alt": "Diners",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/20bb8e66-5495-4f92-a6d0-4967a66f3a44"
-    },
-    {
-      "alt": "Apple Pay",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d4227ed7-333d-49b8-b3e2-35719f606640"
-    },
-    {
-      "alt": "Amex",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/023472cf-782d-4a22-82d9-ecdf18466d96"
-    },
-    {
-      "alt": "Visa",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/2d213fd6-2754-4e92-a6f1-03825f71c7af"
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/imgs/payment-elo___7a9a5d47bece785bd3a2c7e69dd9f527.svg"
     }
   ],
   "policies": [
@@ -163,5 +158,31 @@
     }
   ],
   "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f1faab73-e4ff-4037-b7c4-5d02bd0b1209",
-  "trademark": "TM & © 2023 Deco Storefront, Inc."
+  "trademark": "TM & © 2023 Deco Storefront, Inc.",
+  "contactUs": {
+    "phone": {
+      "text": "0800 000 7075",
+      "href": "tel:08000007075"
+    },
+    "openingHour": {
+      "text": "Segunda à Sexta das 08h às 20h.",
+      "href": "#"
+    },
+    "email": {
+      "href": "sacmizuno@vulcabras.com",
+      "text": "sacmizuno@vulcabras.com"
+    }
+  },
+  "security": [
+    {
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.77/imgs/lets-encrypt___22cae2ba82fe006cec8cc536d00862e4.svg",
+      "alt": "Lets Encrypt",
+      "href": "#"
+    },
+    {
+      "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/3.2.26/imgs/reclame-aqui___58e0256eb7ef68744b48557ba3803564.svg",
+      "alt": "Reclame aqui",
+      "href": "https://www.reclameaqui.com.br/empresa/mizuno-loja-online/"
+    }
+  ]
 }
