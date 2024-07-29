@@ -230,9 +230,7 @@ function Footer({
           {links.map((link) => {
             if (link.title) {
               return (
-                <ul
-                  class="relative h-min"
-                >
+                <ul class="relative h-min">
                   <li class="mb-[10px]">
                     <a
                       class="text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] font-medium"
@@ -270,9 +268,7 @@ function Footer({
                       href={child.href}
                       style={{
                         color: child.type === "title" ? "#060606" : "#707070",
-                        fontWeight: child.type === "title"
-                          ? "500"
-                          : "normal",
+                        fontWeight: child.type === "title" ? "500" : "normal",
                       }}
                     >
                       {child.title}
@@ -289,7 +285,7 @@ function Footer({
               </p>
               <div class="mb-[15px] flex gap-[5px]">
                 <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-medium">
-                  Telefone: 
+                  Telefone:
                 </p>
                 <a
                   class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
@@ -300,7 +296,7 @@ function Footer({
               </div>
               <div class="mb-[15px] flex gap-[5px]">
                 <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-medium">
-                  E-mail: 
+                  E-mail:
                 </p>
                 <a
                   class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
@@ -397,7 +393,7 @@ function Footer({
             </p>
           </div>
           <div class="flex justify-center items-center pt-[40px] pb-[20px]">
-            <PoweredByDeco /> 
+            <PoweredByDeco />
           </div>
         </div>
       </div>
