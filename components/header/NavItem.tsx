@@ -64,7 +64,7 @@ function NavItem({ item }: { item: NavItemNode }) {
           >
             <div class="max-w-[1238px] pb-[20px] w-full mx-auto group-hover:flex items-start justify-center gap-[10px]">
               <ul
-                class="grid w-full justify-center pt-[12px] pb-[5px] overflow-hidden border border-[#f2f2f2] max-h-[382px]"
+                class="grid w-full justify-center pt-[12px] pb-[5px] overflow-hidden max-h-[382px]"
                 style={{
                   gridTemplateColumns: "repeat(auto-fit,minmax(20%,150px))",
                 }}
