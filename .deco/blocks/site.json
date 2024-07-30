@@ -68,10 +68,5 @@
   },
   "flavor": {
     "framework": "htmx"
-  },
-  "pageSections": [
-    {
-      "__resolveType": "site/sections/Session.tsx"
-    }
-  ]
+  }
 }
