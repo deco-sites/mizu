@@ -6,6 +6,9 @@
   },
   "sections": [
     {
+      "__resolveType": "site/sections/Session.tsx"
+    },
+    {
       "__resolveType": "commerce/sections/Seo/SeoPDP.tsx",
       "jsonLD": {
         "__resolveType": "PDP Loader"
@@ -22,9 +25,6 @@
       "page": {
         "__resolveType": "PDP Loader"
       }
-    },
-    {
-      "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
     },
     {
       "__resolveType": "Footer"
