@@ -30,7 +30,7 @@ export type Platform =
   | "nuvemshop"
   | "custom";
 
-export let _platform: Platform = "custom";
+export let _platform: Platform = "vtex";
 
 export type App = ReturnType<typeof Site>;
 // @ts-ignore somehow deno task check breaks, I have no idea why
