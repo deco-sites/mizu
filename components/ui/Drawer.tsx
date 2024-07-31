@@ -2,7 +2,6 @@ import { useScript } from "deco/hooks/useScript.ts";
 import { type ComponentChildren } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import Icon from "./Icon.tsx";
 
 export interface Props {
   open?: boolean;
@@ -83,21 +82,29 @@ function Aside(
   return (
     <div
       data-aside
-      class="bg-[#f9f9f9] grid h-full divide-y relative"
+      class="grid w-full divide-y divide-[#f2f2f2] lg:w-[400px] h-full relative lg:max-h-[calc(100dvh-68px)] lg:top-[68px]"
       style={{
+        backgroundColor: hasTop ? "#fff" : "#f9f9f9",
         maxWidth: "100vw",
         gridTemplateRows: hasTop ? "auto 1fr" : "auto",
         top: hasTop ? "" : "118px",
+        boxShadow: "0px 0px 20px rgba(0,0,0,0.16)",
       }}
     >
       {hasTop &&
         (
-          <div class="flex justify-between items-center">
-            <h1 class="px-4 py-3">
-              <span class="font-medium text-2xl">{title}</span>
+          <div class="flex justify-between items-center p-[20px] pb-[12px] pr-[35px]">
+            <h1 class="">
+              <span class="text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]">
+                {title}
+              </span>
             </h1>
-            <label for={drawer} aria-label="X" class="btn btn-ghost">
-              <Icon id="close" />
+            <label
+              for={drawer}
+              aria-label="X"
+              class="cursor-pointer text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]"
+            >
+              X
             </label>
           </div>
         )}

@@ -3,8 +3,7 @@ import Image from "apps/website/components/Image.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import { useScript } from "deco/hooks/useScript.ts";
-import Icon from "../ui/Icon.tsx";
-import QuantitySelector from "../ui/QuantitySelector.tsx";
+// import QuantitySelector from "../ui/QuantitySelector.tsx";
 
 export type Item = AnalyticsItem & {
   listPrice: number;
@@ -18,7 +17,7 @@ export interface Props {
   currency: string;
 }
 
-const QUANTITY_MAX_VALUE = 100;
+// const QUANTITY_MAX_VALUE = 100;
 
 const removeItemHandler = () => {
   const itemID = (event?.currentTarget as HTMLButtonElement | null)
@@ -30,8 +29,8 @@ const removeItemHandler = () => {
   }
 };
 
-function CartItem({ item, index, locale, currency }: Props) {
-  const { image, listPrice, price = Infinity, quantity } = item;
+function CartItem({ item, locale, currency }: Props) {
+  const { image, price = Infinity, item_url } = item;
   const isGift = price < 0.01;
 
   // deno-lint-ignore no-explicit-any
@@ -44,50 +43,55 @@ function CartItem({ item, index, locale, currency }: Props) {
       class="grid grid-rows-1 gap-2"
       style={{ gridTemplateColumns: "auto 1fr" }}
     >
-      <Image
-        alt={name}
-        src={image}
-        style={{ aspectRatio: "108 / 150" }}
-        width={108}
-        height={150}
-        class="h-full object-contain"
-      />
+      <a class="bg-[#f2f2f2] rounded-[8px] mr-[20px]" href={item_url}>
+        <Image
+          alt={name}
+          src={image}
+          style={{ aspectRatio: "1 / 1" }}
+          width={300}
+          class="object-contain w-[150px]"
+        />
+      </a>
 
       {/* Info */}
       <div class="flex flex-col gap-2">
         {/* Name and Remove button */}
-        <div class="flex justify-between items-center">
-          <legend>{name}</legend>
+        <div class="flex justify-between">
+          <legend class="text-[14px] leading-[18px] font-medium	text-[#060606] max-w-[112px] mb-[20px] font-roboto">
+            {name}
+          </legend>
           <button
             class={clx(
               isGift && "hidden",
-              "btn btn-ghost btn-square no-animation",
+              "h-min	",
             )}
             hx-on:click={useScript(removeItemHandler)}
           >
-            <Icon id="trash" size={24} />
+            <Image
+              width={18}
+              src="https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/1e896331-8348-4e80-a861-91e06253ad37"
+            />
           </button>
         </div>
 
         {/* Price Block */}
         <div class="flex items-center gap-2">
-          <span class="line-through text-sm">
-            {formatPrice(listPrice, currency, locale)}
-          </span>
-          <span class="text-sm text-secondary">
-            {isGift ? "Grátis" : formatPrice(price, currency, locale)}
+          <span class="text-[16px] text-[#060606] leading-[1.4375rem] tracking-[0rem] font-semibold	">
+            {isGift ? "Grátis" : "por " + formatPrice(price, currency, locale)}
           </span>
         </div>
 
         {/* Quantity Selector */}
-        <div class={clx(isGift && "hidden")}>
+        {
+          /* <div class={clx(isGift && "hidden")}>
           <QuantitySelector
             min={0}
             max={QUANTITY_MAX_VALUE}
             value={quantity}
             name={`item::${index}`}
           />
-        </div>
+        </div> */
+        }
       </div>
     </fieldset>
   );

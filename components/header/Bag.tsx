@@ -28,13 +28,13 @@ function Bag() {
   return (
     <>
       <label
-        class="indicator cursor-pointer lg:px-[15px]"
+        class="indicator cursor-pointer lg:px-[15px] relative"
         for={MINICART_DRAWER_ID}
         aria-label="open cart"
       >
         <span
           id={id}
-          class="hidden indicator-item badge badge-primary badge-sm font-thin"
+          class="hidden absolute top-[-5px] right-0 text-[#f2f2f2] bg-[#0085ca] rounded-full text-[.75rem] font-roboto w-[20px] h-[20px] flex justify-center items-center"
         />
 
         <span>
