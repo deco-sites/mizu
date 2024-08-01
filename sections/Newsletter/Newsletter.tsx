@@ -91,7 +91,7 @@ function Newsletter({
         <Image
           width={960}
           height={418}
-          class="hidden lg:flex w-[50%] object-cover h-[418px]"
+          class="hidden lg:flex w-[48%] object-cover h-[418px]"
           src={desktopImage}
           alt={desktopImage}
           decoding="sync"
@@ -142,7 +142,7 @@ function Newsletter({
       <Image
         width={960}
         height={418}
-        class="hidden lg:flex w-[50%] object-cover h-[418px]"
+        class="hidden lg:flex w-[48%] object-cover h-[418px]"
         src={desktopImage}
         alt={desktopImage}
         decoding="sync"
@@ -152,7 +152,7 @@ function Newsletter({
         <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
           {title}
         </h2>
-        <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[2rem] tracking-[0rem] uppercase font-bold">
+        <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[40px] tracking-[0rem] uppercase font-bold">
           {heading}
         </h3>
         <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
@@ -178,7 +178,7 @@ function Newsletter({
           />
 
           <button
-            class="btn btn-primary lg:min-w-[118px] hover:bg-white h-[48px] lg:mr-[19px] lg:mt-[30px] font-extrabold bg-white text-primary rounded-[24px] text-[16px] leading-[21px] tracking-[0rem] mb-[65px] lg:mb-0 uppercase"
+            class="btn btn-primary lg:min-w-[130px] hover:bg-white h-[48px] lg:mr-[19px] lg:mt-[26px] font-extrabold bg-white text-primary rounded-[24px] text-[16px] leading-[21px] tracking-[0rem] mb-[65px] lg:mb-0 uppercase"
             type="submit"
           >
             <span class="[.htmx-request_&]:hidden flex items-center justify-between gap-[10px]">

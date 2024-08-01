@@ -185,8 +185,8 @@ function Header({
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}
-        {alerts.length > 0 && <Alert alerts={alerts} />}
       </div>
+      {alerts.length > 0 && <Alert alerts={alerts} />}
     </header>
   );
 }

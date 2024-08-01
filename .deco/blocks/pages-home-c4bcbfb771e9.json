@@ -33,25 +33,33 @@
           "name": "Cabedal",
           "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-01___a04f46f2c045f87261bffe229c298e50.png",
           "description": "Estrutura que se adapta à forma do pé, mantendo-o na posição correta e ajustado durante todo o período do treino.",
-          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-01___459c6880272823a3bb36ed97956e5c1e.png"
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-01___459c6880272823a3bb36ed97956e5c1e.png",
+          "widthImageName": 151,
+          "heightImageName": 72
         },
         {
           "name": "Amortecimento",
           "description": "Entressola com Mizuno Enerzy Nxt que oferece uma experiência aprimorada de amortecimento com retorno de energia.",
           "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-02___5c5c5be29cd2e769da3fc110bd1a5cbc.png",
-          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-02___9dce74ee098ad92bbf91457d8bdb053a.png"
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-02___9dce74ee098ad92bbf91457d8bdb053a.png",
+          "widthImageName": 207,
+          "heightImageName": 99
         },
         {
           "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-03___3dcbf17724d03fbb68cabf1a2959fbf3.png",
           "description": "Placa Wave reforçada com fibra de vidro que proporciona velocidade e estabilidade sem abrir mão do conforto.",
           "name": "Propulsão",
-          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-03___fe103bc415cd337ca4bbec04a95a4b52.png"
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-03___fe103bc415cd337ca4bbec04a95a4b52.png",
+          "widthImageName": 207,
+          "heightImageName": 99
         },
         {
           "name": "Tecnologia",
           "description": "A mais inovadora tecnologia de corrida da Mizuno, Smooth Speed Assist é uma geometria da entressola que facilita a pisada com o ante pé, proporcionando uma transição mais rápida e suave na sua passada.",
           "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-04___946c040a5922816eccb19d846e6fe870.png",
-          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-04___8749217ce01230574f498cdfe0687c99.png"
+          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-04___8749217ce01230574f498cdfe0687c99.png",
+          "widthImageName": 207,
+          "heightImageName": 99
         }
       ],
       "title": "TECNOLOGIA PARA IR ALÉM",
@@ -129,7 +137,7 @@
             "href": "/",
             "text": "Compre agora"
           },
-          "image": "https://s3-alpha-sig.figma.com/img/9136/9180/0b121f2639e156f2c21e8489cfb3ddc6?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AFgoiH9Fd5KGTjSiTl2zyU42CZ~vgx6RgEFQuFIeo6opFZ1GpFP7lKwWP66jF9zcukAGOmzqwtkas9MPug2JZAGC~YJlw2wNGphfbXfdtL3EQGWjE8u0TpuwT5nZatHGxWWqv2i5TBjXzVVvGhaxJh3SsWR1rL9SzxQei~A5SKaJU3HYdmYcmYH7DdciyCFdrDn4XH5qt50fXl~M-kAnTY-bZMxn-Krk7d3PowIuvmevocGwaJ027ju48B874-Kf6j5RM4UvjGdTGysW~qfoxUG1ZpazfT8UjFgb5nLI8gO~kyhFJ50kEjERthYj23F2a~OovTTYcSLd5QG7Zpm62w__",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/27ba378b-53ad-4b8c-9f42-99ce34866ffe",
           "href": "/"
         },
         {
@@ -138,7 +146,7 @@
             "href": "/",
             "text": "Compre agora"
           },
-          "image": "https://s3-alpha-sig.figma.com/img/c34e/c583/0d8c49a25ea700fbf51cf4235df1181a?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=O04SDVrS22VG0YibXXtVXAdPH39qrcuMH8HBUc4ZMtpqiaa~98MVzP~xB-UgoFX~T1MSZ1zjkFBeMWHW0TXBGN5MeFXbZAjJGQVY1S0~tG5h8--0ZPK-lvMxToUAZ5sZopQqHKkYPdmVYSqOWtJXbBSgSF5bD2m54tCt~gljtayi7S~kRHYqvdxY25G27ss29czI-js~IVBgtuN2R5snlsdGG6FsRuQr5h223JoJ8R8I-3YSB8OoQxAhvVeYywHpgKSBI-jmHNm62IQq24E21s60zmQX0iy2jcd-a2KI3NJaVvnQ0XgSkkIElaIQfwESk8war~IfjBBIJ6gx549prA__",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/763630a3-155b-4767-b281-0fd75737da41",
           "href": "/"
         },
         {
@@ -147,7 +155,7 @@
             "href": "/",
             "text": "Compre agora"
           },
-          "image": "https://s3-alpha-sig.figma.com/img/d7b7/7234/82bcd02008084a6f83f3ee4ecd5f8113?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NIboHdWguy0RZJrj4cbwU~TjS0in5mtArO4RUS-TDdgeKr1aL2Z--VOWVizKy9wqTkvpkQXGhxdawr6FMmsZZIzRd68xDXS7EdTyF1MYV3Raff56NDUdzhzwWcIwUdrq4wX2aaAPr6pu~gxHkMPkKdd5d6K5XNlRe9Qp3jSkQ6eDSJGVnRDcV0JFgugYxJe3nzGa2d1dgs9MPYUc2na2feQSZhf9BCjzdxQx9IkpDecfqQUeKfyTGoJUslwn9fsFM7yimhXLXPQNcufPwJ-oKgLRhbO5lAN998sF3Z2G6XPToAm30I3BGdWgI42-taRYA2gIAD3j1l9FBIEMBSbaWw__",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/3a6ffa62-b64d-4c44-b84a-26ddc9a7727a",
           "href": "/"
         }
       ]

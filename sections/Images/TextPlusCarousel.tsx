@@ -44,7 +44,7 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
               class="text-primary font-black uppercase text-[32px] lg:text-[40px] leading-[37.5px]"
               dangerouslySetInnerHTML={{ __html: summary.title }}
             />
-            <p
+            <div
               class="font-roboto text-[16px] leading-[18.75px]"
               dangerouslySetInnerHTML={{ __html: summary.description }}
             />

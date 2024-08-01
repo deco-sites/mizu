@@ -5,6 +5,8 @@ import { useSection } from "deco/hooks/useSection.ts";
 export interface Tab {
   name: string;
   imageName: ImageWidget;
+  widthImageName: number;
+  heightImageName: number;
   description: string;
   image: ImageWidget;
 }
@@ -23,7 +25,7 @@ export default function TabLayoutShoes({
   selected = 0,
 }: Props & { selected: number }) {
   return (
-    <div class="bg-[#f2f2f2] lg:bg-white flex flex-col lg:items-center px-[12px] lg:px-0 mt-[40px] lg:mt-[65px] mb-[50px] mb-[24px] py-[12px] lg:py-[15px]">
+    <div class="bg-[#f2f2f2] lg:bg-white flex flex-col lg:items-center px-[12px] lg:px-0 mt-[40px] lg:mt-[65px] mb-[24px] lg:mb-[50px] mb-[24px] py-[12px] pb-[30px] lg:pb-[15px] lg:py-[15px]">
       <h1 class="max-w-[190px] mt-[26px] mx-[14px] mb-[40px] lg:m-0 lg:max-w-[1240px] w-full font-black text-primary leading-[37.5px] text-[32px] lg:text-[40px] lg:leading-[46.88px]">
         {title}
       </h1>
@@ -58,7 +60,11 @@ export default function TabLayoutShoes({
               >
                 <Image
                   width={207}
-                  style={{ opacity: index == selected ? "1" : ".6" }}
+                  style={{
+                    opacity: index == selected ? "1" : ".6",
+                    width: tab.widthImageName,
+                    height: tab.heightImageName,
+                  }}
                   src={tab.imageName}
                   alt={tab.imageName}
                   decoding="async"
@@ -99,15 +105,15 @@ export default function TabLayoutShoes({
         <Image
           width={311}
           height={433}
-          class="mx-auto"
+          class="mx-auto mb-[24px]"
           src={mobileImage}
           alt={mobileImage}
           decoding="async"
           loading="lazy"
         />
-        <div class="grid grid-rows-2 grid-flow-col gap-[16px]">
+        <div class="flex flex-wrap gap-[16px]">
           {tabs.map((tab) => (
-            <div class="flex flex-col items-center justify-start">
+            <div class="flex flex-col items-center justify-start w-[47%]">
               <Image
                 width={163}
                 height={78}

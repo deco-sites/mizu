@@ -167,13 +167,19 @@ export default function Cart({
         >
           {count === 0
             ? (
-              <div class="flex flex-col gap-6">
-                <span class="font-medium text-2xl">Sua sacola está vazia</span>
+              <div class="flex flex-col items-center h-full w-[90%]">
+                <span class="flex justify-center items-center h-full font-roboto text-[16px] text-[#060606] font-bold leading-[1.125rem] tracking-[0rem] text-center">
+                  Seu carrinho está vazio!
+                </span>
                 <label
                   for={MINICART_DRAWER_ID}
-                  class="btn btn-outline no-animation"
+                  class="btn btn-outline no-animation mx-[20px] my-[30px] h-[46px] bg-[#f2f2f2] hover:bg-[#f2f2f2] text-[#707070] hover:text-[#707070] w-full border-0 rounded-[28px] text-[16px] font-bold leading-[1rem] uppercase tracking-[0rem]"
+                  style={{
+                    fontFamily:
+                      "-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif",
+                  }}
                 >
-                  Escolher produtos
+                  Continuar comprando
                 </label>
               </div>
             )

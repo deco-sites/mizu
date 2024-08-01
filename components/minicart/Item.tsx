@@ -46,9 +46,8 @@ function CartItem({ item, locale, currency }: Props) {
       <a class="bg-[#f2f2f2] rounded-[8px] mr-[20px]" href={item_url}>
         <Image
           alt={name}
-          src={image}
-          style={{ aspectRatio: "1 / 1" }}
-          width={300}
+          src={image.replace("55-55", "250-250")}
+          width={600}
           class="object-contain w-[150px]"
         />
       </a>

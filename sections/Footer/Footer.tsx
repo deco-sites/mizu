@@ -233,7 +233,7 @@ function Footer({
                 <ul class="relative h-min">
                   <li class="mb-[10px]">
                     <a
-                      class="text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] font-medium"
+                      class="text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] "
                       href={link.href}
                     >
                       {link.title}
@@ -268,7 +268,7 @@ function Footer({
                       href={child.href}
                       style={{
                         color: child.type === "title" ? "#060606" : "#707070",
-                        fontWeight: child.type === "title" ? "500" : "normal",
+                        fontWeight: child.type === "title" ? "400" : "normal",
                       }}
                     >
                       {child.title}
@@ -280,11 +280,11 @@ function Footer({
           })}
           <div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] font-medium">
+              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
                 FALE CONOSCO
               </p>
               <div class="mb-[15px] flex gap-[5px]">
-                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-medium">
+                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-bold">
                   Telefone:
                 </p>
                 <a
@@ -295,7 +295,7 @@ function Footer({
                 </a>
               </div>
               <div class="mb-[15px] flex gap-[5px]">
-                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-medium">
+                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]  font-bold">
                   E-mail:
                 </p>
                 <a
@@ -307,7 +307,7 @@ function Footer({
               </div>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] font-medium uppercase">
+              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem]  uppercase">
                 Horários de Atendimento
               </p>
               <div class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] mb-[15px]">
@@ -317,7 +317,7 @@ function Footer({
           </div>
           <div class="flex flex-col">
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] font-medium">
+              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
                 SIGA A MIZUNO
               </p>
               <ul class="flex gap-[10px] mb-[15px]">
@@ -333,7 +333,7 @@ function Footer({
               </ul>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] font-medium">
+              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
                 FORMAS DE PAGAMENTO
               </p>
               <ul class="flex gap-[10px] mb-[15px] flex-wrap max-w-[150px]">
@@ -349,7 +349,7 @@ function Footer({
               </ul>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] font-medium">
+              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
                 SEGURANÇA
               </p>
               <ul class="flex gap-[10px] mb-[15px]">
