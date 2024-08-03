@@ -12,6 +12,42 @@
       "imageURL": "/"
     },
     {
+      "__resolveType": "site/sections/Images/BannerTrio.tsx",
+      "summary": {
+        "title": "<p>CELEBRE A CULTURA DO BEISEBOL JAPONÊS.</p>",
+        "description": "<p>A Mizuno se juntou com a Shinzo para lançar um tênis único em duas versões.<br>Inspirada em revistas antigas de beisebol japonês e artigos de jornais, o modelo conta com uma estampa escondida abaixo do veludo cotelê.<br>É uma homenagem à longa história desse esporte que a Mizuno vem cultivando ao longo dos anos.</p>"
+      },
+      "carouselImages": [
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/f635710b-571c-4504-b209-10100a384d8b",
+          "desktopHover": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/7118bed2-0cb9-49ca-9e5e-6969a2f6cf65",
+          "alt": "1",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/b2f19f1e-a617-451b-94f7-adf823cb9b0e",
+          "desktopWidth": "671 ",
+          "desktopHeight": "560",
+          "href": "/"
+        },
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/840809bb-fed0-42c1-9aff-8a13a1018d95",
+          "desktopHover": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/e8242c73-d32d-4cde-8440-0647cf5bb778",
+          "alt": "2",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/c1ca71e9-8aaa-4f64-a603-e47ae8f66a3d",
+          "desktopWidth": "334",
+          "desktopHeight": "560",
+          "href": "/"
+        },
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/e3908842-5b5c-434a-b05b-e8c89efdbcc1",
+          "desktopHover": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/5ca0dc38-9832-470a-8a05-38b0434a626f",
+          "alt": "3",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/6b442f3c-8503-4062-8001-da1f1f218ed2",
+          "desktopWidth": "334",
+          "desktopHeight": "560",
+          "href": "/"
+        }
+      ]
+    },
+    {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/Hero.tsx",

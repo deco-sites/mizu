@@ -1,21 +1,21 @@
 import { clx } from "../../sdk/clx.ts";
-import Icon, { AvailableIcons } from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
 import { HTMLWidget, ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import Icon from "../../components/ui/Icon.tsx";
 
-export interface CTA {
-  href: string;
-  text: string;
-  iconOnHover: AvailableIcons;
-}
 export interface CarouselImage {
   /** @description desktop otimized image */
   desktop: ImageWidget;
+  desktopHover: ImageWidget;
+  desktopWidth: string;
+  desktopHeight: string;
 
   /** @description mobile otimized image */
   mobile: ImageWidget;
+
+  href: string;
 
   /** @description Image's alt text */
   alt: string;
@@ -27,87 +27,105 @@ export interface Text {
 }
 
 interface Props {
-  summaries: Text[];
-  cta: CTA;
+  summary: Text;
   carouselImages: CarouselImage[];
 }
 
-function BannerTrio({ carouselImages, cta, summaries }: Props) {
+function BannerTrio({ carouselImages, summary }: Props) {
   const id = useId();
 
   return (
-    <div class="relative flex flex-col gap-[24px] mt-[24px] lg:mt-[80px]">
-      <div class="flex flex-col gap-[40px] px-[12px] max-w-[357px]">
-        {summaries.map((summary) => (
-          <div class="flex flex-col gap-[24px]">
-            <h3
-              class="text-primary font-black uppercase text-[32px] lg:text-[40px] leading-[37.5px]"
-              dangerouslySetInnerHTML={{ __html: summary.title }}
-            />
-            <div
-              class="font-roboto text-[16px] leading-[18.75px]"
-              dangerouslySetInnerHTML={{ __html: summary.description }}
-            />
-          </div>
-        ))}
-        <a
-          class="mx-auto lg:mx-0 w-min group relative pr-[90px] lg:pr-[40px] hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-[40px] mt-[24px] rounded font-roboto font-medium mt-[-20px]"
-          href={cta.href}
-        >
-          {cta.text}
-          <Icon
-            class="lg:opacity-0 group-hover:opacity-100 absolute right-[40px] transition-all duration-300"
-            id={cta.iconOnHover}
-            size={18}
+    <div class="relative flex flex-col gap-[24px] mt-[24px] lg:mt-[80px] max-w-[1238px] mx-auto w-full">
+      <div class="px-[16px] lg:px-0 flex flex-col gap-[40px]">
+        <div class="flex flex-col gap-[24px]">
+          <h3
+            class="text-[#060606] font-bold font-roboto uppercase text-[2rem] lg:text-[2rem] leading-[1.2]"
+            dangerouslySetInnerHTML={{ __html: summary.title }}
           />
-        </a>
+          <div
+            class="font-roboto text-[#060606] text-[16px] leading-[1.5] max-w-[610px]"
+            dangerouslySetInnerHTML={{ __html: summary.description }}
+          />
+        </div>
+      </div>
+      <div class="hidden lg:flex gap-[1rem] relative">
+        {carouselImages?.map((image) => (
+          <a href={image.href} class="flex w-auto h-auto group relative">
+            <Image
+              width={image.desktopWidth}
+              height={image.desktopHeight}
+              class=""
+              style={{
+                flex: '0 0 auto'
+              }}
+              src={image.desktop}
+              alt={image.desktop}
+              decoding="async"
+              loading="lazy"
+            />
+            <Image
+              width={image.desktopWidth}
+              height={image.desktopHeight}
+              style={{
+                flex: '0 0 auto'
+              }}
+              class="opacity-0 group-hover:opacity-100 absolute top-0 left-0 transition-all ease-in-out duration-500"
+              src={image.desktopHover}
+              alt={image.desktopHover}
+              decoding="async"
+              loading="lazy"
+            />
+          </a>
+        ))}
       </div>
       <div
         id={id}
-        class="max-w-[1180px] lg:w-[61%]"
+        class="W-full lg:hidden"
       >
         <div class="col-start-1 col-span-3 row-start-1 row-span-1">
-          <Slider class="carousel carousel-left w-full transition-all">
+          <Slider class="carousel carousel-center w-full transition-all">
             {carouselImages?.map((image, index) => (
               <Slider.Item
                 index={index}
                 class={clx(
-                  "carousel-item px-[8px]",
-                  "first:pl-[8px]",
-                  "last:pr-[8px]",
+                  "carousel-item px-[16px]",
+                  "first:pl-[16px]",
+                  "last:pr-[16px]",
                 )}
               >
-                <Image
-                  width={260}
-                  height={374}
-                  class="w-[260px] lg:w-[394px]"
-                  src={image.desktop}
-                  alt={image.desktop}
-                  decoding="async"
-                  loading="lazy"
-                />
+                <a href={image.href} class="">
+                  <Image
+                    width={382}
+                    height={314}
+                    class=""
+                    src={image.mobile}
+                    alt={image.mobile}
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </a>
               </Slider.Item>
             ))}
           </Slider>
         </div>
 
-        <div class="lg:absolute lg:w-[50%] lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-[12px] justify-center items-center my-[20px]">
+        <div class="lg:absolute lg:w-[50%] lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-[36px] mb-[60px] justify-center items-center my-[15px]">
           <div class="group">
-            <Slider.PrevButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent lg:bg-white group-hover:bg-primary no-animation">
+            <Slider.PrevButton class="w-[24px] h-[24px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-white group-hover:bg-[#000] no-animation">
               <Icon
-                id="chevron-right"
-                size={16}
-                class="fill-[#001489] group-hover:fill-[#fff] rotate-180"
+                id="carret_right"
+                size={10}
+                class="fill-[#fff]"
               />
             </Slider.PrevButton>
           </div>
 
           <div class="group">
-            <Slider.NextButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent lg:bg-white group-hover:bg-primary no-animation">
+            <Slider.NextButton class="w-[24px] h-[24px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-[#000] group-hover:bg-[#000] no-animation">
               <Icon
-                id="chevron-right"
-                size={16}
-                class="fill-[#001489] group-hover:fill-[#fff]"
+                id="carret_left"
+                size={10}
+                class="fill-[#fff]"
               />
             </Slider.NextButton>
           </div>
