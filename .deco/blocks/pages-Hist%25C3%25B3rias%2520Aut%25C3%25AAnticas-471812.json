@@ -1,0 +1,46 @@
+{
+  "name": "Histórias Autênticas",
+  "path": "/historias-autenticas",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
+      "label": "ENVIAR",
+      "placeholder": "Email address",
+      "empty": {
+        "title": "Get top deals, latest trends, and more.",
+        "description": "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
+      },
+      "success": {
+        "title": "Thank you for subscribing!",
+        "description": "Cadastro efetuado! Aguarde para receber as novidades em primeira mão."
+      },
+      "failed": {
+        "title": "Oops!. Something went wrong!",
+        "description": "Algo deu errado. Por favor, tente novamente."
+      },
+      "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/e3dde2f9-ed2e-4bce-b445-77d5c6fc05da",
+      "desktopImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/10320093-6c9a-4a17-92ac-91d6a3c3929a",
+      "title": "Newsletter",
+      "heading": "Cadastre-se",
+      "subHeading": "E receba ofertas e novidades exclusivas",
+      "namePlaceholder": "Digite seu nome",
+      "emailPlaceholder": "Digite seu e-mail"
+    },
+    {
+      "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Hero.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

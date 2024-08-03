@@ -9,24 +9,27 @@ export interface CTA {
 }
 
 export interface Props {
-  title: HTMLWidget;
-  description: string;
+  title?: HTMLWidget;
+  description?: string;
   image?: ImageWidget;
-  placement: "left" | "right";
+  mobileImage?: ImageWidget;
+  placement?: "left" | "right" | "center";
   cta: CTA[];
 }
 
 const PLACEMENT = {
   left: "flex-col text-left lg:flex-row-reverse",
   right: "flex-col text-left lg:flex-row",
+  center: "flex-col text-center lg:flex-row",
 };
 
 export default function HeroFlats({
   title = "Hero",
   description = "Your description here",
   image,
-  placement,
-  cta,
+  mobileImage,
+  placement = "left",
+  cta = [],
 }: Props) {
   return (
     <div>
@@ -45,6 +48,17 @@ export default function HeroFlats({
               sizes="(max-width: 640px) 100vw, 30vw"
               src={image}
               alt={image}
+              decoding="async"
+              loading="lazy"
+            />
+          )}
+          {mobileImage && (
+            <Image
+              width={640}
+              class="w-full lg:w-1/2 object-fit"
+              sizes="(max-width: 640px) 100vw, 30vw"
+              src={mobileImage}
+              alt={mobileImage}
               decoding="async"
               loading="lazy"
             />
