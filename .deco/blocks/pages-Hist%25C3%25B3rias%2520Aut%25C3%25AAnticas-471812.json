@@ -6,6 +6,22 @@
       "__resolveType": "Header"
     },
     {
+      "__resolveType": "site/sections/Content/Hero.tsx",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/2d6c6f32-aa25-4696-89f8-e6d07864713e",
+      "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/52b296ab-34fa-49ce-8805-dcc88e2f7b95",
+      "imageURL": "/"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Content/Hero.tsx",
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/14050e22-9619-4797-bb42-3fdf9ab97b80",
+        "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/5b0bd436-d49c-46a9-a7f3-a32345ec9954",
+        "title": "SPORTSTYLE",
+        "placement": "center"
+      }
+    },
+    {
       "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
       "label": "ENVIAR",
       "placeholder": "Email address",
@@ -31,12 +47,6 @@
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Content/Hero.tsx"
-      }
     }
   ],
   "seo": {
