@@ -48,6 +48,54 @@
       ]
     },
     {
+      "__resolveType": "site/sections/Content/HeroBannerHover.tsx",
+      "title": "<p>HIROSHI NAGAI:</p>",
+      "description": "Arte, Cultura e Estilo!",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/99332bf5-2f99-4547-87e0-eca7581af06f",
+      "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/c796042b-2809-45a8-9aae-3e1fed013f95",
+      "cta": {
+        "text": "COMPRAR AGORA",
+        "href": "/"
+      },
+      "cards": [
+        {
+          "title": "<p>HIROSHI NAGAI:</p>",
+          "description": "Arte, Cultura e Estilo!",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/99332bf5-2f99-4547-87e0-eca7581af06f",
+          "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/c796042b-2809-45a8-9aae-3e1fed013f95",
+          "cta": {
+            "text": "COMPRAR AGORA",
+            "href": "/"
+          }
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Content/HeroBannerHover.tsx",
+      "cards": [
+        {
+          "cta": {
+            "href": "/",
+            "text": "COMPRAR AGORA"
+          },
+          "title": "<p>KOSEI PACK</p>",
+          "description": "Inspirado pelo conceito japonês de \"Kosei\", que celebra a individualidade.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/482b7dbd-c8c8-49b5-b30f-3ae3dafd1906",
+          "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/2f78c798-c810-4f70-8026-a84763c0acc7"
+        },
+        {
+          "cta": {
+            "href": "/",
+            "text": "COMPRAR AGORA"
+          },
+          "title": "<p>COUNTRYSIDE PACK</p>",
+          "description": "Traz a essência da natureza e o espírito aventureiro.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/0a340889-fe06-4f3c-b35e-822813c4ebe3",
+          "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/3cc96220-79d2-4d09-8804-b8389f61b755"
+        }
+      ]
+    },
+    {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Content/Hero.tsx",
