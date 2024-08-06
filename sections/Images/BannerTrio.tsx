@@ -56,7 +56,7 @@ function BannerTrio({ carouselImages, summary }: Props) {
               height={image.desktopHeight}
               class=""
               style={{
-                flex: '0 0 auto'
+                flex: "0 0 auto",
               }}
               src={image.desktop}
               alt={image.desktop}
@@ -67,7 +67,7 @@ function BannerTrio({ carouselImages, summary }: Props) {
               width={image.desktopWidth}
               height={image.desktopHeight}
               style={{
-                flex: '0 0 auto'
+                flex: "0 0 auto",
               }}
               class="opacity-0 group-hover:opacity-100 absolute top-0 left-0 transition-all ease-in-out duration-500"
               src={image.desktopHover}

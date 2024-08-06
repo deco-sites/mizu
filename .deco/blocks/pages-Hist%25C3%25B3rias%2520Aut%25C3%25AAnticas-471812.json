@@ -12,6 +12,62 @@
       "imageURL": "/"
     },
     {
+      "__resolveType": "site/sections/Images/ZoomCardCarousel.tsx",
+      "cards": [
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/35c9023b-1be5-4e5c-9009-23b3a3797c62",
+          "description": "CITY WIND WAGASHI",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/ce2d5690-10ac-41d1-8248-44a92644807b",
+          "description": "CONTENDER SHINZO",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/ba90143a-0546-4d13-872f-3c434cfc4ca1",
+          "description": "MUJIN TL X HIROSHI NAGAI",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/497e7ebb-45f1-4681-92f6-5c3af442b85f",
+          "description": "PROPHECY LS X HIROSHI NAGAI",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/d0929d53-01ea-4d6a-977e-f0074b01a925",
+          "description": "RIDER BETA X HIROSHI NAGAI",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/bb6caffd-9998-4a53-a594-90d1c177aeca",
+          "description": "RIDER BETA KOSEI",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/5cd7f949-bfbe-4385-aa2b-fffa21e1d6c4",
+          "description": "CONTENDER COUNTRYSIDE",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/12b28f6a-b545-462a-9a0a-f656e13d3eec",
+          "description": "STREET WIND",
+          "href": "/"
+        },
+        {
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/35c9023b-1be5-4e5c-9009-23b3a3797c62",
+          "description": "CITY WIND WAGASHI",
+          "href": "/"
+        }
+      ],
+      "description": "Porque o melhor pode sempre ser melhorado",
+      "title": "COLEÇÕES ALÉM DO TEMPO",
+      "cta": {
+        "text": "VEJA MAIS ESTILOS",
+        "href": "/"
+      }
+    },
+    {
       "__resolveType": "site/sections/Images/BannerTrio.tsx",
       "summary": {
         "title": "<p>CELEBRE A CULTURA DO BEISEBOL JAPONÊS.</p>",
@@ -49,6 +105,18 @@
     },
     {
       "__resolveType": "site/sections/Content/HeroBannerHover.tsx",
+      "cards": [
+        {
+          "cta": {
+            "href": "/",
+            "text": "COMPRAR AGORA"
+          },
+          "title": "<p>HIROSHI NAGAI:</p>",
+          "description": "Arte, Cultura e Estilo!",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/99332bf5-2f99-4547-87e0-eca7581af06f",
+          "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/c796042b-2809-45a8-9aae-3e1fed013f95"
+        }
+      ],
       "title": "<p>HIROSHI NAGAI:</p>",
       "description": "Arte, Cultura e Estilo!",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/99332bf5-2f99-4547-87e0-eca7581af06f",
@@ -56,19 +124,7 @@
       "cta": {
         "text": "COMPRAR AGORA",
         "href": "/"
-      },
-      "cards": [
-        {
-          "title": "<p>HIROSHI NAGAI:</p>",
-          "description": "Arte, Cultura e Estilo!",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/99332bf5-2f99-4547-87e0-eca7581af06f",
-          "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/c796042b-2809-45a8-9aae-3e1fed013f95",
-          "cta": {
-            "text": "COMPRAR AGORA",
-            "href": "/"
-          }
-        }
-      ]
+      }
     },
     {
       "__resolveType": "site/sections/Content/HeroBannerHover.tsx",
