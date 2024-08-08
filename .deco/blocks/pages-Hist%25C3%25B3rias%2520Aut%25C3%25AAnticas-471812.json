@@ -187,6 +187,15 @@
     },
     {
       "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "price:desc"
+        }
+      }
     }
   ],
   "seo": {
