@@ -41,7 +41,7 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
           "grid-rows-[1fr_32px_1fr_64px]",
           "grid-cols-[32px_1fr_32px] min-h-[660px]",
           "md:grid-cols-[112px_1fr_112px] md:min-h-[550px]",
-          "lg:w-full",
+          "lg:w-full 2xl:min-h-[600px]",
         )}
       >
         <div class="col-span-full row-span-full lg:ml-[calc((100vw-1238px)/2)]">
@@ -84,7 +84,7 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
                 index={index}
                 class={clx(
                   "bg-[#707070] h-[1rem] w-[1rem] no-animation rounded-full",
-                  "disabled:bg-primary",
+                  "disabled:bg-[#0085ca] disabled:hover:bg-primary cursor-pointer",
                 )}
               >
               </Slider.Dot>
