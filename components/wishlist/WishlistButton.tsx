@@ -3,7 +3,7 @@ import { useScript } from "deco/hooks/useScript.ts";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import Icon from "../ui/Icon.tsx";
+import Image from "apps/website/components/Image.tsx";
 
 interface Props {
   variant?: "full" | "icon";
@@ -63,13 +63,18 @@ function WishlistButton({ item, variant = "full" }: Props) {
         aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
         class={clx(
-          "btn no-animation",
+          "btn no-animation  ml-auto hover:bg-transparent",
           variant === "icon"
             ? "btn-circle btn-ghost btn-sm"
             : "btn-primary btn-outline gap-2 w-full",
         )}
       >
-        <Icon id="favorite" class="[.htmx-request_&]:hidden" fill="none" />
+        <Image
+            src={"https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.39/icons/icon-wishlist___aac3488ee8d3cf3a48c551f93bebb442.png"}
+            width={20}
+            height={21}
+            class={""}
+          />
         {variant === "full" && (
           <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
         )}

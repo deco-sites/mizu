@@ -1,17 +1,42 @@
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import ProductSlider from "../../components/product/ProductSlider.tsx";
-import Section, {
-  Props as SectionHeaderProps,
-} from "../../components/ui/Section.tsx";
+import Section from "../../components/ui/Section.tsx";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import { HTMLWidget } from "apps/admin/widgets.ts";
+import type { SectionProps } from "deco/mod.ts";
 
-export interface Props extends SectionHeaderProps {
+export interface Props {
+  title: HTMLWidget;
+  description: HTMLWidget;
   products: Product[] | null;
 }
 
-export default function ProductShelf({ products, title, cta }: Props) {
+export const loader = async (props: Props, req: Request) => {
+  const productsWithVariations = await Promise.all(
+    props.products.map(async (product) => {
+      if (product?.isVariantOf?.model) {
+        const variations = await fetch(
+          `https://www.mizuno.com.br/api/catalog_system/pub/products/search?fq=alternateIds_RefId:${product.isVariantOf.model.substr(0,10)}*&_from=0&_to=20`,
+        ).then((r) => r.json());
+
+        return {
+          ...product,
+          variationColors: variations,
+        };
+      }
+      return product;
+    })
+  );
+  
+  return {
+    ...props,
+    products: productsWithVariations,
+  };
+};
+
+export default function ProductShelf({ products, title, description }: SectionProps<typeof loader>) {
   if (!products || products.length === 0) {
     return null;
   }
@@ -38,8 +63,17 @@ export default function ProductShelf({ products, title, cta }: Props) {
       {...viewItemListEvent}
       class="[view-transition-name:loading-fallback-2]"
     >
-      <Section.Header title={title} cta={cta} />
-
+      <div class="hidden">{JSON.stringify(products)}</div>
+      <div class="flex flex-col gap-[32px]">
+        <h3
+          class="text-[#060606] font-bold font-roboto uppercase text-[2rem] lg:text-[2rem] leading-[1.2]"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+        <div
+          class="font-roboto text-[#060606] text-[16px] leading-[1.5] max-w-[610px]"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+      </div>
       <ProductSlider products={products} itemListName={title} />
     </Section.Container>
   );

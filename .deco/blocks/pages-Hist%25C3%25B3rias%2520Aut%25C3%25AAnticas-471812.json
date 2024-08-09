@@ -127,6 +127,23 @@
       }
     },
     {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "price:desc",
+          "count": 9,
+          "fq": [
+            "alternateIds_RefId:101102102_*"
+          ],
+          "collection": "359"
+        }
+      },
+      "title": "<p>INSPIRE-SE COM O QUE HÁ DE NOVO.</p>",
+      "description": "<p>Descubra mais lançamentos e transforme seu estilo com o que há de mais moderno e confortável! Explore a coleção e encontre o par perfeito para elevar seu visual diário com autenticidade e sofisticação.</p>",
+      "produtos": "s"
+    },
+    {
       "__resolveType": "site/sections/Content/HeroBannerHover.tsx",
       "cards": [
         {
@@ -150,6 +167,23 @@
           "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/3cc96220-79d2-4d09-8804-b8389f61b755"
         }
       ]
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "price:desc",
+          "count": 9,
+          "fq": [
+            "alternateIds_RefId:101102102_*"
+          ],
+          "collection": "836",
+          "similars": true
+        }
+      },
+      "title": "<p>INSPIRE-SE COM O QUE HÁ DE NOVO.</p>",
+      "description": "<p>Descubra mais lançamentos e transforme seu estilo com o que há de mais moderno e confortável! Explore a coleção e encontre o par perfeito para elevar seu visual diário com autenticidade e sofisticação.</p>"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -187,15 +221,6 @@
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-        "props": {
-          "sort": "price:desc"
-        }
-      }
     }
   ],
   "seo": {

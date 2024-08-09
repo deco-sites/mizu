@@ -17,46 +17,56 @@ function ProductSlider({ products, itemListName }: Props) {
     <>
       <div
         id={id}
-        class="grid grid-rows-1"
+        class="grid grid-rows-1 relative"
         style={{
           gridTemplateColumns: "min-content 1fr min-content",
         }}
       >
-        <div class="col-start-1 col-span-3 row-start-1 row-span-1">
-          <Slider class="carousel carousel-center sm:carousel-end gap-5 sm:gap-10 w-full">
+        <div class="col-start-1 col-span-3 row-start-1 row-span-1 mb-[70px] lg:mb-0">
+          <Slider class="carousel carousel-end sm:carousel-end gap-[16px] w-full">
             {products?.map((product, index) => (
               <Slider.Item
                 index={index}
                 class={clx(
                   "carousel-item",
-                  "first:pl-5 first:sm:pl-0",
-                  "last:pr-5 last:sm:pr-0",
+                  "last:mr-[16px]",
+                  "",
                 )}
               >
                 <ProductCard
                   index={index}
                   product={product}
                   itemListName={itemListName}
-                  class="w-[287px] sm:w-[300px]"
+                  class="w-[179px] lg:w-[287px]"
                 />
               </Slider.Item>
             ))}
           </Slider>
         </div>
 
-        <div class="col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center">
-          <Slider.PrevButton class="hidden sm:flex disabled:invisible btn btn-neutral btn-sm btn-circle no-animation">
-            <Icon id="chevron-right" class="rotate-180" />
-          </Slider.PrevButton>
-        </div>
+        <div class="absolute z-10 lg:z-[-1] w-full bottom-[-25px] lg:bottom-[auto] lg:w-[106%] lg:left-[-37px] lg:justify-between lg:top-[43%] flex w-full gap-[1.25rem] lg:gap-[36px] mb-[60px] justify-center items-center my-[15px]">
+          <div class="group">
+            <Slider.PrevButton class="w-[28px] h-[28px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-[#000] group-hover:bg-[#000] no-animation">
+              <Icon
+                id="carret_right"
+                size={14}
+                class="fill-[#fff]"
+              />
+            </Slider.PrevButton>
+          </div>
 
-        <div class="col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center">
-          <Slider.NextButton class="hidden sm:flex disabled:invisible btn btn-neutral btn-sm btn-circle no-animation">
-            <Icon id="chevron-right" />
-          </Slider.NextButton>
+          <div class="group">
+            <Slider.NextButton class="w-[28px] h-[28px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-[#000] group-hover:bg-[#000] no-animation">
+              <Icon
+                id="carret_left"
+                size={14}
+                class="fill-[#fff]"
+              />
+            </Slider.NextButton>
+          </div>
         </div>
       </div>
-      <Slider.JS rootId={id} />
+      <Slider.JS rootId={id} infinite={true} />
     </>
   );
 }
