@@ -180,7 +180,7 @@ function ProductCard({
               "-webkit-box-orient": "vertical",
               display: "-webkit-box",
             }}
-            class="font-medium font-roboto text-[.875rem] leading-[1.125rem]  text-ellipsis	text-[#1d1d1d] "
+            class="font-medium font-roboto text-[.875rem] leading-[1.125rem] overflow-hidden text-ellipsis	text-[#1d1d1d] "
           >
             {title}
           </span>
