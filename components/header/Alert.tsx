@@ -16,7 +16,7 @@ function Alert({ alerts = [], interval = 5 }: Props) {
 
   return (
     <div id={id} class="relative top-[118px] lg:top-[64px]">
-      <Slider class="carousel carousel-center w-screen gap-6 bg-[#f2f2f2] text-primary">
+      <Slider class="carousel carousel-center w-full gap-6 bg-[#f2f2f2] text-primary">
         {alerts.map((alert, index) => (
           <Slider.Item index={index} class="carousel-item">
             <span

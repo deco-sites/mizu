@@ -21,7 +21,8 @@ export type AvailableIcons =
   | "account"
   | "carret_right"
   | "carret_left"
-  | "send";
+  | "send"
+  | "buy";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

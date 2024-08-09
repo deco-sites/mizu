@@ -18,7 +18,9 @@ export const loader = async (props: Props, req: Request) => {
     props.products.map(async (product) => {
       if (product?.isVariantOf?.model) {
         const variations = await fetch(
-          `https://www.mizuno.com.br/api/catalog_system/pub/products/search?fq=alternateIds_RefId:${product.isVariantOf.model.substr(0,10)}*&_from=0&_to=20`,
+          `https://www.mizuno.com.br/api/catalog_system/pub/products/search?fq=alternateIds_RefId:${
+            product.isVariantOf.model.substr(0, 10)
+          }*&_from=0&_to=20`,
         ).then((r) => r.json());
 
         return {
@@ -27,16 +29,18 @@ export const loader = async (props: Props, req: Request) => {
         };
       }
       return product;
-    })
+    }),
   );
-  
+
   return {
     ...props,
     products: productsWithVariations,
   };
 };
 
-export default function ProductShelf({ products, title, description }: SectionProps<typeof loader>) {
+export default function ProductShelf(
+  { products, title, description }: SectionProps<typeof loader>,
+) {
   if (!products || products.length === 0) {
     return null;
   }
@@ -63,7 +67,6 @@ export default function ProductShelf({ products, title, description }: SectionPr
       {...viewItemListEvent}
       class="[view-transition-name:loading-fallback-2]"
     >
-      <div class="hidden">{JSON.stringify(products)}</div>
       <div class="flex flex-col gap-[32px]">
         <h3
           class="text-[#060606] font-bold font-roboto uppercase text-[2rem] lg:text-[2rem] leading-[1.2]"

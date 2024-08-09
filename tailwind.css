@@ -55,6 +55,52 @@ input[type="checkbox"]#collapse-input-animation:checked ~ .collapse-title {
   font-weight: bold;
 }
 
+.variations::-webkit-scrollbar-thumb {
+  border-radius: 1.25rem;
+  border: .125rem solid #f2f2f2;
+  background: #0085ca;
+}
+
+.variations::-webkit-scrollbar {
+  height: .625rem;
+}
+
+.buy-button-label:hover ~ .buy-button {
+  transition: all .4s ease-in-out;
+  transform: translateX(-200%);
+}
+
+.buy-button:hover ~ .buy-button-label {
+  pointer-events: all !important;
+}
+
+.buy-button-label:hover {
+  transition: all .4s ease-in-out;
+  pointer-events: all;
+  transform: translate(-300%, -50%);
+}
+
+.buy-button-label:hover ~ .box-sizes {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .4s ease-in-out;
+}
+
+.box-sizes:hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .4s ease-in-out;
+}
+
+.box-sizes:hover ~ .buy-button {
+  transition: all .4s ease-in-out;
+  transform: translateX(-200%);
+}
+.box-sizes:hover ~ .buy-button-label {
+  transition: all .4s ease-in-out;
+  transform: translateX(-300%, -50%) !important;
+}
+
 @keyframes progress-frame {
   0% {
     --dot-progress: 0%

@@ -70,11 +70,11 @@ function WishlistButton({ item, variant = "full" }: Props) {
         )}
       >
         <Image
-            src={"https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.39/icons/icon-wishlist___aac3488ee8d3cf3a48c551f93bebb442.png"}
-            width={20}
-            height={21}
-            class={""}
-          />
+          src={"https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.store-theme/4.0.39/icons/icon-wishlist___aac3488ee8d3cf3a48c551f93bebb442.png"}
+          width={20}
+          height={21}
+          class={""}
+        />
         {variant === "full" && (
           <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
         )}
