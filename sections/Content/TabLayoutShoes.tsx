@@ -97,8 +97,8 @@ export default function TabLayoutShoes({
               class="min-w-[318px] w-full relative"
               src={tabs[selected].image}
               alt={tabs[selected].image}
-              decoding="async"
-              loading="lazy"
+              decoding="sync"
+              loading="eager"
             />
           </div>
         </div>
