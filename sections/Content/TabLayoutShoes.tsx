@@ -14,6 +14,7 @@ export interface Tab {
 export interface Props {
   title: string;
   mobileImage: ImageWidget;
+  desktopCoverImage: ImageWidget;
   tabs: Tab[];
 }
 
@@ -22,6 +23,7 @@ export default function TabLayoutShoes({
   mobileImage =
     "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/f1b4ea9b-438f-445a-9786-377d32280279",
   tabs,
+  desktopCoverImage,
   selected = 0,
 }: Props & { selected: number }) {
   return (
@@ -84,8 +86,8 @@ export default function TabLayoutShoes({
               width={550}
               height={730}
               class="absolute top-0 right-0 min-w-[318px] w-full"
-              src={tabs[0].image}
-              alt={tabs[0].image}
+              src={desktopCoverImage}
+              alt={desktopCoverImage}
               decoding="sync"
               loading="eager"
             />

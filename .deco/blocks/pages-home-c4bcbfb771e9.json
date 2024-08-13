@@ -33,7 +33,7 @@
           "name": "Cabedal",
           "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-01___a04f46f2c045f87261bffe229c298e50.png",
           "description": "Estrutura que se adapta à forma do pé, mantendo-o na posição correta e ajustado durante todo o período do treino.",
-          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-01___459c6880272823a3bb36ed97956e5c1e.png",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/f9c0c631-87a6-4147-a9ea-d0be441cafb0",
           "widthImageName": 151,
           "heightImageName": 72
         },
@@ -41,7 +41,7 @@
           "name": "Amortecimento",
           "description": "Entressola com Mizuno Enerzy Nxt que oferece uma experiência aprimorada de amortecimento com retorno de energia.",
           "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-02___5c5c5be29cd2e769da3fc110bd1a5cbc.png",
-          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-02___9dce74ee098ad92bbf91457d8bdb053a.png",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/80f73c2f-a1f1-43f4-8a87-4b1069ef016a",
           "widthImageName": 207,
           "heightImageName": 99
         },
@@ -49,7 +49,7 @@
           "imageName": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-logo-03___3dcbf17724d03fbb68cabf1a2959fbf3.png",
           "description": "Placa Wave reforçada com fibra de vidro que proporciona velocidade e estabilidade sem abrir mão do conforto.",
           "name": "Propulsão",
-          "image": "https://mizunobrio.vtexassets.com/assets/vtex/assets-builder/mizunobrio.fourmaker/0.0.15/neovista/tecnologia-03___fe103bc415cd337ca4bbec04a95a4b52.png",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/e08f7a7f-ca84-4589-b78f-5ea3423fcb45",
           "widthImageName": 207,
           "heightImageName": 99
         },
@@ -63,7 +63,8 @@
         }
       ],
       "title": "TECNOLOGIA PARA IR ALÉM",
-      "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/f1b4ea9b-438f-445a-9786-377d32280279"
+      "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/f1b4ea9b-438f-445a-9786-377d32280279",
+      "desktopCoverImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/e7964a2b-07ac-4776-ad74-70424fb4b895"
     },
     {
       "__resolveType": "website/sections/Rendering/Deferred.tsx",
