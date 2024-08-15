@@ -9,7 +9,8 @@
       "__resolveType": "site/sections/Content/Hero.tsx",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/2d6c6f32-aa25-4696-89f8-e6d07864713e",
       "mobileImage": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/52b296ab-34fa-49ce-8805-dcc88e2f7b95",
-      "imageURL": "/"
+      "imageURL": "/",
+      "preloadImages": true
     },
     {
       "__resolveType": "site/sections/Images/ZoomCardCarousel.tsx",
