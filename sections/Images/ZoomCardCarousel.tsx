@@ -58,6 +58,7 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
                       width={900}
                       height={900}
                       loading={"lazy"}
+                      decoding={"async"}
                       class="transition-all duration-300 group-hover:scale-[1.15]"
                     />
                   </a>

@@ -38,6 +38,7 @@ function ProductSlider({ products, itemListName }: Props) {
                   product={product}
                   itemListName={itemListName}
                   class="w-[179px] lg:w-[287px]"
+                  preload={false}
                 />
               </Slider.Item>
             ))}

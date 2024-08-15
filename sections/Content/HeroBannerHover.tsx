@@ -37,8 +37,8 @@ export default function HeroBannerHover({
                 class="hidden lg:flex object-cover w-full lg:h-full transition-all duration-300 group-hover:scale-105"
                 src={card.image}
                 alt={card.image}
-                decoding="sync"
-                loading="eager"
+                decoding="async"
+                loading="lazy"
               />
               <Image
                 width={414}
@@ -46,8 +46,8 @@ export default function HeroBannerHover({
                 class="lg:hidden object-cover w-full lg:h-full transition-all duration-300 group-hover:scale-105"
                 src={card.mobileImage}
                 alt={card.mobileImage}
-                decoding="sync"
-                loading="eager"
+                decoding="async"
+                loading="lazy"
               />
             </a>
             <div

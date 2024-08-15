@@ -16,6 +16,7 @@ export interface Props {
   image?: ImageWidget;
   mobileImage?: ImageWidget;
   imageURL?: string;
+  preloadImages?: boolean;
   placement?: "left" | "right" | "center";
   cta?: CTA[];
 }
@@ -34,6 +35,7 @@ export default function HeroFlats({
   placement = "center",
   imageURL = "#",
   cta = [],
+  preloadImages = false
 }: Props) {
   return (
     <div>
@@ -49,8 +51,8 @@ export default function HeroFlats({
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={image}
                 alt={image}
-                decoding="async"
-                loading="lazy"
+                decoding={preloadImages ? "sync" : "async"}
+                loading={preloadImages ? "eager" : "lazy"}
               />
             )}
             {mobileImage && (
@@ -60,8 +62,8 @@ export default function HeroFlats({
                 sizes="(max-width: 640px) 100vw, 30vw"
                 src={mobileImage}
                 alt={mobileImage}
-                decoding="async"
-                loading="lazy"
+                decoding={preloadImages ? "sync" : "async"}
+                loading={preloadImages ? "eager" : "lazy"}
               />
             )}
           </a>

@@ -85,8 +85,8 @@ function Newsletter({
           class="lg:hidden w-full object-cover h-[418px]"
           src={mobileImage}
           alt={mobileImage}
-          decoding="sync"
-          loading="eager"
+          decoding="async"
+          loading="lazy"
         />
         <Image
           width={960}
@@ -94,8 +94,8 @@ function Newsletter({
           class="hidden lg:flex w-[48%] object-cover h-[418px]"
           src={desktopImage}
           alt={desktopImage}
-          decoding="sync"
-          loading="eager"
+          decoding="async"
+          loading="lazy"
         />
         <div class="lg:max-w-[690px] w-full lg:w-[50%] flex flex-col items-center justify-center lg:justify-start lg:items-start gap-[20px] pt-[45px] lg:pt-[65px]">
           <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
@@ -136,8 +136,8 @@ function Newsletter({
         class="lg:hidden w-full object-cover h-[418px]"
         src={mobileImage}
         alt={mobileImage}
-        decoding="sync"
-        loading="eager"
+        decoding="async"
+        loading="lazy"
       />
       <Image
         width={960}
@@ -145,8 +145,8 @@ function Newsletter({
         class="hidden lg:flex w-[48%] object-cover h-[418px]"
         src={desktopImage}
         alt={desktopImage}
-        decoding="sync"
-        loading="eager"
+        decoding="async"
+        loading="lazy"
       />
       <div class="lg:max-w-[690px] w-full lg:w-[50%] flex flex-col items-center justify-center lg:justify-start lg:items-start gap-[20px] pt-[45px] lg:pt-[65px]">
         <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
