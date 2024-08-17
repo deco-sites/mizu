@@ -21,7 +21,7 @@ export default function VideoPlusText({
           >
             <div class="w-full h-full lg:max-w-[1240px] flex items-center">
               <h1
-                class="w-full font-black	text-white text-[40px] lg:text-[72px] leading-[40px] lg:leading-[64px] text-center lg:text-left mx-[31px] lg:mx-0"
+                class="w-full font-black	text-white text-[40px] lg:text-7xl leading-10 lg:leading-[64px] text-center lg:text-left mx-[31px] lg:mx-0"
                 dangerouslySetInnerHTML={{
                   __html: title,
                 }}
@@ -31,7 +31,7 @@ export default function VideoPlusText({
         )}
       {video.src.includes("youtube")
         ? (
-          <div class="h-[52.5vw] lg:h-[768px] px-[12px] lg:px-[40px] w-full bg-transparent lg:bg-[#d9d9d9] flex justify-center">
+          <div class="h-[52.5vw] lg:h-[768px] px-3 lg:px-10 w-full bg-transparent lg:bg-info-content flex justify-center">
             <iframe
               class="max-w-[1366px]"
               width="100%"

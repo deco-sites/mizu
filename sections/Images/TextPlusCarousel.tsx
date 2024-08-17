@@ -36,22 +36,22 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
   const id = useId();
 
   return (
-    <div class="relative flex flex-col lg:flex-row lg:justify-end gap-[24px] mt-[24px] lg:mt-[80px]">
-      <div class="flex flex-col gap-[40px] px-[12px] max-w-[357px]">
+    <div class="relative flex flex-col lg:flex-row lg:justify-end gap-6 mt-6 lg:mt-20">
+      <div class="flex flex-col gap-10 px-3 max-w-[357px]">
         {summaries.map((summary) => (
-          <div class="flex flex-col gap-[24px]">
+          <div class="flex flex-col gap-6">
             <h3
               class="text-primary font-black uppercase text-[32px] lg:text-[40px] leading-[37.5px]"
               dangerouslySetInnerHTML={{ __html: summary.title }}
             />
             <div
-              class="font-roboto text-[16px] leading-[18.75px]"
+              class="font-roboto text-base leading-[18.75px] text-black"
               dangerouslySetInnerHTML={{ __html: summary.description }}
             />
           </div>
         ))}
         <a
-          class="mx-auto lg:mx-0 w-min group relative pr-[90px] lg:pr-[40px] hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-[40px] mt-[24px] rounded font-roboto font-medium mt-[-20px]"
+          class="mx-auto lg:mx-0 w-min group relative pr-[90px] lg:pr-10 hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-10 mt-6 rounded font-roboto font-medium mt-[-20px]"
           href={cta.href}
         >
           {cta.text}
@@ -91,13 +91,13 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
           </Slider>
         </div>
 
-        <div class="lg:absolute lg:w-[50%] lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-[12px] justify-center items-center my-[20px]">
+        <div class="lg:absolute lg:w-1/2 lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-3 justify-center items-center my-[20px]">
           <div class="group">
             <Slider.PrevButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent lg:bg-white group-hover:bg-primary no-animation">
               <Icon
                 id="chevron-right"
                 size={16}
-                class="fill-[#001489] group-hover:fill-[#fff] rotate-180"
+                class="fill-primary group-hover:fill-white rotate-180"
               />
             </Slider.PrevButton>
           </div>
@@ -107,7 +107,7 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
               <Icon
                 id="chevron-right"
                 size={16}
-                class="fill-[#001489] group-hover:fill-[#fff]"
+                class="fill-primary group-hover:fill-white"
               />
             </Slider.NextButton>
           </div>

@@ -43,7 +43,7 @@ function CartItem({ item, locale, currency }: Props) {
       class="grid grid-rows-1 gap-2"
       style={{ gridTemplateColumns: "auto 1fr" }}
     >
-      <a class="bg-[#f2f2f2] rounded-[8px] mr-[20px]" href={item_url}>
+      <a class="bg-base-300 rounded-lg mr-5" href={item_url}>
         <Image
           alt={name}
           src={image.replace("55-55", "250-250")}
@@ -56,7 +56,7 @@ function CartItem({ item, locale, currency }: Props) {
       <div class="flex flex-col gap-2">
         {/* Name and Remove button */}
         <div class="flex justify-between">
-          <legend class="text-[14px] leading-[18px] font-medium	text-[#060606] max-w-[112px] mb-[20px] font-roboto">
+          <legend class="text-sm leading-[18px] font-medium	text-accent max-w-[112px] mb-5 font-roboto">
             {name}
           </legend>
           <button
@@ -75,7 +75,7 @@ function CartItem({ item, locale, currency }: Props) {
 
         {/* Price Block */}
         <div class="flex items-center gap-2">
-          <span class="text-[16px] text-[#060606] leading-[1.4375rem] tracking-[0rem] font-semibold	">
+          <span class="text-base text-accent leading-[1.4375rem] tracking-normal font-semibold	">
             {isGift ? "Grátis" : "por " + formatPrice(price, currency, locale)}
           </span>
         </div>

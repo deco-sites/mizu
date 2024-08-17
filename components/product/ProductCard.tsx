@@ -91,7 +91,7 @@ function ProductCard({
           class={clx(
             "absolute top-0 left-0",
             "grid grid-cols-1 grid-rows-1",
-            "w-full bg-[#f2f2f2] rounded-[.5rem] ",
+            "w-full bg-base-300 rounded-lg ",
             !inStock && "opacity-70",
           )}
         >
@@ -142,23 +142,23 @@ function ProductCard({
             decoding="async"
           />
         </a>
-        <div class="hidden lg:flex group/button w-[2.5rem] hover:w-full absolute left-[.625rem] bottom-[.625rem] z-[2]">
-          <label class="buy-button-label z-10 top-[65%] cursor-pointer pointer-events-none group-hover/button:pointer-events-auto w-full h-full flex items-center justify-center font-roboto w-[0] absolute top-0 left-0 text-[.875rem] font-medium opacity-0 overflow-hidden translate-y-[-50%] transition-all duration-[.2s] group-hover/button:w-[max-content] group-hover/button:left-1/2 group-hover/button:translate-y-[-50%] group-hover/button:translate-x-[-50%] group-hover/button:opacity-100">
+        <div class="hidden lg:flex group/button w-10 hover:w-full absolute left-[.625rem] bottom-[.625rem] z-[2]">
+          <label class="buy-button-label z-10 top-[65%] cursor-pointer pointer-events-none group-hover/button:pointer-events-auto w-full h-full flex items-center justify-center font-roboto w-0 absolute top-0 left-0 text-sm font-medium opacity-0 overflow-hidden translate-y-[-50%] transition-all duration-200 group-hover/button:w-max group-hover/button:left-1/2 group-hover/button:translate-y-[-50%] group-hover/button:translate-x-[-50%] group-hover/button:opacity-100">
             Adicionar a sacola
           </label>
-          <button class="buy-button w-[2.5rem] h-[2.5rem] p-[.625rem] rounded-[1.25rem] absolute left-0 bottom-0 border-0 translate-x-0 transition-all duration-[.2s] overflow-hidden bg-white min-h-[auto] hover:max-w-[17.5rem] hover:w-[calc(100%-20px)] flex items-center">
+          <button class="buy-button w-10 h-10 p-2.5 rounded-[1.25rem] absolute left-0 bottom-0 border-0 translate-x-0 transition-all duration-200 overflow-hidden bg-white min-h-[auto] hover:max-w-[17.5rem] hover:w-[calc(100%-20px)] flex items-center">
             <Icon id={"buy"} size={22} />
           </button>
           <ul
             style={{
               gridTemplateColumns: "repeat(6,1fr)",
             }}
-            class="grid box-sizes relative bg-white p-[.625rem] w-[calc(100%-1.25rem)] z-30 opacity-0 min-h-[2.5rem] rounded-[.625rem] gap-[.625rem] translate-y-[200%] transition-all ease-in-out duration-[.4s]"
+            class="grid box-sizes relative bg-white p-2.5 w-[calc(100%-1.25rem)] z-30 opacity-0 min-h-10 rounded-[.625rem] gap-2.5 translate-y-[200%] transition-all ease-in-out duration-[.4s]"
           >
             {secondVariants.map((variant) => (
-              <li class="text-[#707070] flex justify-center items-center hover:text-[#000] hover:underline">
+              <li class="text-neutral flex justify-center items-center hover:text-black hover:underline">
                 <a
-                  class="w-full h-full font-[600] text-[.8125rem] leading-[.875rem]"
+                  class="w-full h-full font-semibold text-[.8125rem] leading-[.875rem]"
                   href={variant[1]}
                 >
                   {variant[0]}
@@ -169,7 +169,7 @@ function ProductCard({
         </div>
       </figure>
 
-      <a href={relativeUrl} class="mt-[.625rem]">
+      <a href={relativeUrl} class="mt-2.5">
         <div
           class="grid"
           style={{ gridTemplateColumns: "1fr minmax(auto,3.75rem)" }}
@@ -180,14 +180,14 @@ function ProductCard({
               "-webkit-box-orient": "vertical",
               display: "-webkit-box",
             }}
-            class="font-medium font-roboto text-[.875rem] leading-[1.125rem] overflow-hidden text-ellipsis	text-[#1d1d1d] "
+            class="font-medium font-roboto text-sm leading-[1.125rem] overflow-hidden text-ellipsis	text-accent-content "
           >
             {title}
           </span>
           <WishlistButton item={item} variant="icon" />
         </div>
 
-        <div class="flex flex-col gap-[.75rem] pt-[.75rem]">
+        <div class="flex flex-col gap-3 pt-3">
           {
             /* {listPrice && (
             <span class="line-through font-normal text-gray-400">
@@ -195,13 +195,13 @@ function ProductCard({
             </span>
           )} */
           }
-          <span class="font-bold text-[#001489] text-[.875rem] leading-[.875rem] font-roboto">
+          <span class="font-bold text-primary text-sm leading-[.875rem] font-roboto">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
-          <span class="text-[#707070] text-[.875rem] leading-[.875rem] font-roboto">
+          <span class="text-neutral text-sm leading-[.875rem] font-roboto">
             {installments}
           </span>
-          <span class="text-[#707070] text-[.875rem] leading-[.875rem] font-roboto">
+          <span class="text-neutral text-sm leading-[.875rem] font-roboto">
             {variationColors && variationColors.length > 0 &&
               variationColors.length + (variationColors.length > 1
                   ? " cores disponíveis"
@@ -209,7 +209,7 @@ function ProductCard({
           </span>
         </div>
       </a>
-      <ul class="hidden variations lg:flex opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-[.4s] mt-[.625rem] overflow-hidden overflow-x-auto p-[.25rem] min-h-[50px]">
+      <ul class="hidden variations lg:flex opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-[.4s] mt-2.5 overflow-hidden overflow-x-auto p-1 min-h-[50px]">
         {variationColors && variationColors.length > 0 &&
           variationColors.map((variation) => (
             <li class="mr-[.1875rem] min-w-[45px]">

@@ -78,17 +78,17 @@ export default function Searchbar(
   const slot = useId();
 
   return (
-    <div class="w-full px-[16px] pb-[14px] lg:px-0 lg:pb-0 min-w-[13.5rem] max-w-[25rem] mx-auto lg:max-w-[216px]">
+    <div class="w-full px-4 pb-3.5 lg:px-0 lg:pb-0 min-w-[13.5rem] max-w-[25rem] mx-auto lg:max-w-[216px]">
       <form
         id={SEARCHBAR_INPUT_FORM_ID}
         action={ACTION}
-        class="w-full grid gap-[1.5rem] items-center justify-between rounded-[2rem] border border-[.0625rem] border-[#707070] hover:bg-[#f2f2f2] transition-all duration-[400ms] ease-in-out"
+        class="w-full grid gap-6 items-center justify-between rounded-[2rem] border border-[.0625rem] border-neutral hover:bg-base-300 transition-all duration-[400ms] ease-in-out"
         style={{ gridTemplateColumns: "3fr 2rem" }}
       >
         <input
           autoFocus
           tabIndex={0}
-          class="outline-none bg-transparent leading-[.75rem] text-[.75rem] font-roboto p-[.5625rem] pr-0 text-[#949494]"
+          class="outline-none bg-transparent leading-3 text-xs font-roboto p-[.5625rem] pr-0 text-neutral-content"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"

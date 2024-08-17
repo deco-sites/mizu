@@ -34,7 +34,7 @@ function Bag() {
       >
         <span
           id={id}
-          class="hidden absolute top-[-5px] right-0 text-[#f2f2f2] bg-[#0085ca] rounded-full text-[.75rem] font-roboto w-[20px] h-[20px] flex justify-center items-center"
+          class="hidden absolute top-[-5px] right-0 text-base-300 bg-info rounded-full text-xs font-roboto w-5 h-5 flex justify-center items-center"
         />
 
         <span>

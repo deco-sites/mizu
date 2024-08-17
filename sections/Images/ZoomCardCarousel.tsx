@@ -27,10 +27,10 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
   return (
     <>
       <div class="my-[4rem] lg:mt-[3rem]">
-        <h2 class="text-[2.5rem] font-bold text-[#060606] text-center leading-[1.5] font-roboto">
+        <h2 class="text-[2.5rem] font-bold text-accent text-center leading-normal	 font-roboto">
           {title}
         </h2>
-        <p class="font-medium text-[1rem] text-[#060606] text-center leading-[1.5] font-roboto mt-[20px]">
+        <p class="font-medium text-base text-accent text-center leading-normal	 font-roboto mt-5">
           {description}
         </p>
       </div>
@@ -51,7 +51,7 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
                 index={index}
                 class="group carousel-item w-full md:w-1/3 lg:w-[22%] flex-col"
               >
-                <div class="w-full bg-[#f2f2f2] py-[4rem]">
+                <div class="w-full bg-base-300 py-[4rem]">
                   <a href={card.href} class="w-full">
                     <Image
                       src={card.image}
@@ -63,8 +63,8 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
                     />
                   </a>
                 </div>
-                <a href={card.href} class="my-[16px]">
-                  <p class="leading-[1.5] text-[#060606] text-center text-[1rem] font-roboto group-hover:font-bold">
+                <a href={card.href} class="my-4">
+                  <p class="leading-normal	 text-accent text-center text-base font-roboto group-hover:font-bold">
                     {card.description}
                   </p>
                 </a>
@@ -76,7 +76,7 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
         <ul
           class={clx(
             "col-span-full row-start-4 z-10 mt-[1.5rem]",
-            "carousel justify-center gap-[1rem]",
+            "carousel justify-center gap-4",
           )}
         >
           {cards.map((_, index) => (
@@ -84,8 +84,8 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
               <Slider.Dot
                 index={index}
                 class={clx(
-                  "bg-[#707070] h-[1rem] w-[1rem] no-animation rounded-full",
-                  "disabled:bg-[#0085ca] disabled:hover:bg-primary cursor-pointer",
+                  "bg-neutral h-[1rem] w-[1rem] no-animation rounded-full",
+                  "disabled:bg-info disabled:hover:bg-primary cursor-pointer",
                 )}
               >
               </Slider.Dot>
@@ -98,7 +98,7 @@ function ZoomCardCarousel({ cards = [], description, title, cta }: Props) {
       <div class="hidden md:flex mt-[2.5rem] mb-[4rem]">
         <a
           href={cta.href}
-          class="mx-auto bg-[#060606] font-roboto text-[1rem] rounded-[30px] text-white transition-all duration-300 py-[1rem] px-[5rem] hover:bg-[#0085ca]"
+          class="mx-auto bg-accent font-roboto text-base rounded-[30px] text-white transition-all duration-300 py-4 px-[5rem] hover:bg-info"
         >
           {cta.text}
         </a>

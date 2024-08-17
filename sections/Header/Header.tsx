@@ -68,11 +68,11 @@ const Desktop = (
         />
       </a>
 
-      <ul class="flex w-auto gap-[10px] pl-[40px]">
+      <ul class="flex w-auto gap-2.5 pl-10">
         {navItems?.map((item) => <NavItem item={item} />)}
       </ul>
 
-      <div class="flex w-auto gap-[1.25rem] justify-center items-center">
+      <div class="flex w-auto gap-5 justify-center items-center">
         <Searchbar {...searchbar} />
         <SignIn variant="desktop" />
         <Image
@@ -115,7 +115,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
     />
 
     <div
-      class="grid items-center w-screen px-[16px] py-[15px]"
+      class="grid items-center w-screen px-4 py-[15px]"
       style={{
         height: NAVBAR_HEIGHT_MOBILE,
         gridTemplateColumns: "5rem auto 5rem",
@@ -149,7 +149,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
         </a>
       )}
 
-      <div class="flex gap-[1rem] items-center justify-end">
+      <div class="flex gap-4 items-center justify-end">
         <SignIn variant="mobile" />
         <Bag />
       </div>

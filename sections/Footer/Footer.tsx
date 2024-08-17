@@ -52,10 +52,10 @@ function Footer({
   security = [],
 }: Props) {
   return (
-    <footer class="bg-[#f2f2f2]">
+    <footer class="bg-base-300">
       <div class="lg:hidden">
-        <div class="flex flex-col pb-[15px] pt-[40px] w-full justify-start">
-          <ul class="w-full p-[15px] max-h-[500px] flex flex-wrap justify-end border-b border-[#707070]">
+        <div class="flex flex-col pb-[15px] pt-10 w-full justify-start">
+          <ul class="w-full p-[15px] max-h-[500px] flex flex-wrap justify-end border-b border-neutral">
             {links.map((link, index) => {
               if (link.title) {
                 return (
@@ -65,7 +65,7 @@ function Footer({
                   >
                     <li class="mb-[15px]">
                       <a
-                        class="text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary"
+                        class="text-base leading-[1.125rem]  tracking-normal font-bold text-primary"
                         href={link.href}
                       >
                         {link.title}
@@ -75,7 +75,7 @@ function Footer({
                       {link?.children?.map((child) => (
                         <li class="mb-[15px]">
                           <a
-                            class="text-[16px] leading-[1.125rem]  tracking-[0rem] "
+                            class="text-base leading-[1.125rem]  tracking-normal "
                             href={child.href}
                             style={{
                               color: child.type === "title"
@@ -96,7 +96,7 @@ function Footer({
                   {link?.children?.map((child) => (
                     <li class="mb-[15px]">
                       <a
-                        class="text-[16px] leading-[1.125rem]  tracking-[0rem] "
+                        class="text-base leading-[1.125rem]  tracking-normal "
                         href={child.href}
                         style={{
                           color: child.type === "title" ? "#001489" : "#707070",
@@ -113,12 +113,12 @@ function Footer({
               );
             })}
           </ul>
-          <div class="flex flex-col justify-center items-center mt-[15px] border-b border-[#707070]">
+          <div class="flex flex-col justify-center items-center mt-[15px] border-b border-neutral">
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+              <p class="mb-[15px] text-base leading-[1.125rem]  tracking-normal font-bold text-primary">
                 SIGA A MIZUNO
               </p>
-              <ul class="flex gap-[10px] justify-center mb-[15px]">
+              <ul class="flex gap-2.5 justify-center mb-[15px]">
                 {social.map((item) => (
                   <a href={item.href}>
                     <Image
@@ -131,10 +131,10 @@ function Footer({
               </ul>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+              <p class="mb-[15px] text-base leading-[1.125rem]  tracking-normal font-bold text-primary">
                 FORMAS DE PAGAMENTO
               </p>
-              <ul class="flex gap-[10px] justify-center mb-[15px]">
+              <ul class="flex gap-2.5 justify-center mb-[15px]">
                 {paymentMethods.map((item) => (
                   <a href={item.href}>
                     <Image
@@ -147,10 +147,10 @@ function Footer({
               </ul>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+              <p class="mb-[15px] text-base leading-[1.125rem]  tracking-normal font-bold text-primary">
                 SEGURANÇA
               </p>
-              <ul class="flex gap-[10px] justify-center mb-[15px]">
+              <ul class="flex gap-2.5 justify-center mb-[15px]">
                 {security.map((item) => (
                   <a href={item.href}>
                     <Image
@@ -163,26 +163,26 @@ function Footer({
               </ul>
             </div>
             <div>
-              <p class="text-center mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary">
+              <p class="text-center mb-[15px] text-base leading-[1.125rem]  tracking-normal font-bold text-primary">
                 FALE CONOSCO
               </p>
               <div class="text-center mb-[15px]">
-                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-bold">
+                <p class="text-base text-neutral leading-[1.125rem]  tracking-normal font-bold">
                   Telefone:
                 </p>
                 <a
-                  class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
+                  class="text-base text-neutral leading-[1.125rem]  tracking-normal"
                   href={contactUs?.phone.href}
                 >
                   {contactUs?.phone.text}
                 </a>
               </div>
               <div class="text-center mb-[15px]">
-                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-bold">
+                <p class="text-base text-neutral leading-[1.125rem]  tracking-normal font-bold">
                   Email:
                 </p>
                 <a
-                  class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
+                  class="text-base text-neutral leading-[1.125rem]  tracking-normal"
                   href={contactUs?.email.href}
                 >
                   {contactUs?.email.text}
@@ -190,35 +190,35 @@ function Footer({
               </div>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem]  tracking-[0rem] font-bold text-primary uppercase">
+              <p class="mb-[15px] text-base leading-[1.125rem]  tracking-normal font-bold text-primary uppercase">
                 Horários de Atendimento
               </p>
-              <div class="text-center text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] mb-[15px]">
+              <div class="text-center text-base text-neutral leading-[1.125rem]  tracking-normal mb-[15px]">
                 {contactUs?.openingHour.text}
               </div>
             </div>
           </div>
           <div class="mt-[30px]">
-            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px] font-bold">
+            <p class="leading-3 text-[8px] text-neutral text-center mb-[5px] font-bold">
               FIQUE ATENTO ÀS FRAUDES!
             </p>
-            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+            <p class="leading-3 text-[8px] text-neutral text-center mb-[5px]">
               O site Mizuno.com.br é o site exclusivo da marca para compras
               online. Antes de efetuar a compra, verifique que você está no site
               oficial.
             </p>
-            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+            <p class="leading-3 text-[8px] text-neutral text-center mb-[5px]">
               Em caso de dúvida ou comunicação suspeita, se informe nos perfis
               oficiais da marca ou pela central de atendimento.
             </p>
-            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+            <p class="leading-3 text-[8px] text-neutral text-center mb-[5px]">
               © 2023 MIZUNO TODOS OS DIREITOS RESERVADOS.
             </p>
-            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+            <p class="leading-3 text-[8px] text-neutral text-center mb-[5px]">
               Vulcabras – SP Comércio de Artigos Esportivos Ltda. – CNPJ
               18.565.468/0012-41
             </p>
-            <p class="leading-[12px] text-[8px] text-[#707070] text-center mb-[5px]">
+            <p class="leading-3 text-[8px] text-neutral text-center mb-[5px]">
               Estrada Municipal Luiz Lopes Neto, n.º 21 – Tenentes – CEP.
               37.640-000 – Extrema/MG
             </p>
@@ -226,14 +226,14 @@ function Footer({
         </div>
       </div>
       <div class="hidden lg:flex flex-col">
-        <div class="flex flex w-full justify-evenly gap-[10px] mx-auto max-w-[1250px] mt-[40px]">
+        <div class="flex flex w-full justify-evenly gap-2.5 mx-auto max-w-[1250px] mt-10">
           {links.map((link) => {
             if (link.title) {
               return (
                 <ul class="relative h-min">
-                  <li class="mb-[10px]">
+                  <li class="mb-2.5">
                     <a
-                      class="text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] "
+                      class="text-base leading-[1.125rem] text-accent tracking-normal "
                       href={link.href}
                     >
                       {link.title}
@@ -241,9 +241,9 @@ function Footer({
                   </li>
                   <ul>
                     {link?.children?.map((child) => (
-                      <li class="mb-[10px]">
+                      <li class="mb-2.5">
                         <a
-                          class="text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] "
+                          class="text-base leading-[1.125rem] text-accent tracking-normal "
                           href={child.href}
                           style={{
                             color: child.type === "title"
@@ -262,9 +262,9 @@ function Footer({
             return (
               <ul class="h-min">
                 {link?.children?.map((child) => (
-                  <li class="mb-[10px]">
+                  <li class="mb-2.5">
                     <a
-                      class="text-[16px] leading-[1.125rem] tracking-[0rem] "
+                      class="text-base leading-[1.125rem] tracking-normal "
                       href={child.href}
                       style={{
                         color: child.type === "title" ? "#060606" : "#707070",
@@ -280,26 +280,26 @@ function Footer({
           })}
           <div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
+              <p class="mb-[15px] text-base leading-[1.125rem] text-accent tracking-normal ">
                 FALE CONOSCO
               </p>
               <div class="mb-[15px] flex gap-[5px]">
-                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] font-bold">
+                <p class="text-base text-neutral leading-[1.125rem]  tracking-normal font-bold">
                   Telefone:
                 </p>
                 <a
-                  class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
+                  class="text-base text-neutral leading-[1.125rem]  tracking-normal"
                   href={contactUs?.phone.href}
                 >
                   {contactUs?.phone.text}
                 </a>
               </div>
               <div class="mb-[15px] flex gap-[5px]">
-                <p class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]  font-bold">
+                <p class="text-base text-neutral leading-[1.125rem]  tracking-normal  font-bold">
                   E-mail:
                 </p>
                 <a
-                  class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem]"
+                  class="text-base text-neutral leading-[1.125rem]  tracking-normal"
                   href={contactUs?.email.href}
                 >
                   {contactUs?.email.text}
@@ -307,20 +307,20 @@ function Footer({
               </div>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem]  uppercase">
+              <p class="mb-[15px] text-base leading-[1.125rem] text-accent tracking-normal  uppercase">
                 Horários de Atendimento
               </p>
-              <div class="text-[16px] text-[#707070] leading-[1.125rem]  tracking-[0rem] mb-[15px]">
+              <div class="text-base text-neutral leading-[1.125rem]  tracking-normal mb-[15px]">
                 {contactUs?.openingHour.text}
               </div>
             </div>
           </div>
           <div class="flex flex-col">
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
+              <p class="mb-[15px] text-base leading-[1.125rem] text-accent tracking-normal ">
                 SIGA A MIZUNO
               </p>
-              <ul class="flex gap-[10px] mb-[15px]">
+              <ul class="flex gap-2.5 mb-[15px]">
                 {social.map((item) => (
                   <a href={item.href}>
                     <Image
@@ -333,10 +333,10 @@ function Footer({
               </ul>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
+              <p class="mb-[15px] text-base leading-[1.125rem] text-accent tracking-normal ">
                 FORMAS DE PAGAMENTO
               </p>
-              <ul class="flex gap-[10px] mb-[15px] flex-wrap max-w-[150px]">
+              <ul class="flex gap-2.5 mb-[15px] flex-wrap max-w-[150px]">
                 {paymentMethods.map((item) => (
                   <a href={item.href}>
                     <Image
@@ -349,10 +349,10 @@ function Footer({
               </ul>
             </div>
             <div>
-              <p class="mb-[15px] text-[16px] leading-[1.125rem] text-[#060606] tracking-[0rem] ">
+              <p class="mb-[15px] text-base leading-[1.125rem] text-accent tracking-normal ">
                 SEGURANÇA
               </p>
-              <ul class="flex gap-[10px] mb-[15px]">
+              <ul class="flex gap-2.5 mb-[15px]">
                 {security.map((item) => (
                   <a href={item.href}>
                     <Image
@@ -366,33 +366,33 @@ function Footer({
             </div>
           </div>
         </div>
-        <div class="py-[30px] mt-[30px] border-t-2 border-[#707070]">
+        <div class="py-[30px] mt-[30px] border-t-2 border-neutral">
           <div class="max-w-[725px] mx-auto">
-            <p class="leading-[12px] text-[12px] text-[#707070] tracking-[0rem] mb-[15px] font-bold font-roboto">
+            <p class="leading-3 text-xs text-neutral tracking-normal mb-[15px] font-bold font-roboto">
               FIQUE ATENTO ÀS FRAUDES!
             </p>
-            <p class="leading-[12px] text-[12px] text-[#707070] tracking-[0rem] font-roboto">
+            <p class="leading-3 text-xs text-neutral tracking-normal font-roboto">
               O site Mizuno.com.br é o site exclusivo da marca para compras
               online. Antes de efetuar a compra, verifique que você está no site
               oficial.
             </p>
-            <p class="leading-[12px] text-[12px] text-[#707070] tracking-[0rem] mb-[30px] font-roboto">
+            <p class="leading-3 text-xs text-neutral tracking-normal mb-[30px] font-roboto">
               Em caso de dúvida ou comunicação suspeita, se informe nos perfis
               oficiais da marca ou pela central de atendimento.
             </p>
-            <p class="leading-[12px] text-[12px] text-[#707070] tracking-[0rem] font-roboto">
+            <p class="leading-3 text-xs text-neutral tracking-normal font-roboto">
               © 2023 MIZUNO TODOS OS DIREITOS RESERVADOS.
             </p>
-            <p class="leading-[12px] text-[12px] text-[#707070] tracking-[0rem] font-roboto">
+            <p class="leading-3 text-xs text-neutral tracking-normal font-roboto">
               Vulcabras – SP Comércio de Artigos Esportivos Ltda. – CNPJ
               18.565.468/0012-41
             </p>
-            <p class="leading-[12px] text-[12px] text-[#707070] tracking-[0rem] font-roboto">
+            <p class="leading-3 text-xs text-neutral tracking-normal font-roboto">
               Estrada Municipal Luiz Lopes Neto, n.º 21 – Tenentes – CEP.
               37.640-000 – Extrema/MG
             </p>
           </div>
-          <div class="flex justify-center items-center pt-[40px] pb-[20px]">
+          <div class="flex justify-center items-center pt-10 pb-5">
             <PoweredByDeco />
           </div>
         </div>

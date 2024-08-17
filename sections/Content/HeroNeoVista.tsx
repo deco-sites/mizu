@@ -35,7 +35,7 @@ export default function HeroNeoVista({
   return (
     <div class="w-full py-[34px] overflow-hidden flex flex-col justify-center items-center">
       <h1
-        class="relative lg:top-[76px] text-primary text-[64px] lg:text-[72px] font-extrabold leading-[64px] lg:leading-[72px] text-center uppercase"
+        class="relative lg:top-[76px] text-primary text-[64px] lg:text-7xl font-extrabold leading-[64px] lg:leading-[72px] text-center uppercase"
         dangerouslySetInnerHTML={{
           __html: title,
         }}
@@ -62,19 +62,19 @@ export default function HeroNeoVista({
       </div>
       <div class="relative lg:top-[-60px] max-w-[80%] sm:max-w-[95%] md:max-w-[55%] lg:max-w-[35%] flex flex-col items-center">
         <h2
-          class="text-primary text-[32px] lg:text-[40px] font-extrabold leading-[32px] lg:leading-[46.88px] text-center uppercase mt-[-20px]"
+          class="text-primary text-[32px] lg:text-[40px] font-extrabold leading-8 lg:leading-[46.88px] text-center uppercase mt-[-20px]"
           dangerouslySetInnerHTML={{
             __html: subTitle,
           }}
         />
         <p
-          class="text-accent text-[16px] leading-[18.75px] text-center mt-[24px] font-roboto mt-[-20px]"
+          class="text-accent text-base leading-[18.75px] text-center mt-6 font-roboto"
           dangerouslySetInnerHTML={{
             __html: description,
           }}
         />
         <a
-          class="w-min group relative pr-[90px] lg:pr-[40px] hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-[40px] mt-[24px] rounded font-roboto font-medium mt-[-20px]"
+          class="w-min group relative pr-[90px] lg:pr-10 hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-10 mt-6 rounded font-roboto font-medium"
           href={cta.href}
         >
           {cta.text}

@@ -23,13 +23,13 @@ function ProductSlider({ products, itemListName }: Props) {
         }}
       >
         <div class="col-start-1 col-span-3 row-start-1 row-span-1 mb-[70px] lg:mb-0">
-          <Slider class="carousel carousel-end sm:carousel-end gap-[16px] w-full">
+          <Slider class="carousel carousel-end sm:carousel-end gap-4 w-full">
             {products?.map((product, index) => (
               <Slider.Item
                 index={index}
                 class={clx(
                   "carousel-item",
-                  "last:mr-[16px]",
+                  "last:mr-4",
                   "",
                 )}
               >
@@ -45,23 +45,23 @@ function ProductSlider({ products, itemListName }: Props) {
           </Slider>
         </div>
 
-        <div class="absolute z-10 lg:z-[-1] w-full bottom-[-25px] lg:bottom-[auto] lg:w-[106%] lg:left-[-37px] lg:justify-between lg:top-[43%] flex w-full gap-[1.25rem] lg:gap-[36px] mb-[60px] justify-center items-center my-[15px]">
+        <div class="absolute z-10 lg:z-[-1] w-full bottom-[-25px] lg:bottom-auto lg:w-[106%] lg:left-[-37px] lg:justify-between lg:top-[43%] flex w-full gap-5 lg:gap-9 mb-[60px] justify-center items-center my-[15px]">
           <div class="group">
-            <Slider.PrevButton class="w-[28px] h-[28px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-[#000] group-hover:bg-[#000] no-animation">
+            <Slider.PrevButton class="w-[28px] h-[28px] flex justify-center items-center rounded-full border border-black text-white group-hover:text-white bg-black lg:bg-black group-hover:bg-black no-animation">
               <Icon
                 id="carret_right"
                 size={14}
-                class="fill-[#fff]"
+                class="fill-white"
               />
             </Slider.PrevButton>
           </div>
 
           <div class="group">
-            <Slider.NextButton class="w-[28px] h-[28px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-[#000] group-hover:bg-[#000] no-animation">
+            <Slider.NextButton class="w-[28px] h-[28px] flex justify-center items-center rounded-full border border-black text-white group-hover:text-white bg-black lg:bg-black group-hover:bg-black no-animation">
               <Icon
                 id="carret_left"
                 size={14}
-                class="fill-[#fff]"
+                class="fill-white"
               />
             </Slider.NextButton>
           </div>

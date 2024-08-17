@@ -168,12 +168,12 @@ export default function Cart({
           {count === 0
             ? (
               <div class="flex flex-col items-center h-full w-[90%]">
-                <span class="flex justify-center items-center h-full font-roboto text-[16px] text-[#060606] font-bold leading-[1.125rem] tracking-[0rem] text-center">
+                <span class="flex justify-center items-center h-full font-roboto text-base text-accent font-bold leading-[1.125rem] tracking-normal text-center">
                   Seu carrinho está vazio!
                 </span>
                 <label
                   for={MINICART_DRAWER_ID}
-                  class="btn btn-outline no-animation mx-[20px] my-[30px] h-[46px] bg-[#f2f2f2] hover:bg-[#f2f2f2] text-[#707070] hover:text-[#707070] w-full border-0 rounded-[28px] text-[16px] font-bold leading-[1rem] uppercase tracking-[0rem]"
+                  class="btn btn-outline no-animation mx-5 my-[30px] h-[46px] bg-base-300 hover:bg-base-300 text-neutral hover:text-neutral w-full border-0 rounded-[28px] text-base font-bold leading-4 uppercase tracking-normal"
                   style={{
                     fontFamily:
                       "-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif",
@@ -188,10 +188,10 @@ export default function Cart({
                 {/* Cart Items */}
                 <ul
                   role="list"
-                  class="flex-grow overflow-y-auto flex flex-col w-full divide-y-2 divide-[#f2f2f2] "
+                  class="flex-grow overflow-y-auto flex flex-col w-full divide-y-2 divide-base-300 "
                 >
                   {items.map((item, index) => (
-                    <li class="px-[20px] py-[10px] pr-[34px]">
+                    <li class="px-5 py-2.5 pr-[34px]">
                       <CartItem
                         item={item}
                         index={index}
@@ -204,7 +204,7 @@ export default function Cart({
 
                 {/* Cart Footer */}
                 <footer
-                  class="w-full pb-[20px]"
+                  class="w-full pb-5"
                   style={{
                     boxShadow: "rgba(100,100,111,0.2) 1px 1px 12px 1px",
                   }}
@@ -212,7 +212,7 @@ export default function Cart({
                   {/* Subtotal */}
                   <div class="flex flex-col">
                     {/* Free Shipping Bar */}
-                    <div class="px-[32px] py-[24px] w-full">
+                    <div class="pt-8 py-6 w-full">
                       <FreeShippingProgressBar
                         total={total}
                         locale={locale}
@@ -235,14 +235,14 @@ export default function Cart({
                   </div>
 
                   {/* Total */}
-                  <div class="border-t-2  px-[20px] border-[#f2f2f2] flex flex-col justify-end items-end gap-[12px]">
-                    <div class="w-full flex justify-between text-[#000] font-roboto text-[14px] leading-[1rem] tracking-[0.01rem] mt-[18px]">
+                  <div class="border-t-2  px-5 border-base-300 flex flex-col justify-end items-end gap-3">
+                    <div class="w-full flex justify-between text-black font-roboto text-sm leading-4 tracking-[0.01rem] mt-[18px]">
                       <span>Subtotal</span>
                       <output form={MINICART_FORM_ID}>
                         {formatPrice(subtotal, currency, locale)}
                       </output>
                     </div>
-                    <div class="flex justify-between mb-[18px] items-center w-full font-roboto text-[#000] font-medium	 text-[14px] leading-[1rem] tracking-[0.01rem]">
+                    <div class="flex justify-between mb-[18px] items-center w-full font-roboto text-black font-medium	 text-sm leading-4 tracking-[0.01rem]">
                       <span>Total</span>
                       <output
                         form={MINICART_FORM_ID}
@@ -252,9 +252,9 @@ export default function Cart({
                     </div>
                   </div>
 
-                  <div class=" px-[20px]">
+                  <div class=" px-5">
                     <a
-                      class="btn bg-[#060606] hover:bg-[#060606] rounded-[28px] h-[46px] text-[16px] text-white tracking-[0.04rem] font-bold leading-[1rem] w-full no-animation"
+                      class="btn bg-accent hover:bg-accent rounded-[28px] h-[46px] text-base text-white tracking-[0.04rem] font-bold leading-4 w-full no-animation"
                       href={checkoutHref}
                       hx-on:click={useScript(sendBeginCheckoutEvent)}
                     >

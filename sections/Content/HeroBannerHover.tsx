@@ -25,7 +25,7 @@ export default function HeroBannerHover({
 }: Props) {
   return (
     <div>
-      <div class="mx-auto flex flex-col lg:flex-row gap-[32px] max-w-[1238px] mx-auto items-center my-[30px] lg:mt-[54px]">
+      <div class="mx-auto flex flex-col lg:flex-row gap-8 max-w-[1238px] mx-auto items-center my-[30px] lg:mt-[54px]">
         {cards.map((card) => (
           <div
             class={`group flex w-full lg:h-full relative items-center overflow-hidden`}
@@ -51,23 +51,23 @@ export default function HeroBannerHover({
               />
             </a>
             <div
-              class={`absolute bottom-[1rem] left-[1rem] lg:bottom-[2rem] lg:left-[2rem]`}
+              class={`absolute bottom-4 left-4 lg:bottom-8 lg:left-8`}
             >
               <div
-                class={`flex flex-col mb-[16px]`}
+                class={`flex flex-col mb-4`}
               >
                 <div
-                  class="text-[#F2F2F2] uppercase tracking-[0px] leading-[1] mb-[1rem] transition-all duration-300 font-bold text-[2.5rem] font-roboto lg:translate-y-[120%] group-hover:translate-y-0"
+                  class="text-base-300 uppercase tracking-normal leading-none mb-4 transition-all duration-300 font-bold text-[2.5rem] font-roboto lg:translate-y-[120%] group-hover:translate-y-0"
                   dangerouslySetInnerHTML={{
                     __html: card.title,
                   }}
                 >
                 </div>
-                <p class="text-[#F2F2F2] tracking-[0px] leading-[1.5] text-[16px] font-roboto w-[75%] transition-all duration-300 lg:translate-y-[140%] group-hover:translate-y-0">
+                <p class="text-base-300 tracking-normal leading-normal	 text-base font-roboto w-9/12 transition-all duration-300 lg:translate-y-[140%] group-hover:translate-y-0">
                   {card.description}
                 </p>
                 <a
-                  class="w-min relative mt-[1rem] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-[#F2F2F2] lg:bg-transparent text-[#000] lg:border lg:border-white hover:border-2 lg:text-white py-[1rem] px-[3rem] rounded-[30px] font-roboto font-bold mt-[-20px] lg:opacity-0 group-hover:opacity-100"
+                  class="w-min relative mt-4 text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-base-300 lg:bg-transparent text-black lg:border lg:border-white hover:border-2 lg:text-white py-4 px-12 rounded-[30px] font-roboto font-bold mt-[-20px] lg:opacity-0 group-hover:opacity-100"
                   href={card.cta.href}
                 >
                   {card.cta.text}

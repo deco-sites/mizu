@@ -35,20 +35,20 @@ function BannerTrio({ carouselImages, summary }: Props) {
   const id = useId();
 
   return (
-    <div class="relative flex flex-col gap-[24px] mt-[24px] lg:mt-[80px] max-w-[1238px] mx-auto w-full">
-      <div class="px-[16px] lg:px-0 flex flex-col gap-[40px]">
-        <div class="flex flex-col gap-[24px]">
+    <div class="relative flex flex-col gap-6 mt-6 lg:mt-20 max-w-[1238px] mx-auto w-full">
+      <div class="px-4 lg:px-0 flex flex-col gap-10">
+        <div class="flex flex-col gap-6">
           <h3
-            class="text-[#060606] font-bold font-roboto uppercase text-[2rem] lg:text-[2rem] leading-[1.2]"
+            class="text-accent font-bold font-roboto uppercase text-[2rem] leading-[1.2]"
             dangerouslySetInnerHTML={{ __html: summary.title }}
           />
           <div
-            class="font-roboto text-[#060606] text-[16px] leading-[1.5] max-w-[610px]"
+            class="font-roboto text-accent text-base leading-normal	 max-w-[610px]"
             dangerouslySetInnerHTML={{ __html: summary.description }}
           />
         </div>
       </div>
-      <div class="hidden lg:flex gap-[1rem] relative">
+      <div class="hidden lg:flex gap-4 relative">
         {carouselImages?.map((image) => (
           <a href={image.href} class="flex w-auto h-auto group relative">
             <Image
@@ -88,9 +88,9 @@ function BannerTrio({ carouselImages, summary }: Props) {
               <Slider.Item
                 index={index}
                 class={clx(
-                  "carousel-item px-[16px]",
-                  "first:pl-[16px]",
-                  "last:pr-[16px]",
+                  "carousel-item px-4",
+                  "first:pl-4",
+                  "last:pr-4",
                 )}
               >
                 <a href={image.href} class="">
@@ -109,23 +109,23 @@ function BannerTrio({ carouselImages, summary }: Props) {
           </Slider>
         </div>
 
-        <div class="lg:absolute lg:w-[50%] lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-[36px] mb-[60px] justify-center items-center my-[15px]">
+        <div class="lg:absolute lg:w-1/2 lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-9 mb-[60px] justify-center items-center my-[15px]">
           <div class="group">
-            <Slider.PrevButton class="w-[24px] h-[24px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-white group-hover:bg-[#000] no-animation">
+            <Slider.PrevButton class="w-6 h-6 flex justify-center items-center rounded-full border border-black text-white group-hover:text-white bg-black lg:bg-white group-hover:bg-black no-animation">
               <Icon
                 id="carret_right"
                 size={10}
-                class="fill-[#fff]"
+                class="fill-white"
               />
             </Slider.PrevButton>
           </div>
 
           <div class="group">
-            <Slider.NextButton class="w-[24px] h-[24px] flex justify-center items-center rounded-full border border-[#000] text-white group-hover:text-white bg-[#000] lg:bg-[#000] group-hover:bg-[#000] no-animation">
+            <Slider.NextButton class="w-6 h-6 flex justify-center items-center rounded-full border border-black text-white group-hover:text-white bg-black lg:bg-black group-hover:bg-black no-animation">
               <Icon
                 id="carret_left"
                 size={10}
-                class="fill-[#fff]"
+                class="fill-white"
               />
             </Slider.NextButton>
           </div>

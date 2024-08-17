@@ -97,26 +97,26 @@ function Newsletter({
           decoding="async"
           loading="lazy"
         />
-        <div class="lg:max-w-[690px] w-full lg:w-[50%] flex flex-col items-center justify-center lg:justify-start lg:items-start gap-[20px] pt-[45px] lg:pt-[65px]">
-          <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+        <div class="lg:max-w-[690px] w-full lg:w-1/2 flex flex-col items-center justify-center lg:justify-start lg:items-start gap-5 pt-[45px] lg:pt-[65px]">
+          <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-normal uppercase font-bold">
             {title}
           </h2>
-          <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[2rem] tracking-[0rem] uppercase font-bold">
+          <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-info leading-[2rem] tracking-normal uppercase font-bold">
             {heading}
           </h3>
-          <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+          <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-normal uppercase font-bold">
             {subHeading}
           </h3>
 
           {status === "success" &&
             (
-              <p class="text-[16px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem]">
+              <p class="text-base text-center lg:text-left text-white leading-[2rem] tracking-normal">
                 {success.description}
               </p>
             )}
           {status === "failed" &&
             (
-              <p class="text-[16px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem]">
+              <p class="text-base text-center lg:text-left text-white leading-[2rem] tracking-normal">
                 {failed.description}
               </p>
             )}
@@ -148,14 +148,14 @@ function Newsletter({
         decoding="async"
         loading="lazy"
       />
-      <div class="lg:max-w-[690px] w-full lg:w-[50%] flex flex-col items-center justify-center lg:justify-start lg:items-start gap-[20px] pt-[45px] lg:pt-[65px]">
-        <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+      <div class="lg:max-w-[690px] w-full lg:w-1/2 flex flex-col items-center justify-center lg:justify-start lg:items-start gap-5 pt-[45px] lg:pt-[65px]">
+        <h2 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-normal uppercase font-bold">
           {title}
         </h2>
-        <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-[#0085ca] leading-[40px] tracking-[0rem] uppercase font-bold">
+        <h3 class="text-[40px] lg:text-[48px] text-center lg:text-left text-info leading-10 tracking-normal uppercase font-bold">
           {heading}
         </h3>
-        <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-[0rem] uppercase font-bold">
+        <h3 class="text-[32px] text-center lg:text-left text-white leading-[2rem] tracking-normal uppercase font-bold">
           {subHeading}
         </h3>
         <form
@@ -166,22 +166,22 @@ function Newsletter({
         >
           <input
             name="name"
-            class="input input-bordered h-[48px] lg:mr-[19px] flex-grow w-[262px] lg:w-full lg:max-w-[265px] text-[13px] font-roboto text-[#000000] leading-[29px] tracking-[0.05rem]"
+            class="input input-bordered h-[48px] lg:mr-[19px] flex-grow w-[262px] lg:w-full lg:max-w-[265px] text-[13px] font-roboto text-black leading-[29px] tracking-[0.05rem]"
             type="text"
             placeholder={namePlaceholder}
           />
           <input
             name="email"
-            class="input input-bordered h-[48px] lg:mr-[19px] flex-grow w-[262px] lg:w-full lg:max-w-[265px] text-[13px] font-roboto text-[#000000] leading-[29px] tracking-[0.05rem]"
+            class="input input-bordered h-[48px] lg:mr-[19px] flex-grow w-[262px] lg:w-full lg:max-w-[265px] text-[13px] font-roboto text-black leading-[29px] tracking-[0.05rem]"
             type="text"
             placeholder={emailPlaceholder}
           />
 
           <button
-            class="btn btn-primary lg:min-w-[130px] hover:bg-white h-[48px] lg:mr-[19px] lg:mt-[26px] font-extrabold bg-white text-primary rounded-[24px] text-[16px] leading-[21px] tracking-[0rem] mb-[65px] lg:mb-0 uppercase"
+            class="btn btn-primary lg:min-w-[130px] hover:bg-white h-[48px] lg:mr-[19px] lg:mt-[26px] font-extrabold bg-white text-primary rounded-[24px] text-base leading-[21px] tracking-normal mb-[65px] lg:mb-0 uppercase"
             type="submit"
           >
-            <span class="[.htmx-request_&]:hidden flex items-center justify-between gap-[10px]">
+            <span class="[.htmx-request_&]:hidden flex items-center justify-between gap-2.5">
               {label}
               <Icon size={24} id={"send"} />
             </span>

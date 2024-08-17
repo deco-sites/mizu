@@ -82,7 +82,7 @@ function Aside(
   return (
     <div
       data-aside
-      class="grid w-full divide-y divide-[#f2f2f2] lg:w-[400px] h-full relative lg:max-h-[calc(100dvh-68px)] lg:top-[68px]"
+      class="grid w-full divide-y divide-base-300 lg:w-[400px] h-full relative lg:max-h-[calc(100dvh-68px)] lg:top-[68px]"
       style={{
         backgroundColor: hasTop ? "#fff" : "#f9f9f9",
         maxWidth: "100vw",
@@ -93,16 +93,16 @@ function Aside(
     >
       {hasTop &&
         (
-          <div class="flex justify-between items-center p-[20px] pb-[12px] pr-[35px]">
+          <div class="flex justify-between items-center p-5 pb-3 pr-[35px]">
             <h1 class="">
-              <span class="text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]">
+              <span class="text-accent text-base font-bold leading-6 tracking-normal">
                 {title}
               </span>
             </h1>
             <label
               for={drawer}
               aria-label="X"
-              class="cursor-pointer text-[#060606] text-[1rem] font-bold leading-[1.5rem] tracking-[0rem]"
+              class="cursor-pointer text-accent text-base font-bold leading-6 tracking-normal"
             >
               X
             </label>

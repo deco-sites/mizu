@@ -67,13 +67,13 @@ export default function ProductShelf(
       {...viewItemListEvent}
       class="[view-transition-name:loading-fallback-2]"
     >
-      <div class="flex flex-col gap-[32px]">
+      <div class="flex flex-col gap-8">
         <h3
-          class="text-[#060606] font-bold font-roboto uppercase text-[2rem] lg:text-[2rem] leading-[1.2]"
+          class="text-accent font-bold font-roboto uppercase text-[2rem] lg:text-[2rem] leading-[1.2]"
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <div
-          class="font-roboto text-[#060606] text-[16px] leading-[1.5] max-w-[610px]"
+          class="font-roboto text-accent text-base leading-normal	 max-w-[610px]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>

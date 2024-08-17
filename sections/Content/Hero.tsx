@@ -35,7 +35,7 @@ export default function HeroFlats({
   placement = "center",
   imageURL = "#",
   cta = [],
-  preloadImages = false
+  preloadImages = false,
 }: Props) {
   return (
     <div>
@@ -80,19 +80,19 @@ export default function HeroFlats({
               }`}
             >
               <div
-                class="text-[#F2F2F2] uppercase tracking-[0px] font-bold text-[32px] font-roboto"
+                class="text-base-300 uppercase tracking-normal font-bold text-[32px] font-roboto"
                 dangerouslySetInnerHTML={{
                   __html: title || "",
                 }}
               >
               </div>
-              <p class="text-[#F2F2F2] tracking-[0px] text-[16px] lg:text-[20px] font-roboto">
+              <p class="text-base-300 tracking-normal text-base lg:text-xl font-roboto">
                 {description}
               </p>
               <div class="flex flex-col items-center lg:items-start lg:flex-row gap-4">
                 {cta?.map((item) => (
                   <a
-                    class="w-min group relative pr-[90px] lg:pr-[40px] hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-[#F2F2F2] text-[#000] py-[15px] px-[40px] mt-[24px] rounded-[28px] font-roboto font-medium mt-[-20px]"
+                    class="w-min group relative pr-[90px] lg:pr-10 hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-base-300 text-black py-[15px] px-10 mt-6 rounded-[28px] font-roboto font-medium mt-[-20px]"
                     href={item.href}
                   >
                     {item.text}

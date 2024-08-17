@@ -15,7 +15,7 @@ function FreeShippingProgressBar({ target, total, currency, locale }: Props) {
 
   return (
     <div class="flex flex-col w-full gap-2">
-      <div class="flex justify-center items-center gap-[18px] font-roboto text-[14px] leading-[19px] text-[#060606]">
+      <div class="flex justify-center items-center gap-[18px] font-roboto text-sm leading-[19px] text-accent">
         {remaining > 0
           ? (
             <>
@@ -61,12 +61,12 @@ function FreeShippingProgressBar({ target, total, currency, locale }: Props) {
       />
       {remaining > 0
         ? (
-          <span class="text-[10px] text-center leading-[19px] text-[#060606]">
+          <span class="text-[10px] text-center leading-[19px] text-accent">
             *Frete grátis em compras acima de R$ 199,99
           </span>
         )
         : (
-          <span class="text-[10px] text-center leading-[19px] text-[#060606]">
+          <span class="text-[10px] text-center leading-[19px] text-accent">
             *O desconto será aplicado automaticamente
           </span>
         )}

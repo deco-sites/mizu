@@ -24,7 +24,7 @@ export default function CardsTrio({
   cards,
 }: Props) {
   return (
-    <div class="px-[12px] lg:px-[40px] pt-[10px] lg:pt-[80px] pb-[50px] overflow-auto w-full flex gap-[4px] lg:gap-[24px] max-w-[1920px]">
+    <div class="px-3 lg:px-10 pt-2.5 lg:pt-20 pb-[50px] overflow-auto w-full flex gap-1 lg:gap-6 max-w-[1920px]">
       {cards.map((card) => (
         <div class="min-w-[318px]">
           <a href={card.href} class="min-w-[318px] lg:w-full">
@@ -41,18 +41,18 @@ export default function CardsTrio({
           <div>
             {card.title &&
               (
-                <h3 class="font-bold text-[40px] leading-[46.88px] text-[#060606] uppercase pt-[24px] pb-[16px]">
+                <h3 class="font-bold text-[40px] leading-[46.88px] text-accent uppercase pt-6 pb-4">
                   {card.title}
                 </h3>
               )}
             {card.description &&
               (
-                <p class="text-[16px] leading-[18.75px] text-[#060606]">
+                <p class="text-base leading-[18.75px] text-accent">
                   {card.description}
                 </p>
               )}
             <a
-              class="w-min group relative pr-[90px] lg:pr-[40px] hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-[40px] mt-[24px] rounded font-roboto font-medium mt-[-20px]"
+              class="w-min group relative pr-[90px] lg:pr-10 hover:pr-[90px] text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-primary text-white py-[15px] px-10 mt-6 rounded font-roboto font-medium"
               href={card.cta.href}
             >
               {card.cta.text}

@@ -27,12 +27,12 @@ export default function TabLayoutShoes({
   selected = 0,
 }: Props & { selected: number }) {
   return (
-    <div class="bg-[#f2f2f2] lg:bg-white flex flex-col lg:items-center px-[12px] lg:px-0 mt-[40px] lg:mt-[65px] mb-[24px] lg:mb-[50px] mb-[24px] py-[12px] pb-[30px] lg:pb-[15px] lg:py-[15px]">
-      <h1 class="max-w-[190px] mt-[26px] mx-[14px] mb-[40px] lg:m-0 lg:max-w-[1240px] w-full font-black text-primary leading-[37.5px] text-[32px] lg:text-[40px] lg:leading-[46.88px]">
+    <div class="bg-base-300 lg:bg-white flex flex-col lg:items-center px-3 lg:px-0 mt-10 lg:mt-[65px] mb-6 lg:mb-[50px] mb-6 py-3 pb-[30px] lg:pb-[15px] lg:py-[15px]">
+      <h1 class="max-w-[190px] mt-[26px] mx-[14px] mb-10 lg:m-0 lg:max-w-[1240px] w-full font-black text-primary leading-[37.5px] text-[32px] lg:text-[40px] lg:leading-[46.88px]">
         {title}
       </h1>
       <div class="hidden lg:block max-w-[1240px] w-full">
-        <div class="flex gap-[16px] my-[32px]" role="tablist">
+        <div class="flex gap-4 my-8" role="tablist">
           {tabs.map((tab, index) => (
             <button
               hx-get={useSection({ props: { selected: index } })}
@@ -42,7 +42,7 @@ export default function TabLayoutShoes({
                 background: index == selected ? "#001489" : "transparent",
                 color: index == selected ? "#fff" : "#001489",
               }}
-              class="rounded-[46px] border font-roboto border-[#001489] text-[16px] leading-[18.75px] py-[10px] px-[20px]"
+              class="rounded-[46px] border font-roboto border-primary text-base leading-[18.75px] py-2.5 px-5"
             >
               {tab.name}
             </button>
@@ -55,7 +55,7 @@ export default function TabLayoutShoes({
                 hx-get={useSection({ props: { selected: index } })}
                 hx-target="closest section"
                 hx-swap="outerHTML"
-                class="font-roboto text-[16px] flex items-start gap-[72px] w-[500px] h-[139px] mb-[40px]"
+                class="font-roboto text-base flex items-start gap-[72px] w-[500px] h-[139px] mb-10"
                 style={{
                   borderBottom: index == selected ? "1px solid #000" : "0",
                 }}
@@ -74,14 +74,14 @@ export default function TabLayoutShoes({
                 />
                 {index == selected &&
                   (
-                    <p class="text-left text-[#060606] leading-[17px]">
+                    <p class="text-left text-accent leading-[17px]">
                       {tab.description}
                     </p>
                   )}
               </button>
             ))}
           </div>
-          <div class="relative">
+          <div class="relative w-full">
             <Image
               width={550}
               height={730}
@@ -90,6 +90,7 @@ export default function TabLayoutShoes({
               alt={desktopCoverImage}
               decoding="sync"
               loading="eager"
+              preload={true}
             />
             <Image
               width={550}
@@ -107,13 +108,13 @@ export default function TabLayoutShoes({
         <Image
           width={311}
           height={433}
-          class="mx-auto mb-[24px]"
+          class="mx-auto mb-6"
           src={mobileImage}
           alt={mobileImage}
           decoding="async"
           loading="lazy"
         />
-        <div class="flex flex-wrap gap-[16px]">
+        <div class="flex flex-wrap gap-4">
           {tabs.map((tab) => (
             <div class="flex flex-col items-center justify-start w-[47%]">
               <Image
@@ -124,7 +125,7 @@ export default function TabLayoutShoes({
                 decoding="async"
                 loading="lazy"
               />
-              <p class="text-[12px] font-roboto leading-[14px] text-[#060606]">
+              <p class="text-xs font-roboto leading-[14px] text-accent">
                 {tab.description}
               </p>
             </div>

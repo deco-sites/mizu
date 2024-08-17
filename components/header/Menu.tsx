@@ -11,7 +11,7 @@ function MenuItem({ item }: { item: NavItemNode }) {
       {item.children.length > 0 &&
         <input id="collapse-input-animation" type="checkbox" />}
       <div
-        class="collapse-title flex justify-between items-center p-[20px] text-[#060606] text-[12px] leading-[11px] font-roboto tracking-[0rem] uppercase"
+        class="collapse-title flex justify-between items-center p-5 text-accent text-xs leading-[11px] font-roboto tracking-normal uppercase"
         style={{
           color: item.color ? item.color : "inherit",
           minHeight: "fit-content",
@@ -33,7 +33,7 @@ function MenuItem({ item }: { item: NavItemNode }) {
       {item.children.length > 0 &&
         (
           <div class="collapse-content">
-            <ul class="divide-y divide-[#f2f2f2]">
+            <ul class="divide-y divide-base-300">
               {item.children?.map((node) => {
                 if (node.title?.text) {
                   return (
@@ -41,7 +41,7 @@ function MenuItem({ item }: { item: NavItemNode }) {
                       <div class="collapse collapse-child">
                         <input id="collapse-input-animation" type="checkbox" />
                         <div
-                          class="collapse-title flex justify-between items-center pl-[10px] pr-[3px] divide-y divide-[#f2f2f2] py-[12px] text-[#060606] text-[12px] leading-[11px] font-roboto tracking-[0rem] uppercase"
+                          class="collapse-title flex justify-between items-center pl-2.5 pr-[3px] divide-y divide-base-300 py-3 text-accent text-xs leading-[11px] font-roboto tracking-normal uppercase"
                           style={{
                             minHeight: "fit-content",
                             height: "min-content",
@@ -57,7 +57,7 @@ function MenuItem({ item }: { item: NavItemNode }) {
                         <div class="collapse-content">
                           <ul>
                             {node?.links?.map((link) => (
-                              <li class="pl-[10px] py-[12px] text-[#707070] text-[12px] leading-[11px] font-roboto tracking-[0rem] uppercase">
+                              <li class="pl-2.5 py-3 text-neutral text-xs leading-[11px] font-roboto tracking-normal uppercase">
                                 <a href={link.url}>{link.text}</a>
                               </li>
                             ))}
@@ -72,7 +72,7 @@ function MenuItem({ item }: { item: NavItemNode }) {
                       {node?.links?.map((link) => (
                         <li>
                           <a
-                            class="text-sm text-[#707070] text-[12px] leading-[11px] font-roboto tracking-[0rem] uppercase"
+                            class="text-sm text-neutral text-xs leading-[11px] font-roboto tracking-normal uppercase"
                             href={link.url}
                           >
                             {link.text}
@@ -85,7 +85,7 @@ function MenuItem({ item }: { item: NavItemNode }) {
               })}
               <li>
                 <a
-                  class="pl-[10px] text-[#707070] text-[12px] leading-[11px] font-roboto tracking-[0rem] uppercase"
+                  class="pl-2.5 text-neutral text-xs leading-[11px] font-roboto tracking-normal uppercase"
                   href={item.url}
                 >
                   VER TUDO
@@ -101,10 +101,10 @@ function MenuItem({ item }: { item: NavItemNode }) {
 function Menu({ navItems }: Props) {
   return (
     <div
-      class="flex flex-col h-full overflow-y-auto bg-[#f9f9f9]"
+      class="flex flex-col h-full overflow-y-auto bg-base-content"
       style={{ minWidth: "100vw" }}
     >
-      <ul class="flex-grow flex flex-col divide-y divide-[#f2f2f2] overflow-y-auto">
+      <ul class="flex-grow flex flex-col divide-y divide-base-300 overflow-y-auto">
         {navItems.map((item) => (
           <li>
             <MenuItem item={item} />
