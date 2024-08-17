@@ -67,7 +67,7 @@ export default function HeroBannerHover({
                   {card.description}
                 </p>
                 <a
-                  class="w-min relative mt-4 text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-base-300 lg:bg-transparent text-black lg:border lg:border-white hover:border-2 lg:text-white py-4 px-12 rounded-[30px] font-roboto font-bold mt-[-20px] lg:opacity-0 group-hover:opacity-100"
+                  class="w-min relative mt-4 text-nowrap flex transition-all duration-300 justify-center items-center gap-10 bg-base-300 lg:bg-transparent text-black lg:border lg:border-white hover:border-2 lg:text-white py-4 px-12 rounded-[30px] font-roboto font-bold lg:opacity-0 group-hover:opacity-100"
                   href={card.cta.href}
                 >
                   {card.cta.text}

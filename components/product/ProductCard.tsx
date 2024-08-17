@@ -143,7 +143,7 @@ function ProductCard({
           />
         </a>
         <div class="hidden lg:flex group/button w-10 hover:w-full absolute left-[.625rem] bottom-[.625rem] z-[2]">
-          <label class="buy-button-label z-10 top-[65%] cursor-pointer pointer-events-none group-hover/button:pointer-events-auto w-full h-full flex items-center justify-center font-roboto w-0 absolute top-0 left-0 text-sm font-medium opacity-0 overflow-hidden translate-y-[-50%] transition-all duration-200 group-hover/button:w-max group-hover/button:left-1/2 group-hover/button:translate-y-[-50%] group-hover/button:translate-x-[-50%] group-hover/button:opacity-100">
+          <label class="buy-button-label z-10 top-[65%] text-black cursor-pointer pointer-events-none group-hover/button:pointer-events-auto w-full h-full flex items-center justify-center font-roboto w-0 absolute top-0 left-0 text-sm font-medium opacity-0 overflow-hidden translate-y-[-50%] transition-all duration-200 group-hover/button:w-max group-hover/button:left-1/2 group-hover/button:translate-y-[-50%] group-hover/button:translate-x-[-50%] group-hover/button:opacity-100">
             Adicionar a sacola
           </label>
           <button class="buy-button w-10 h-10 p-2.5 rounded-[1.25rem] absolute left-0 bottom-0 border-0 translate-x-0 transition-all duration-200 overflow-hidden bg-white min-h-[auto] hover:max-w-[17.5rem] hover:w-[calc(100%-20px)] flex items-center">
