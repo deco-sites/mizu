@@ -7,13 +7,14 @@ import ProductCard from "../../product/ProductCard.tsx";
 import Icon from "../../ui/Icon.tsx";
 import Slider from "../../ui/Slider.tsx";
 import { ACTION, NAME } from "./Form.tsx";
+import { SmarthintRecommendation } from "apps/smarthint/utils/typings.ts";
 
 export interface Props {
   /**
    * @title Suggestions Integration
    * @todo: improve this typings ({query: string, count: number}) => Suggestions
    */
-  loader: Resolved<Suggestion | null>;
+  loader: Resolved<SmarthintRecommendation[] | null>;
 }
 
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
@@ -51,11 +52,11 @@ function Suggestions(
   const { products = [], searches = [] } = suggestion ?? {};
   const hasProducts = Boolean(products.length);
   const hasTerms = Boolean(searches.length);
-
   return (
     <div
       class={clx(`overflow-y-scroll`, !hasProducts && !hasTerms && "hidden")}
     >
+      <code>{suggestion}</code>
       <div class="gap-4 grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-[150px_1fr]">
         <div class="flex flex-col gap-6">
           <span
