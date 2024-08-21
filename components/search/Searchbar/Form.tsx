@@ -36,7 +36,7 @@ export interface SearchbarProps {
   placeholder?: string;
 
   /** @description Loader to run when suggesting new elements */
-  loader: Resolved<SmarthintRecommendation[] | null>;
+  loader: Resolved<Suggestion | null>;
 }
 
 const script = (formId: string, name: string, popupId: string) => {

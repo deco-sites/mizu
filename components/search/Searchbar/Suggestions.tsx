@@ -14,7 +14,7 @@ export interface Props {
    * @title Suggestions Integration
    * @todo: improve this typings ({query: string, count: number}) => Suggestions
    */
-  loader: Resolved<SmarthintRecommendation[] | null>;
+  loader: Resolved<Suggestion | null>;
 }
 
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
@@ -49,14 +49,17 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
 function Suggestions(
   { suggestion }: ComponentProps<typeof loader, typeof action>,
 ) {
+  console.log(suggestion)
+  alert(suggestion)
   const { products = [], searches = [] } = suggestion ?? {};
-  const hasProducts = Boolean(products.length);
+  const hasProducts = Boolean(products?.length);
   const hasTerms = Boolean(searches.length);
   return (
     <div
       class={clx(`overflow-y-scroll`, !hasProducts && !hasTerms && "hidden")}
     >
       <code>{suggestion}</code>
+      <code>{products}</code>
       <div class="gap-4 grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-[150px_1fr]">
         <div class="flex flex-col gap-6">
           <span
