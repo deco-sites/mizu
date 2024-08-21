@@ -51,7 +51,7 @@ function ProductCard({
   const possibilities = useVariantPossibilities(hasVariant, product);
   // const firstSkuVariations = Object.entries(possibilities)[0];
   // const variants = Object.entries(firstSkuVariations[1] ?? {});
-  const secondSkuVariations = Object.entries(possibilities)[1];
+  const secondSkuVariations = Object.entries(possibilities)?.[1] ?? {};
   const secondVariants = Object.entries(secondSkuVariations[1] ?? {}); // <-
   const relativeUrl = relative(url);
   // const percent = listPrice && price
@@ -155,13 +155,13 @@ function ProductCard({
             }}
             class="grid box-sizes relative bg-white p-2.5 w-[calc(100%-1.25rem)] z-30 opacity-0 min-h-10 rounded-[.625rem] gap-2.5 translate-y-[200%] transition-all ease-in-out duration-[.4s]"
           >
-            {secondVariants.map((variant) => (
+            {secondVariants && secondVariants?.map((variant) => (
               <li class="text-neutral flex justify-center items-center hover:text-black hover:underline">
                 <a
                   class="w-full h-full font-semibold text-[.8125rem] leading-[.875rem]"
-                  href={variant[1]}
+                  href={variant?.[1] ?? ''}
                 >
-                  {variant[0]}
+                  {variant?.[0] ?? ''}
                 </a>
               </li>
             ))}

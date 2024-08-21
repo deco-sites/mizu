@@ -14,7 +14,7 @@ export interface Props {
    * @title Suggestions Integration
    * @todo: improve this typings ({query: string, count: number}) => Suggestions
    */
-  loader: Resolved<Suggestion | null>;
+  loader: Resolved<SmarthintRecommendation | null>;
 }
 
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
@@ -49,21 +49,24 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
 function Suggestions(
   { suggestion }: ComponentProps<typeof loader, typeof action>,
 ) {
-  console.log(suggestion)
-  alert(suggestion)
   const { products = [], searches = [] } = suggestion ?? {};
   const hasProducts = Boolean(products?.length);
   const hasTerms = Boolean(searches.length);
   return (
     <div
       class={clx(`overflow-y-scroll`, !hasProducts && !hasTerms && "hidden")}
+      style={{
+        position: 'absolute',
+        right: 0,
+        background: 'white',
+        width: '100%',
+        top: '64px',
+      }}
     >
-      <code>{suggestion}</code>
-      <code>{products}</code>
       <div class="gap-4 grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-[150px_1fr]">
         <div class="flex flex-col gap-6">
           <span
-            class="font-medium text-xl"
+            class="font-medium text-xl text-black"
             role="heading"
             aria-level={3}
           >
@@ -75,7 +78,7 @@ function Suggestions(
                 {/* TODO @gimenes: use name and action from searchbar form */}
                 <a
                   href={`${ACTION}?${NAME}=${term}`}
-                  class="flex gap-4 items-center"
+                  class="flex gap-4 items-center text-black"
                 >
                   <span>
                     <Icon id="search" />
@@ -88,7 +91,7 @@ function Suggestions(
         </div>
         <div class="flex flex-col pt-6 md:pt-0 gap-6 overflow-x-hidden">
           <span
-            class="font-medium text-xl"
+            class="font-medium text-xl text-black"
             role="heading"
             aria-level={3}
           >
