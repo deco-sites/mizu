@@ -64,7 +64,7 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
       </div>
       <div
         id={id}
-        class="max-w-[1180px] lg:w-[61%]"
+        class="max-w-[1180px] lg:w-[58%]"
       >
         <div class="col-start-1 col-span-3 row-start-1 row-span-1">
           <Slider class="carousel carousel-left w-full transition-all">
@@ -80,7 +80,7 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
                 <Image
                   width={260}
                   height={374}
-                  class="w-[260px] lg:w-[394px]"
+                  class="w-[260px] lg:w-[344px]"
                   src={image.desktop}
                   alt={image.desktop}
                   decoding="async"
@@ -91,7 +91,7 @@ function TextPlusCarousel({ carouselImages, cta, summaries }: Props) {
           </Slider>
         </div>
 
-        <div class="lg:absolute lg:w-1/2 lg:justify-between lg:right-[9%] lg:top-[43%] flex w-full gap-3 justify-center items-center my-[20px]">
+        <div class="lg:absolute lg:w-[43%] lg:justify-between lg:right-[13%] lg:top-[43%] flex w-full gap-3 justify-center items-center my-[20px]">
           <div class="group">
             <Slider.PrevButton class="w-[42px] h-[42px] flex justify-center items-center rounded-full border border-primary text-primary group-hover:text-white bg-transparent lg:bg-white group-hover:bg-primary no-animation">
               <Icon

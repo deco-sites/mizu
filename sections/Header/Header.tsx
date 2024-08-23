@@ -75,12 +75,14 @@ const Desktop = (
       <div class="flex w-auto gap-5 justify-center items-center">
         <Searchbar {...searchbar} />
         <SignIn variant="desktop" />
-        <Image
-          class="cursor-pointer"
-          src={"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/772125fb-f121-40fc-b27c-0632722e40bf"}
-          width={20}
-          height={21}
-        />
+        <a href="https://www.mizuno.com.br/account#/wishlist">
+          <Image
+            class="cursor-pointer"
+            src={"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11899/772125fb-f121-40fc-b27c-0632722e40bf"}
+            width={20}
+            height={21}
+          />
+        </a>
         <Bag />
       </div>
     </div>

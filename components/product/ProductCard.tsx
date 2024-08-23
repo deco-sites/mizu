@@ -155,16 +155,17 @@ function ProductCard({
             }}
             class="grid box-sizes relative bg-white p-2.5 w-[calc(100%-1.25rem)] z-30 opacity-0 min-h-10 rounded-[.625rem] gap-2.5 translate-y-[200%] transition-all ease-in-out duration-[.4s]"
           >
-            {secondVariants && secondVariants?.map((variant) => (
-              <li class="text-neutral flex justify-center items-center hover:text-black hover:underline">
-                <a
-                  class="w-full h-full font-semibold text-[.8125rem] leading-[.875rem]"
-                  href={variant?.[1] ?? ''}
-                >
-                  {variant?.[0] ?? ''}
-                </a>
-              </li>
-            ))}
+            {secondVariants &&
+              secondVariants?.map((variant) => (
+                <li class="text-neutral flex justify-center items-center hover:text-black hover:underline">
+                  <a
+                    class="w-full h-full font-semibold text-[.8125rem] leading-[.875rem]"
+                    href={variant?.[1] ?? ""}
+                  >
+                    {variant?.[0] ?? ""}
+                  </a>
+                </li>
+              ))}
           </ul>
         </div>
       </figure>

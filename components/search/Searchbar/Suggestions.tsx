@@ -56,11 +56,11 @@ function Suggestions(
     <div
       class={clx(`overflow-y-scroll`, !hasProducts && !hasTerms && "hidden")}
       style={{
-        position: 'absolute',
+        position: "absolute",
         right: 0,
-        background: 'white',
-        width: '100%',
-        top: '64px',
+        background: "white",
+        width: "100%",
+        top: "64px",
       }}
     >
       <div class="gap-4 grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-[150px_1fr]">

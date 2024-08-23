@@ -43,13 +43,16 @@ const script = (formId: string, name: string, popupId: string) => {
   const form = document.getElementById(formId) as HTMLFormElement | null;
   const input = form?.elements.namedItem(name) as HTMLInputElement | null;
   form?.addEventListener("submit", () => {
+    event?.preventDefault();
     const search_term = input?.value;
     if (search_term) {
-      window.DECO.events.dispatch({
-        name: "search",
-        params: { search_term },
-      });
+      // window.DECO.events.dispatch({
+      //   name: "search",
+      //   params: { search_term },
+      // });
     }
+    window.location.href =
+      `https://www.mizuno.com.br/sh/${search_term}?_q=${search_term}&map=ft`;
   });
 
   // Keyboard event listeners

@@ -235,6 +235,12 @@ function Footer({
                     <a
                       class="text-base leading-[1.125rem] text-accent tracking-normal "
                       href={link.href}
+                      style={{
+                        cursor:
+                          link.href === "" || link.href === "#" || !link.href
+                            ? "auto"
+                            : "pointer",
+                      }}
                     >
                       {link.title}
                     </a>
