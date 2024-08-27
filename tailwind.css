@@ -82,13 +82,13 @@ input[type="checkbox"]#collapse-input-animation:checked ~ .collapse-title {
 
 .buy-button-label:hover ~ .box-sizes {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-100%);
   transition: all .4s ease-in-out;
 }
 
 .box-sizes:hover {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-100%);
   transition: all .4s ease-in-out;
 }
 

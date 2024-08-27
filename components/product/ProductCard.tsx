@@ -49,8 +49,8 @@ function ProductCard({
     useOffer(offers);
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
-  // const firstSkuVariations = Object.entries(possibilities)[0];
-  // const variants = Object.entries(firstSkuVariations[1] ?? {});
+  const firstSkuVariations = Object.entries(possibilities)[0];
+  const variants = Object.entries(firstSkuVariations[1] ?? {});
   const secondSkuVariations = Object.entries(possibilities)?.[1] ?? {};
   const secondVariants = Object.entries(secondSkuVariations[1] ?? {}); // <-
   const relativeUrl = relative(url);
@@ -77,6 +77,10 @@ function ProductCard({
       {...event}
       class={clx("card card-compact group text-sm", _class)}
     >
+      <code class="hidden">{JSON.stringify(hasVariant)}</code>
+      <code class="hidden">{JSON.stringify(secondSkuVariations)}</code>
+      <code class="hidden">{JSON.stringify(secondVariants)}</code>
+      <code class="hidden">{JSON.stringify(variants)}</code>
       <figure
         class={clx(
           "relative bg-base-200",
@@ -86,7 +90,7 @@ function ProductCard({
       >
         {/* Product Images */}
         <a
-          href={relativeUrl}
+          href={"https://www.mizuno.com.br" + relativeUrl}
           aria-label="view product"
           class={clx(
             "absolute top-0 left-0",
@@ -143,7 +147,7 @@ function ProductCard({
           />
         </a>
         <div class="hidden lg:flex group/button w-10 hover:w-full absolute left-[.625rem] bottom-[.625rem] z-[2]">
-          <label class="buy-button-label z-10 top-[65%] text-black cursor-pointer pointer-events-none group-hover/button:pointer-events-auto w-full h-full flex items-center justify-center font-roboto w-0 absolute top-0 left-0 text-sm font-medium opacity-0 overflow-hidden translate-y-[-50%] transition-all duration-200 group-hover/button:w-max group-hover/button:left-1/2 group-hover/button:translate-y-[-50%] group-hover/button:translate-x-[-50%] group-hover/button:opacity-100">
+          <label class="buy-button-label z-10 bottom-0 h-[auto] text-black cursor-pointer pointer-events-none group-hover/button:pointer-events-auto w-full flex items-center justify-center font-roboto w-0 absolute left-0 text-sm font-medium opacity-0 overflow-hidden translate-y-[-50%] transition-all duration-200 group-hover/button:w-max group-hover/button:left-1/2 group-hover/button:translate-y-[-50%] group-hover/button:translate-x-[-50%] group-hover/button:opacity-100">
             Adicionar a sacola
           </label>
           <button class="buy-button w-10 h-10 p-2.5 rounded-[1.25rem] absolute left-0 bottom-0 border-0 translate-x-0 transition-all duration-200 overflow-hidden bg-white min-h-[auto] hover:max-w-[17.5rem] hover:w-[calc(100%-20px)] flex items-center">
@@ -153,10 +157,21 @@ function ProductCard({
             style={{
               gridTemplateColumns: "repeat(6,1fr)",
             }}
-            class="grid box-sizes relative bg-white p-2.5 w-[calc(100%-1.25rem)] z-30 opacity-0 min-h-10 rounded-[.625rem] gap-2.5 translate-y-[200%] transition-all ease-in-out duration-[.4s]"
+            class="grid box-sizes absolute bg-white p-2.5 w-[calc(100%-1.25rem)] z-30 opacity-0 min-h-10 rounded-[.625rem] gap-2.5 translate-y-[200%] transition-all ease-in-out duration-[.4s]"
           >
             {secondVariants &&
               secondVariants?.map((variant) => (
+                <li class="text-neutral flex justify-center items-center hover:text-black hover:underline">
+                  <a
+                    class="w-full h-full font-semibold text-[.8125rem] leading-[.875rem]"
+                    href={variant?.[1] ?? ""}
+                  >
+                    {variant?.[0] ?? ""}
+                  </a>
+                </li>
+              ))}
+              {secondVariants.length === 0 && variants &&
+              variants?.map((variant) => (
                 <li class="text-neutral flex justify-center items-center hover:text-black hover:underline">
                   <a
                     class="w-full h-full font-semibold text-[.8125rem] leading-[.875rem]"
@@ -170,7 +185,7 @@ function ProductCard({
         </div>
       </figure>
 
-      <a href={relativeUrl} class="mt-2.5">
+      <a href={"https://www.mizuno.com.br" + relativeUrl} class="mt-2.5">
         <div
           class="grid"
           style={{ gridTemplateColumns: "1fr minmax(auto,3.75rem)" }}
@@ -216,7 +231,7 @@ function ProductCard({
             <li class="mr-[.1875rem] min-w-[45px]">
               <a
                 class="w-full h-full min-w-[45px]"
-                href={"/" + variation.linkText + "/p"}
+                href={"https://www.mizuno.com.br" + "/" + variation.linkText + "/p"}
               >
                 <Image
                   src={variation.items[0].images[0].imageUrl}
