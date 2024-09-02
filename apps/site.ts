@@ -18,6 +18,8 @@ export interface Props extends WebsiteProps {
    * @default custom
    */
   platform: Platform;
+  decoHostToRedirect?: string;
+  trafficToDeco?: number;
   theme?: Section;
 }
 
