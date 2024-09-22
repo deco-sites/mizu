@@ -19,8 +19,6 @@ interface Social {
   alt?: string;
   href?: string;
   image: ImageWidget;
-  widthImage: number;
-  heightImage: number;
 }
 
 interface ContactUs {
@@ -125,6 +123,7 @@ function Footer({
                   <a href={item.href}>
                     <Image
                       width={20}
+                      height={21}
                       src={item.image}
                       alt={item.alt}
                     />
@@ -141,6 +140,7 @@ function Footer({
                   <a href={item.href}>
                     <Image
                       width={20}
+                      height={21}
                       src={item.image}
                       alt={item.alt}
                     />
@@ -157,6 +157,7 @@ function Footer({
                   <a href={item.href}>
                     <Image
                       width={20}
+                      height={21}
                       src={item.image}
                       alt={item.alt}
                     />
@@ -333,6 +334,7 @@ function Footer({
                   <a href={item.href}>
                     <Image
                       width={20}
+                      height={21}
                       src={item.image}
                       alt={item.alt}
                     />
@@ -349,6 +351,7 @@ function Footer({
                   <a href={item.href}>
                     <Image
                       width={23}
+                      height={21}
                       src={item.image}
                       alt={item.alt}
                     />
@@ -365,6 +368,7 @@ function Footer({
                   <a href={item.href}>
                     <Image
                       width={29}
+                      height={21}
                       src={item.image}
                       alt={item.alt}
                     />
