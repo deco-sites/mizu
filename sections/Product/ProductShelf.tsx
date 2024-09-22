@@ -13,9 +13,10 @@ export interface Props {
   products: Product[] | null;
 }
 
-export const loader = async (props: Props, req: Request) => {
+export const loader = async (props: Props, _req: Request) => {
+  const products = props?.products ?? [];
   const productsWithVariations = await Promise.all(
-    props.products.map(async (product) => {
+    products.map(async (product) => {
       if (product?.isVariantOf?.model) {
         const variations = await fetch(
           `https://www.mizuno.com.br/api/catalog_system/pub/products/search?fq=alternateIds_RefId:${

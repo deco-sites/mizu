@@ -61,7 +61,8 @@ export default function TabLayoutShoes({
                 }}
               >
                 <Image
-                  width={207}
+                  width={tab.widthImageName ?? 207}
+                  height={tab.heightImageName ?? 99}
                   style={{
                     opacity: index == selected ? "1" : ".6",
                     width: tab.widthImageName,

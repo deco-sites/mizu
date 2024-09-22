@@ -4,9 +4,9 @@ import type { AppContext } from "../../../apps/site.ts";
 import { clx } from "../../../sdk/clx.ts";
 import { ComponentProps } from "../../../sections/Component.tsx";
 import ProductCard from "../../product/ProductCard.tsx";
-import Icon from "../../ui/Icon.tsx";
+// import Icon from "../../ui/Icon.tsx";
 import Slider from "../../ui/Slider.tsx";
-import { ACTION, NAME } from "./Form.tsx";
+import { NAME } from "./Form.tsx";
 import { SmarthintRecommendation } from "apps/smarthint/utils/typings.ts";
 
 export interface Props {
@@ -15,7 +15,7 @@ export interface Props {
    * @todo: improve this typings ({query: string, count: number}) => Suggestions
    */
   loader: Resolved<SmarthintRecommendation | null>;
-  term?: string
+  term?: string;
 }
 
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
@@ -49,7 +49,7 @@ export const action = async (props: Props, req: Request, ctx: AppContext) => {
   );
 
   if (suggestion) {
-    suggestion.products = productsWithVariations
+    suggestion.products = productsWithVariations;
   }
 
   return { suggestion, term: query };
@@ -85,7 +85,7 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
   );
 
   if (suggestion) {
-    suggestion.products = productsWithVariations
+    suggestion.products = productsWithVariations;
   }
 
   return { suggestion, term: query };
@@ -99,7 +99,10 @@ function Suggestions(
   const hasTerms = Boolean(searches.length);
   return (
     <div
-      class={clx(`p-[1.25rem] bg-[#f9f9f9] lg:top-[64px]`, !hasProducts && !hasTerms && "hidden")}
+      class={clx(
+        `p-[1.25rem] bg-[#f9f9f9] lg:top-[64px]`,
+        !hasProducts && !hasTerms && "hidden",
+      )}
       style={{
         position: "fixed",
         right: 0,
@@ -119,7 +122,7 @@ function Suggestions(
             {searches.map(({ term }) => (
               <li>
                 {/* TODO @gimenes: use name and action from searchbar form */}
-                  {/* href={` ${ACTION}?${NAME}=${term}`} */}
+                {/* href={` ${ACTION}?${NAME}=${term}`} */}
                 <a
                   href={`https://www.mizuno.com.br/sh/${term}?_q=${term}&map=ft`}
                   class="flex gap-4 items-center text-[#969090]"
