@@ -8,9 +8,9 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
-import AddToCartButton from "./AddToCartButton.tsx";
-import { Ring } from "./ProductVariantSelector.tsx";
-import { useId } from "../../sdk/useId.ts";
+// import AddToCartButton from "./AddToCartButton.tsx";
+// import { Ring } from "./ProductVariantSelector.tsx";
+// import { useId } from "../../sdk/useId.ts";
 import Icon from "../ui/Icon.tsx";
 
 interface Props {
@@ -38,15 +38,14 @@ function ProductCard({
   index,
   class: _class,
 }: Props) {
-  const id = useId();
+  // const id = useId();
 
   const { url, image: images, offers, isVariantOf, variationColors } = product;
   const hasVariant = isVariantOf?.hasVariant ?? [];
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
-  const { listPrice, price, seller = "1", availability, installments } =
-    useOffer(offers);
+  const { listPrice, price, availability, installments } = useOffer(offers);
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
   const firstSkuVariations = Object.entries(possibilities)[0];
@@ -170,7 +169,7 @@ function ProductCard({
                   </a>
                 </li>
               ))}
-              {secondVariants.length === 0 && variants &&
+            {secondVariants.length === 0 && variants &&
               variants?.map((variant) => (
                 <li class="text-neutral flex justify-center items-center hover:text-black hover:underline">
                   <a
@@ -231,7 +230,8 @@ function ProductCard({
             <li class="mr-[.1875rem] min-w-[45px]">
               <a
                 class="w-full h-full min-w-[45px]"
-                href={"https://www.mizuno.com.br" + "/" + variation.linkText + "/p"}
+                href={"https://www.mizuno.com.br" + "/" + variation.linkText +
+                  "/p"}
               >
                 <Image
                   src={variation.items[0].images[0].imageUrl}

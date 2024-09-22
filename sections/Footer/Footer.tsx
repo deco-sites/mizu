@@ -19,6 +19,8 @@ interface Social {
   alt?: string;
   href?: string;
   image: ImageWidget;
+  widthImage: number;
+  heightImage: number;
 }
 
 interface ContactUs {

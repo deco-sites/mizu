@@ -20,7 +20,7 @@ import { useId } from "../../../sdk/useId.ts";
 import { useComponent } from "../../../sections/Component.tsx";
 import Icon from "../../ui/Icon.tsx";
 import { Props as SuggestionProps } from "./Suggestions.tsx";
-import { SmarthintRecommendation } from "apps/smarthint/utils/typings.ts";
+// import { SmarthintRecommendation } from "apps/smarthint/utils/typings.ts";
 
 // When user clicks on the search button, navigate it to
 export const ACTION = "/s";
