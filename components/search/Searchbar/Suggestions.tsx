@@ -7,6 +7,7 @@ import ProductCard from "../../product/ProductCard.tsx";
 // import Icon from "../../ui/Icon.tsx";
 import Slider from "../../ui/Slider.tsx";
 import { NAME } from "./Form.tsx";
+import { useScript } from "deco/hooks/useScript.ts";
 import { SmarthintRecommendation } from "apps/smarthint/utils/typings.ts";
 
 export interface Props {
@@ -99,18 +100,44 @@ function Suggestions(
   const hasTerms = Boolean(searches.length);
   return (
     <div
+      id="modal"
       class={clx(
         `p-[1.25rem] bg-[#f9f9f9] lg:top-[64px]`,
-        !hasProducts && !hasTerms && "hidden",
       )}
       style={{
         position: "fixed",
         right: 0,
         width: "100%",
+        display: `${!hasProducts && !hasTerms && "none" || "flex"}`
       }}
     >
       <div class="gap-4 flex flex-col lg:flex-row-reverse lg:justify-center">
+        <div
+          class=" cursor-pointer"
+          hx-on:click={useScript(() => {
+            const modal: HTMLDivElement | null = document.querySelector(
+              "#modal",
+            );
+
+            modal!.style.display = "none";
+          })}
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            style="color:#00108a"
+            height="28"
+            width="28"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z">
+            </path>
+          </svg>
+        </div>
         <div class="flex flex-col">
+          
           <span
             class="font-bold text-[.875rem] leading-[1rem] text-primary h-[36px]"
             role="heading"
@@ -142,7 +169,7 @@ function Suggestions(
             Produtos sugeridos
           </span>
           <Slider class="carousel gap-[1.25rem]">
-            {products.map((product, index) => (
+            {products?.map((product, index) => (
               <Slider.Item
                 index={index}
                 class="carousel-item first:ml-4 last:mr-4 max-w-[300px] w-[48%]"
