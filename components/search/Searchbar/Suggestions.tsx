@@ -108,7 +108,7 @@ function Suggestions(
         position: "fixed",
         right: 0,
         width: "100%",
-        display: `${!hasProducts && !hasTerms && "none" || "flex"}`
+        display: `${!hasProducts && "none" || "flex"}`,
       }}
     >
       <div class="gap-4 flex flex-col lg:flex-row-reverse lg:justify-center">
@@ -137,7 +137,6 @@ function Suggestions(
           </svg>
         </div>
         <div class="flex flex-col">
-          
           <span
             class="font-bold text-[.875rem] leading-[1rem] text-primary h-[36px]"
             role="heading"
